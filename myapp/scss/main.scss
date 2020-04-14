@@ -157,16 +157,17 @@ ul,li {
 	line-height: 1;
 	font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
 	color: #fff;
-	padding: 18px 30px 18px 15px;
-	margin-top: 25px;
+    padding: 24px 30px 24px 7px;
 	transition: 0.5s;
 	cursor: pointer;
 	background: #0085f2;
 	background-image: linear-gradient(to right, #006ae5, #00a1ff);
+	box-shadow: 0px 0px 32px 0px rgba(0,121,238,0.71);
 	border: none;
-	min-width: 320px;
+    min-width: 319px;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 7px;
+	font-weight: 700;
 	span {
 		position: relative;
 		&:after {

@@ -1,5 +1,5 @@
 .footer {
-    padding: 15px 0 15px;
+    padding: 19px 0 20px;
     background: #07090e;
     font-size: 14px;
     font-weight: 200;
@@ -8,12 +8,14 @@
         align-items: center;
     }
     &__item {
-        padding-right: 20px;
+        padding-right: 23px;
+        letter-spacing: 0.5px;
         color: #fff;
         opacity: 47%;
+        letter-spacing: 1px;
     }
 
 }
 .rights {
-    margin-right: 20px;
+    margin-right: 40px;
 }
