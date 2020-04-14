@@ -115,7 +115,8 @@ header {
         align-items: center;
         height: 100%;
         &__text {
-            @media screen and (max-width: 1350px) and (orientation: portrait) {
+            @media screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
                 display: none;
             }
         }
@@ -123,7 +124,8 @@ header {
             width: 20px;
             height: 25px;
             margin-right: 10px;
-            @media screen and (max-width: 1350px) and (orientation: portrait) {
+            @media screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
                 margin-left: 10px;
             }
         }

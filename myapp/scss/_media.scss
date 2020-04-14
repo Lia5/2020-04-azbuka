@@ -9,7 +9,8 @@
 @media only screen and (max-width: 980px) {
   
 }
-@media only screen and (max-width: 749px) and (orientation: portrait) {
+@media only screen and (max-width: 749px) and (orientation: portrait),
+screen and (max-width: 1080px) {
     .menu-toggle {
         display: block;
         width: 26px;
@@ -42,16 +43,7 @@
                 transform: rotate(-45deg) translate(14px,-15px);
             }
         }
-
-        
     }
-
-
-
-
-
-
-
     .main-menu {
         display: none;
         &.active {
