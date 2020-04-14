@@ -143,6 +143,9 @@
                 bottom: -106px;
                 right: 83px;
             }
+            @media screen and (max-width: 749px) {
+                content: none;
+            }
         }
         span {
             font-weight: 700;

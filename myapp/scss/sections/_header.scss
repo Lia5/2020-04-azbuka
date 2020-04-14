@@ -1,6 +1,10 @@
 nav {
     a {
         color: #fff;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+screen and (max-width: 1080px) {
+            color: #090f21;
+        }
     }
 }
 .nav {
@@ -40,7 +44,8 @@ header {
     screen and (max-width: 1080px) {
         margin-top: 14px;
     }
-    @media screen and (max-width: 749px){
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+screen and (max-width: 1080px) {
         margin: 2px auto 0;
     }
     img {
@@ -49,7 +54,8 @@ header {
         screen and (max-width: 1080px) {
             width: 197px;
         }
-        @media screen and (max-width: 749px){
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+screen and (max-width: 1080px) {
             width: 178px;
         }
     }
@@ -97,6 +103,9 @@ header {
             background: #039be5;
         }
     }
+    a {
+        color: #fff;
+    }
 }
 .social-text {
     @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -108,7 +117,8 @@ header {
 
 .mob {
     display: none;
-    @media screen and (max-width: 749px){
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+screen and (max-width: 1080px) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -149,6 +159,9 @@ header {
             screen and (max-width: 1080px) {
                 display: none;
             }
+            @media only screen and (max-width: 749px) {
+                display: block;
+            }
         }
         img {
             width: 20px;
@@ -157,6 +170,19 @@ header {
             @media screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 margin-left: 10px;
+            }
+        }
+        &__icon {
+            &--desctop {
+                @media only screen and (max-width: 749px) {
+                    display: none;
+                }
+            }
+            &--mob {
+                display: none;
+                @media only screen and (max-width: 749px) {
+                    display: block;
+                }
             }
         }
     }

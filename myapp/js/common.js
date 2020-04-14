@@ -1,32 +1,27 @@
 $(function() {
+    //menu
+    if(jQuery('.menu-toggle').length) {
+        var menu = $('.menu-toggle');
+        menu.on('click', function(){
+            $('.main-menu').toggleClass('active');
+            $('.menu-toggle').toggleClass('active');
+            $('body').toggleClass('body-modal-open');
+        });
+    }
     if(jQuery('.scroll-to').length) {
         var $page = $('html, body');
         $('.scroll-to[href*="#"]').click(function() {
             $page.animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 400);
+            if ( window.innerWidth < 992 || window.screen.width < 992) {
+                $('.main-menu').removeClass('active');
+                $('.menu-toggle').removeClass('active');
+            }
             return false;
         });
     }
 
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function(){
-//menu
-    var menu = document.querySelector('.menu-toggle');
-    menu.addEventListener('click', function(){
-        var nav = document.querySelector('.main-menu');
-        nav.classList.toggle('active');
-        var navGamb = document.querySelector('.menu-toggle');
-        navGamb.classList.toggle('active');
-    });
-
-
-});
-
-$(function() {
     //select-number form
     if(jQuery('.phone-mask').length) {
         jQuery(function($){
@@ -179,3 +174,4 @@ $(function() {
 
 
 });
+

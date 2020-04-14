@@ -15,9 +15,8 @@
 * {
 	box-sizing: border-box;
 }
-html {}
 body {
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	font-size: 16px;
@@ -47,6 +46,11 @@ body {
 		}
 
 	}
+}
+.body-modal-open {
+	height: 100vh;
+	overflow: hidden;
+	padding-right: 17px;
 }
 .main {
 	flex-grow: 1;
