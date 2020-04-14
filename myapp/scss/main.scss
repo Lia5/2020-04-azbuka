@@ -60,9 +60,12 @@ body {
 	background-position: center;
 	background-size: cover;
 	@media only screen and (max-width: 1350px) and (orientation: portrait),
-screen and (max-width: 1080px) {
+	screen and (max-width: 1080px) {
 		background-image: url('../img/main-bg-750.jpg');
 		background-position-y: 0px;
+	}
+	@media screen and (max-width: 749px){
+		background-image: url('../img/main-bg-320.jpg');
 	}
 }
 .img-responsive {

@@ -7,6 +7,19 @@ $(function() {
             $('.menu-toggle').toggleClass('active');
             $('body').toggleClass('body-modal-open');
         });
+        $('.main-menu').mouseup(function (e){ // событие клика по веб-документу
+            var div = $(".main-menu ul"); // тут указываем ID элемента
+            var close = $('.menu-toggle');
+            if (close.is(e.target)) {
+        
+            } else if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+                $('.main-menu').toggleClass('active');
+                $('.menu-toggle').toggleClass('active');
+                $('body').toggleClass('body-modal-open');
+              
+            }
+        });
     }
     if(jQuery('.scroll-to').length) {
         var $page = $('html, body');
