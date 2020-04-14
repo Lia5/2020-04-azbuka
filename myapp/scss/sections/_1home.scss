@@ -223,6 +223,8 @@
     @media screen and (max-width: 749px){
         flex-wrap: wrap;
         padding-right: 33px;
+        max-width: 392px;
+        margin: 0 auto;
     }
     &__item {
         background: url('../img/bg-item.png');
