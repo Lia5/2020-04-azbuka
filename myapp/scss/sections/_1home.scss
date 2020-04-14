@@ -1,7 +1,9 @@
 .home {
     position: relative; 
-    padding-bottom: 61px;
-    padding-top: 70px;
+    // padding-bottom: 61px;
+    // padding-top: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
     @media screen and (max-width: 1919px) {
         overflow: hidden;
     }
