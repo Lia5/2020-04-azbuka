@@ -48,7 +48,7 @@ body {
 	background: #000 url('../img/main-bg.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
-	@media screen and (max-width: 1350px) {
+	@media screen and (max-width: 1350px) and (orientation: portrait) {
 		background-image: url('../img/main-bg-750.jpg');
 		background-position-y: 0px;
 	}
@@ -74,11 +74,11 @@ b, strong {
 	max-width: 1350px;
 	padding: 0 90px;
 	margin: 0 auto;
-	@media screen and (max-width: 1350px) {
+	@media screen and (max-width: 1350px) and (orientation: portrait) {
 		max-width: 750px;
 		padding: 0 15px;
 	}
-	@media screen and (max-width: 749px) {
+	@media screen and (max-width: 749px) and (orientation: portrait){
 		max-width: 320px;
 
 	}
@@ -125,10 +125,10 @@ ul,li {
 	margin-top: -10px;
 	margin-bottom: 100px;
 	@media screen and (max-width: 880px) {
-		margin-bottom: 40px;
+
 	}
 	@media screen and (max-width: 579px) {
-		margin-top: 10px;
+
 	}
 	a {
 		text-decoration: underline;
@@ -145,11 +145,10 @@ ul,li {
 	text-align: center;
 	color: $accent;
 	@media screen and (max-width: 579px) {
-		font-size: 40px;
-		line-height: 1.2;
+
 	}
 	@media screen and (max-width: 419px) {
-		font-size: 35px;
+
 	}
 	&--white {
 		color: #f9f9f9;
@@ -187,7 +186,7 @@ ul,li {
 		}
 	}
 	@media screen and (max-width: 579px) {
-		padding: 15px 25px;
+
 	}
 	&:hover {
 		box-shadow: 0px 7px 18px -6px rgba(0,121,238,1);
