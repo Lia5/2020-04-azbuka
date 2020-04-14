@@ -1,0 +1,251 @@
+.kviz {
+    position: relative;
+    background: #1f7a83 url('../img/green-bg-full.jpg') no-repeat;
+    color: #fff;
+    overflow: hidden;
+    padding-top: 75px;
+    padding-bottom: 128px;
+    @media screen and (max-width: 565px) {
+        padding-top: 54px;
+        padding-bottom: 112px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        right: 65px;
+        width: 404px;
+        height: 409px;
+        background: url(../img/sun-right.png) no-repeat;
+        background-size: contain;
+        @media screen and (max-width: 1316px) {
+            width: 29%;
+            right: 2%;
+        }
+        @media screen and (max-width: 820px) {
+            display: none;
+        }
+    }
+    &-qa {
+        width: 80%;
+        @media screen and (max-width: 820px) {
+            width: 100%;
+        }
+    }
+    &__ans {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        @media screen and (max-width: 820px) {
+            flex-wrap: wrap;
+            // width: 30%;
+        }
+    }
+    .btn-prev {
+        margin-right: 23px;
+    }
+    &__error {
+        position: absolute;
+        top: -40px;
+        color: #ffc905;
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+.step {
+    &-slide {
+        display: none;
+        &--active {
+            display: block;
+            &.step-slide--finish {
+                display: flex;
+                align-items: center;
+                @media screen and (max-width: 820px) {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        &__num {
+            font-size: 30px;
+            @media screen and (max-width: 565px) {
+                font-size: 26px;
+            }
+            span {
+                color: #ffc905;
+            }
+        }
+        &__title {
+            position: relative;
+            font-size: 35px;
+            line-height: 45px;
+            font-weight: 700;
+            color: #ffc905;
+            margin-top: 30px;
+            margin-bottom: 81px;
+            @media screen and (max-width: 565px) {
+                font-size: 26px;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
+        }
+        &__subtitle {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            font-size: 16px;
+            line-height: 45px;
+            @media screen and (max-width: 1078px) {
+                position: static;
+                line-height: 1.5;
+                margin-top: 20px;
+            }
+        }
+        &__left {
+            width: 50%;
+            padding: 20px 20px 20px 0;
+            @media screen and (max-width: 820px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &__form {
+            @media screen and (max-width: 820px) {
+                margin: auto;
+            }
+            .btn {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+.pick-item {
+    display: block;
+    margin: 0 15px 30px;
+    cursor: pointer;
+    width: 27%;
+
+    @media screen and (max-width: 820px) {
+        width: 48%;
+        margin-right: 2%;
+        margin-left: 0;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+    @media screen and (max-width: 580px) {
+        width: 100%;
+        margin-right: 0;
+    }
+    &:first-of-type {
+        margin-left: 0;
+    }
+    &__input {
+        display: none;
+        width: 185px;
+        height: 55px;
+        border: 0px solid #d9d9d9;
+        background-color: #efefef;
+        border-radius: 5px;
+        padding: 15px;
+        font-size: 22px;
+        margin-right: 10px;
+        &[type="radio"]:checked + .pick-item__label:after {
+            // content: "";
+            // display: block;
+            // width: 11px;
+            // height: 11px;
+            // background: #075057;
+            // border-radius: 50%;
+            // position: absolute;
+            // top: 5px;
+            // left: 5px;
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            width: 9px;
+            height: 5px;
+            top: 5px;
+            left: 4px;
+            border: 3px solid #075057;
+            border-top: none;
+            border-right: none;
+            background: 0 0;
+            transform: rotate(-45deg);
+        }
+        &[type="checkbox"]:checked + .pick-item__label:after {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            width: 9px;
+            height: 5px;
+            top: 5px;
+            left: 4px;
+            border: 3px solid #075057;
+            border-top: none;
+            border-right: none;
+            background: 0 0;
+            transform: rotate(-45deg);
+            
+        }
+    }
+    &__label {
+        font-size: 14px;
+        line-height: 20px;
+        position: relative;
+        padding-left: 30px;
+        font-weight: 500;
+        &:before {
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #fff;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+.question__ans--radio {
+    .pick-item__label:before {
+        border-radius: 2px;
+    }
+}
+.question__ans--checkbox {
+    .pick-item__label:before {
+        border-radius: 2px;
+    }
+}
+.prev-next-container {
+    position: relative;
+    display: flex;
+    margin-top: 67px;
+    @media screen and (max-width: 580px) {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        .btn {
+            margin: 0 auto 20px;
+        }
+    }
+}
+.question__connect {
+    font-size: 18px;
+    padding: 31px;
+    width: 100%;
+}
+.form input {
+    &.rfield {
+        border: 1px solid transparent;
+    }
+    &.empty_field {
+        border: 1px solid red;
+    }
+
+}

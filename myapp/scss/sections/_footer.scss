@@ -1,0 +1,19 @@
+.footer {
+    padding: 15px 0 15px;
+    background: #07090e;
+    font-size: 14px;
+    font-weight: 200;
+    .wrap {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        padding-right: 20px;
+        color: #fff;
+        opacity: 47%;
+    }
+
+}
+.rights {
+    margin-right: 20px;
+}

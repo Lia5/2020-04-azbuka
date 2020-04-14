@@ -1,0 +1,190 @@
+.home {
+    position: relative; 
+    padding-bottom: 61px;
+    @media screen and (max-width: 1660px) {
+        // overflow: hidden;
+    }
+
+    @media screen and (max-width: 880px) {
+
+    }
+    .wrap {
+        display: flex;
+
+        @media screen and (max-width: 1450px) {
+            overflow: hidden;
+        }
+        @media screen and (max-width: 880px) {
+            flex-wrap: wrap;
+            padding: 0;
+        }
+    }
+    &__body {
+        width: 70%;
+        padding-top: 87px;
+        padding-right: 20px;
+        padding-bottom: 150px;
+        @media screen and (max-width: 880px) {
+            width: 100%;
+            max-width: none;
+            background: url('../img/main-man.png') no-repeat;
+            background-position: bottom right;
+            padding: 40px 180px 40px 28px;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 500px) {
+
+        }
+    }
+    &__title {
+        font-family: "AABebasNeue", Arial, Helvetica, sans-serif;
+        font-size: 59px;
+        line-height: 65px;
+        color: #e8ebf4;
+        letter-spacing: 4px;
+        span {
+            color: #ff9232;
+        }
+    }
+    &__subtitle {
+        font-family: "AABebasNeue", Arial, Helvetica, sans-serif;
+        font-size: 54px;
+        line-height: 65px;
+        margin-left: 21px;
+        letter-spacing: 4px;
+        span {
+            display: inline-block;
+            background: #222632;
+            padding: 0 30px;
+            border-radius: 7px;
+            &+span {
+                margin-left: 10px;
+            }
+        }
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 665px) {
+            flex-direction: column;
+        }
+        .btn {
+            @media screen and (max-width: 580px) {
+                width: 242px;
+                margin: 0 auto;
+                padding: 12px 10px;
+                font-size: 12px;
+            }
+            @media screen and (max-width: 580px) {
+                background: #262626;
+                color: #fff;
+                padding: 18px 10px;
+                max-width: 183px;
+                min-width: 183px;
+            }
+        }
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 15px;
+        font-weight: 200;
+        span {
+            font-weight: 700;
+        }
+        @media screen and (max-width: 1115px) {
+            font-size: 14px;
+            line-height: 1.2;
+            padding: 20px;
+        }
+        @media screen and (max-width: 880px) {
+            background: transparent;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 10px;
+            line-height: 1.6;
+            padding: 17px 0;
+            margin-bottom: 110px;
+        }
+    }
+    &__pic {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+.agree {
+    display: flex;
+    color: #9d9d9d;
+    img {
+        width: 27px;
+        height: 32px;
+        margin-right: 10px;
+    }
+}
+.advantages {
+    width: 30%;
+    color: #090303;
+    &__item {
+        background: url('../img/bg-item.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 50px 100px 100px 50px;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 40px;
+            right: -50%;
+            background-repeat: no-repeat;
+        }
+        &:nth-child(1) {
+            &:after {
+                background-image: url('../img/doc.png');
+            }
+        }
+        &:nth-child(2) {
+            &:after {
+                background-image: url('../img/money.png');
+            }
+        }
+        &:nth-child(3) {
+            &:after {
+                background-image: url('../img/win.png');
+            }
+        }
+        &+.advantages__item {
+            margin-top: -80px;
+        }
+    }
+    &__title {
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        span {
+            font-weight: 700;
+        }
+        @media screen and (max-width: 1199px) {
+            font-size: 45px;
+            line-height: 1.2;
+        }
+        @media screen and (max-width: 880px) {
+            font-size: 37px;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+    }
+    &__text {
+        color: #505050;
+        font-size: 14px;
+        font-weight: 200;
+    }
+}
