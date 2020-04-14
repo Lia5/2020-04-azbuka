@@ -48,6 +48,10 @@ body {
 	background: #000 url('../img/main-bg.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
+	@media screen and (max-width: 1350px) {
+		background-image: url('../img/main-bg-750.jpg');
+		background-position-y: 0px;
+	}
 }
 .img-responsive {
 	display: block;
