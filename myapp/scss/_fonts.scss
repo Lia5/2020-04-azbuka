@@ -1,8 +1,8 @@
 @import "_mixins/font-face";
 
 @include font-face("AABebasNeue", "../fonts/AABebasNeue/AABebasNeue", 400);
-@include font-face("Roboto", "../fonts/RobotoThin/RobotoThin", 100);
-@include font-face("Roboto", "../fonts/RobotoLight/RobotoLight", 200);
-@include font-face("Roboto", "../fonts/RobotoRegular/RobotoRegular", 400);
-@include font-face("Roboto", "../fonts/RobotoMedium/RobotoMedium", 500);
-@include font-face("Roboto", "../fonts/RobotoBold/RobotoBold", 700);
+@include font-face("Roboto", "../fonts/Roboto-Thin/Roboto-Thin", 100);
+@include font-face("Roboto", "../fonts/Roboto-Light/Roboto-Light", 200);
+@include font-face("Roboto", "../fonts/Roboto-Regular/Roboto-Regular", 400);
+@include font-face("Roboto", "../fonts/Roboto-Medium/Roboto-Medium", 500);
+@include font-face("Roboto", "../fonts/Roboto-Bold/Roboto-Bold", 700);

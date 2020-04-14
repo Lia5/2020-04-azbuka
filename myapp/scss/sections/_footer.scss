@@ -3,19 +3,39 @@
     background: #07090e;
     font-size: 14px;
     font-weight: 200;
+    @media screen and (max-width: 1350px) {
+        padding: 23px 0 31px;
+    }
     .wrap {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 1350px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__items {
+        display: flex;
+        @media screen and (max-width: 1350px) {
+            width: 100%;
+        }
     }
     &__item {
         padding-right: 23px;
-        letter-spacing: 0.5px;
         color: #fff;
         opacity: 47%;
         letter-spacing: 1px;
+        @media screen and (max-width: 1350px) {
+            letter-spacing: 0.5px;
+        }
     }
 
 }
 .rights {
     margin-right: 40px;
+    @media screen and (max-width: 1350px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
 }
