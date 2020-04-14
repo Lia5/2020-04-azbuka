@@ -18,13 +18,15 @@ header {
         color: #686868;
         font-size: 14px;
         margin-top: 5px;
-        @media screen and (max-width: 1350px) and (orientation: portrait) {
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
             margin-top: 7px;
         }
     }
     &__phone {
         margin-top: 12px;
-        @media screen and (max-width: 1350px) and (orientation: portrait) {
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
             margin-top: 9px;
         }
         span {
@@ -34,13 +36,21 @@ header {
 }
 .logo {
     margin-top: 10px;
-    @media screen and (max-width: 1350px) and (orientation: portrait) {
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
         margin-top: 14px;
+    }
+    @media screen and (max-width: 749px){
+        margin: 2px auto 0;
     }
     img {
         width: 225px;
-        @media screen and (max-width: 1350px) and (orientation: portrait) {
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
             width: 197px;
+        }
+        @media screen and (max-width: 749px){
+            width: 178px;
         }
     }
 }
@@ -54,7 +64,8 @@ header {
         align-items: center;
         padding: 5px 11px;
         border-radius: 7px;
-        @media screen and (max-width: 1350px) and (orientation: portrait) {
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
             padding: 5px 7px;
         }
         &+.social__item {
@@ -87,9 +98,28 @@ header {
         }
     }
 }
+.social-text {
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+        position: relative;
+        top: 2px;
+    }
+}
 
 .mob {
     display: none;
+    @media screen and (max-width: 749px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 33px;
+        right: 9px;
+    }
 }
 
 .menu-wrap {

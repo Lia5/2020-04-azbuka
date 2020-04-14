@@ -9,15 +9,14 @@
 @media only screen and (max-width: 980px) {
   
 }
-@media only screen and (max-width: 749px) and (orientation: portrait),
-screen and (max-width: 1080px) {
+@media only screen and (max-width: 749px) {
     .menu-toggle {
         display: block;
         width: 26px;
         height: 23px;
         position: absolute;
-        top: 8px;
-        right: 25px;
+        top: -12px;
+        left: 0;
         cursor: pointer;
         z-index: 3;
         .one, .two, .three {
@@ -64,13 +63,14 @@ screen and (max-width: 1080px) {
         }
     }
     .menu-wrap {
+        position: absolute;
         padding-left: 25px;
         padding-right: 25px;
     }
 
 }
 @media only screen and (max-width: 500px) {
-   
+
 }
 
 @media only screen and (max-width: 413px) {
@@ -78,4 +78,61 @@ screen and (max-width: 1080px) {
 }
 @media only screen and (max-width: 320px) {
 
+}
+@media screen and (max-height: 850px) and  (min-width: 1081px) {
+    header {
+        padding-top: 5px;
+    }
+    .main-menu {
+        font-size: 15px;
+    }
+    .social {
+        margin-top: 4px;
+    }
+    .header__phone {
+        margin-top: 3px;
+    }
+    .home {
+        &__title {
+            font-size: 49px;
+            line-height: 1;
+        }
+        &__subtitle {
+            font-size: 44px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        &__text {
+            margin-bottom: 20px;
+        }
+        &__btn {
+            margin-bottom: 20px;
+        }
+
+    }
+    .advantages {
+        &__item {
+            &:nth-child(1) {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            &:nth-child(2) {
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+            }
+            &:nth-child(3) {
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+            }
+        }
+    }
+    .agree {
+        font-size: 13px;
+        line-height: 1;
+    }
+    .footer {
+        padding: 5px 0 5px;
+    }
 }
