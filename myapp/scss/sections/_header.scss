@@ -11,6 +11,7 @@ screen and (max-width: 1080px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 header {
     display: flex;
@@ -151,8 +152,8 @@ screen and (max-width: 1080px) {
         position: absolute;
         width: 35px;
         height: 35px;
-        top: 33px;
-        right: 9px;
+        top: 4px;
+        right: -4px;
     }
 }
 

@@ -18,8 +18,9 @@
                     rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
         .modal__body
             .modal__body-pic
-            .modal__maintitle Оставьте заявку
-            .modal__mainsubtitle Ми з вами зв'яжемося і відповімо на всі питання по курсу 
+            .modal__title Оставьте заявку
+            .modal__subtitle и наш менеджер свяжется 
+                span с вами через 3 минуты 
             form(action="#")
                 input.utm_source.hidden(type='hidden', name='utm_source')
                 input.utm_medium.hidden(type='hidden', name='utm_medium')
@@ -31,9 +32,10 @@
                     .form-line
                         label
                             input(type="text" placeholder="Введите ваше имя" name="name" required).rfield.name-icon
+                    .form-line
                         label
                             input(type="text" placeholder="Введите ваш телефон" name="phone" required).rfield.phone-mask
-                    .form-line-wrap
+                    .form-line-btn
                         button.btn.btn-finish(type="submit")
                                 a(href="#modalFinish").kviz__btn Оставить заявку
                 .agree

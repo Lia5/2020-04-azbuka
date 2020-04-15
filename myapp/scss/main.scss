@@ -29,9 +29,11 @@ body {
 	color: #fff;
 	input, textarea {
 		width: 100%;
-		border: none;
+		border: 1px solid transparent;
 		outline: none;
-		background: transparent;
+		background: #f2f2f2;
+		border-radius: 7px;
+		padding: 25px 30px;
 		&:focus:required:invalid {
 			border-color: red;
 		}
@@ -39,6 +41,9 @@ body {
 			border-color: green;
 		}
 	}
+	input.empty_field {
+		border: 1px solid red;
+	  }
 	label {
 		img {
 			width: 22px;
@@ -96,7 +101,7 @@ b, strong {
 	}
 	@media screen and (max-width: 749px){
 		padding: 0 14px;
-		// max-width: 320px;
+		max-width: 320px;
 
 	}
 }
@@ -176,7 +181,6 @@ ul,li {
 	display: inline-block;
 	font-size: 21px;
 	line-height: 1;
-	font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
 	color: #fff;
     padding: 24px 30px 24px 7px;
 	transition: 0.5s;
@@ -212,26 +216,29 @@ ul,li {
 		padding-top: 19px;
 		padding-bottom: 25px;
 	}
+	.kviz__btn {
+		display: block;
+		color: #fff;
+	}
 	&:hover {
 		box-shadow: 0px 7px 18px -6px rgba(0,121,238,1);
-		.kviz__btn {
-			color: #fff;
-		}
 	}
 	&:active {
 		background-image: linear-gradient(to right, #0065d8, #0097ee);
 
 	}
-	&--outline {
-		border-color: #fff;
-		color: #fff;
-		&:hover {
-			background-color: #fff;
-			color: #212121;
+	&-finish {
+		padding: 0;
+		box-shadow: none;
+		@media screen and (max-width: 749px){
+			padding: 0;
 		}
-		&:active {
-			background-color: #fff;
-			color: #c29566;
+		.kviz__btn {
+			padding: 24px 30px 24px 7px;
+			@media screen and (max-width: 749px){
+				padding-top: 19px;
+				padding-bottom: 25px;
+			}
 		}
 	}
 }
