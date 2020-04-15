@@ -55,7 +55,7 @@ body {
 .body-modal-open {
 	height: 100vh;
 	overflow: hidden;
-	padding-right: 17px;
+	// padding-right: 17px;
 }
 .main {
 	flex-grow: 1;
@@ -101,7 +101,7 @@ b, strong {
 	}
 	@media screen and (max-width: 749px){
 		padding: 0 14px;
-		max-width: 320px;
+		// max-width: 320px;
 
 	}
 }

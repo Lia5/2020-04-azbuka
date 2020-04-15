@@ -245,12 +245,24 @@
             width: 100%;
             height: 100%;
             top: 40px;
-            right: -160px;
+            right: 0;
             background-repeat: no-repeat;
+            background-size: contain;
         }
         &:nth-child(1) {
             &:after {
+                width: 179px;
+                height: 177px;
                 background-image: url('../img/doc.png');
+                right: -110px;
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    top: 37px;
+                    right: -116px;
+                }
+                @media screen and (max-width: 749px){
+                    right: -109px;
+                }
             }
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
@@ -266,8 +278,20 @@
             padding-bottom: 79px;
             margin-top: -36px;
             &:after {
+                width: 165px;
+                height: 164px;
                 background-image: url('../img/money.png');
-                right: -144px;
+                right: -81px;
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    right: -71px;
+                    top: 15px;
+                }
+                @media screen and (max-width: 749px){
+                    top: 34px;
+                    right: -81px;
+
+                }
             }
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
@@ -283,9 +307,12 @@
             padding-bottom: 53px;
             margin-top: -36px;
             &:after {
+                width: 101px;
+                height: 144px;
                 background-image: url('../img/win.png');
                 top: 63px;
-                right: -174px;
+                right: -46px;
+
             }
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
@@ -319,6 +346,7 @@
         }
     }
     &__text {
+
         color: #505050;
         font-size: 14px;
         line-height: 20px;

@@ -60,8 +60,7 @@ header {
     screen and (max-width: 1080px) {
         margin-top: 14px;
     }
-    @media only screen and (max-width: 1350px) and (orientation: portrait),
-screen and (max-width: 1080px) {
+    @media screen and (max-width: 749px){
         margin: 2px auto 0;
     }
     img {
@@ -70,8 +69,7 @@ screen and (max-width: 1080px) {
         screen and (max-width: 1080px) {
             width: 197px;
         }
-        @media only screen and (max-width: 1350px) and (orientation: portrait),
-screen and (max-width: 1080px) {
+        @media screen and (max-width: 749px){
             width: 178px;
         }
     }
