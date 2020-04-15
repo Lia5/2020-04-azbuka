@@ -1,13 +1,24 @@
-section.kviz#kviz
-    .wrap
-        .kviz-qa
+#modalQuiz.modal.disabled
+    .modal__wrap.animated.fadeInDown    
+        .close.modal-close
+            svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                g(stroke='none', stroke-width='1', fill-rule='evenodd')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+        .modal__body.quiz
+            .quiz__discount
+                .quiz__discount-text Ваша <br> скидка:
+                .quiz__discount-price
+                    .quiz__discount-plus 
+                        span +500 
+                        | руб.
+                    .quiz__discount-total
+                        span 1.000 
+                        | руб.
             form(class="quizForm")
-                .step-slide.step-slide--active
-                    .step-slide__num 
-                        span 1
-                        | /5
+                .step-slide.step-slide--active.step-slide--first
                     .step-slide__title Где именно вы хотите <br>установить станцию?
-                    .kviz__ans.question__ans--radio
+                    .quiz__ans.question__ans--radio
                         label.pick-item(for="step1-1")
                             input#step1-1.pick-item__input(type='radio', name='question1', value='На земле (наземной конструкции)')
                             .pick-item__label На земле (наземной конструкции)
@@ -17,16 +28,49 @@ section.kviz#kviz
                         label.pick-item(for="step1-3")
                             input#step1-3.pick-item__input(type='radio', name='question1', value='Комбинированно')
                             .pick-item__label Комбинированно
-                    .prev-next-container
-                        .kviz__error
-                        a.btn.btn--orange.btn-next.qa-next(href='#') Далее
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Расчет пройден на 20%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-next.qa-next(href='#') Далее
+                .step-slide
+                    .step-slide__title Где именно вы хотите <br>установить станцию?
+                    .quiz__ans.question__ans--radio
+                        label.pick-item(for="step1-1")
+                            input#step1-1.pick-item__input(type='radio', name='question1', value='На земле (наземной конструкции)')
+                            .pick-item__label На земле (наземной конструкции)
+                        label.pick-item(for="step1-2")
+                            input#step1-2.pick-item__input(type='radio', name='question1', value='На крыше (скатной, плоской)')
+                            .pick-item__label На крыше (скатной, плоской) 
+                        label.pick-item(for="step1-3")
+                            input#step1-3.pick-item__input(type='radio', name='question1', value='Комбинированно')
+                            .pick-item__label Комбинированно
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Расчет пройден на 20%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-next.qa-next(href='#') Далее
                 .step-slide
                     .step-slide__num 
                         span 2
                         | /5
                     .step-slide__title Какая мощность подведенной к вашему <br>объекту линии электропередачи
                         .step-slide__subtitle (мощность в кВт вы можете посмотреть в договоре с вашей энергораспределительной компанией)
-                    .kviz__ans.question__ans--radio
+                    .quiz__ans.question__ans--radio
                         label.pick-item(for="step2-1")
                             input#step2-1.pick-item__input(type='radio', name='question2', value='Знаю сколько кВт, фаз')
                             .pick-item__label Знаю сколько кВт, фаз
@@ -34,7 +78,7 @@ section.kviz#kviz
                             input#step2-2.pick-item__input(type='radio', name='question2', value='Не знаю')
                             .pick-item__label Не знаю
                     .prev-next-container
-                        .kviz__error
+                        .quiz__error
                         a.btn.btn-prev.qa-prev(href='#') Назад
                         a.btn.btn--orange.btn-next.qa-next(href='#') Далее
                 .step-slide
@@ -42,7 +86,7 @@ section.kviz#kviz
                         span 3
                         | /5
                     .step-slide__title Хотите ли вы быть обеспеченным <br>электроэнергией, даже когда нет внешней сети?
-                    .kviz__ans.question__ans--radio
+                    .quiz__ans.question__ans--radio
                         label.pick-item(for="step3-1")
                             input#step3-1.pick-item__input(type='radio', name='question3', value='Нет, хочу просто зарабатывать  на зеленом тарифе')
                             .pick-item__label Нет, хочу просто зарабатывать  на зеленом тарифе
@@ -53,7 +97,7 @@ section.kviz#kviz
                             input#step3-3.pick-item__input(type='radio', name='question3', value='Да, но не понимаю сколько нужно запасать')
                             .pick-item__label Да, но не понимаю сколько нужно запасать
                     .prev-next-container
-                        .kviz__error
+                        .quiz__error
                         a.btn.btn-prev.qa-prev(href='#') Назад
                         a.btn.btn--orange.btn-next.qa-next(href='#') Далее
                 .step-slide
@@ -61,7 +105,7 @@ section.kviz#kviz
                         span 4
                         | /5
                     .step-slide__title Знаете ли вы площадь и ориентацию <br>скатов крыши?
-                    .kviz__ans.question__ans--radio
+                    .quiz__ans.question__ans--radio
                         label.pick-item(for="step4-1")
                             input#step4-1.pick-item__input(type='radio', name='question4', value='Знаю площадь и примерно ориентацию по сторонам света')
                             .pick-item__label Знаю площадь и примерно ориентацию по сторонам света
@@ -75,7 +119,7 @@ section.kviz#kviz
                             input#step4-4.pick-item__input(type='radio', name='question4', value='Не знаю ничего, нужен  выезд специалиста')
                             .pick-item__label Не знаю ничего, нужен  выезд специалиста
                     .prev-next-container
-                        .kviz__error
+                        .quiz__error
                         a.btn.btn-prev.qa-prev(href='#') Назад
                         a.btn.btn--orange.btn-next.qa-next(href='#') Далее
                 .step-slide
@@ -83,7 +127,7 @@ section.kviz#kviz
                         span 5
                         | /5
                     .step-slide__title Знаете ли вы, что нужно для <br>подключения “зеленого тарифа”?
-                    .kviz__ans.question__ans--radio
+                    .quiz__ans.question__ans--radio
                         label.pick-item(for="step5-1")
                             input#step5-1.pick-item__input(type='radio', name='question5', value='Да, но есть вопросы по процедурам и/или нормам закона')
                             .pick-item__label Да, но есть вопросы по процедурам и/или нормам закона
@@ -91,10 +135,26 @@ section.kviz#kviz
                             input#step5-2.pick-item__input(type='radio', name='question5', value='Нет, объясните (мощность линии, требования к счетчику, нормы закона)')
                             .pick-item__label Нет, объясните (мощность линии, требования к счетчику, нормы закона)
                     .prev-next-container
-                        .kviz__error
+                        .quiz__error
                         a.btn.btn-prev.qa-prev(href='#') Назад
                         a.btn.btn--orange.btn-next.qa-next(href='#') Далее
                 .step-slide.step-slide--finish
+                    .modal__title Оставьте заявку
+                    .modal__subtitle и наш менеджер свяжется 
+                        span с вами через 3 минуты 
+                        .form-line
+                            label
+                                input(type="text" placeholder="Введите ваше имя" name="name" required).rfield.name-icon
+                        .form-line
+                            label
+                                input(type="text" placeholder="Введите ваш телефон" name="phone" required).rfield.phone-mask
+                        .form-line-btn
+                            button.btn.btn-finish(type="submit")
+                                    a(href="#modalFinish").quiz__btn Оставить заявку
+                        .agree
+                            img(src="img/agree.png", alt="agree")
+                            .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
+                                span.agree__policy с политикой конфиденциальности
                     .step-slide__left
                         .step-slide__title Спасибо за ответы! <br>Остался последний шаг
                         p Мы уже анализируем ваши ответы. В ближайшее время наш менеджер свяжется с вами и предложит оптимальную комплектацию станции, расскажет, какой бюджет установки и как скоро вы сможете зарабатывать на “зеленом тарифе”.
@@ -103,5 +163,5 @@ section.kviz#kviz
                         input(type="text" placeholder="Телефон" name="phone" required).rfield.phone-mask
                         //- input.btn.btn--orange(type='submit', value='Получить предложение')
                         button.btn.btn--orange(type="submit")
-                            a(href="#modalKviz").modal-open.kviz__btn Получить предложение
+                            a(href="#modalQuiz").modal-open.quiz__btn Получить предложение
 

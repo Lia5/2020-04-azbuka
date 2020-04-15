@@ -38,11 +38,12 @@
                             input(type="text" placeholder="Введите ваш телефон" name="phone" required).rfield.phone-mask
                     .form-line-btn
                         button.btn.btn-finish(type="submit")
-                                a(href="#modalFinish").kviz__btn Оставить заявку
+                                a(href="#modalFinish").quiz__btn Оставить заявку
                 .agree
                     img(src="img/agree.png", alt="agree")
                     .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
                         span.agree__policy с политикой конфиденциальности
+include quiz.jade
 #policy.packagesForm.modal.disabled
     .modal__wrap.animated.fadeInDown    
         .close.modal-close

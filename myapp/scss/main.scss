@@ -164,23 +164,6 @@ ul,li {
 		}
 	}
 }
-.title {
-	font-family: "BebasNeueCyrillic", Arial, Helvetica, sans-serif;
-	text-transform: uppercase;
-	font-size: 50px;
-	line-height: 92px;
-	text-align: center;
-	color: $accent;
-	@media screen and (max-width: 579px) {
-
-	}
-	@media screen and (max-width: 419px) {
-
-	}
-	&--white {
-		color: #f9f9f9;
-	}
-}
 .btn {
 	position: relative;
 	display: inline-block;
@@ -221,7 +204,7 @@ ul,li {
 		padding-top: 19px;
 		padding-bottom: 25px;
 	}
-	.kviz__btn {
+	.quiz__btn {
 		display: block;
 		color: #fff;
 	}
@@ -238,7 +221,7 @@ ul,li {
 		@media screen and (max-width: 749px){
 			padding: 0;
 		}
-		.kviz__btn {
+		.quiz__btn {
 			padding: 24px 30px 24px 7px;
 			@media screen and (max-width: 749px){
 				padding-top: 19px;
@@ -250,8 +233,10 @@ ul,li {
 
 @import "sections/header";
 @import "sections/1home";
+@import "sections/promo-home";
 
 @import "sections/modal";
 @import "sections/footer";
+@import "sections/quiz";
 
 @import "media"; // Always at the end

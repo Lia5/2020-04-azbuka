@@ -47,21 +47,21 @@ $(function() {
     // }
 
 
-    //kviz
-    if(jQuery('.kviz').length) {
+    //quiz
+    if(jQuery('.quiz').length) {
         $('.qa-next').click(function(e){
             e.preventDefault();
             if($(this).parent().prev().find('input:checked').length) {
                 $(this).parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
             } else {
-                $(this).parent().find('.kviz__error').text('Выберите вариант ответа!');
+                $(this).parent().find('.quiz__error').text('Выберите вариант ответа!');
             }
 
             
         });
         // for radiobuttons
         $('input[type="radio"]+.pick-item__label').click(function(e){
-            $(this).parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');           
+            // $(this).parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');           
         });
 
         $(".qa-prev").click(function(e) {
@@ -126,7 +126,7 @@ $(function() {
 
 
     //click on form submit button - AMO
-    $('.kviz__btn').on('click', function(){
+    $('.quiz__btn').on('click', function(){
         var btn = $(this);
         $($(this).closest('form')).each(function () {
             console.log($(this));
