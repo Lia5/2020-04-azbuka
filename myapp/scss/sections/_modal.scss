@@ -16,41 +16,22 @@
       max-width: 954px;
       position: relative;
       margin: auto;
-      @media only screen and (max-width: 620px) {
-          max-width: 100%;
-          width: 90%;
+      @media only screen and (max-width: 749px) {
+      //     max-width: 100%;
+          width: 95%;
+          padding-right: 1%;
       }   
   }
   &__body {
     position: relative;
     background: #fff;
-    padding: 68px 50px;
+    padding: 68px 50px 50px;
     border-radius: 7px;
 
-    @media only screen and (max-width: 805px) {
-
-    }
-    @media only screen and (max-width: 500px) {
-
+    @media only screen and (max-width: 749px) {
+      padding: 50px 39px 40px;
     }
   }
-  // &__header {
-  //   font-size: 35px;
-  //   line-height: 40px;
-  //   font-weight: 700;
-  //   text-align: center;
-  //   background: $accent;
-  //   color: #fff;
-  //   padding: 20px;
-  //   text-transform: uppercase;
-  //   @media screen and (max-width: 679px) {
-  //     font-size: 22px;
-  //     line-height: 1.2;
-  //   }
-  // }
-  // &__inner {
-  //   padding: 20px;
-  // }
   &__title {
     font-family: "AABebasNeue", Arial, Helvetica, sans-serif;
     font-size: 40px;
@@ -59,9 +40,11 @@
     text-align: center;
     color: #222532;
     letter-spacing: 3px;
-    @media only screen and (max-width: 620px) {
-      font-size: 18px;
-      line-height: 28px;
+    @media only screen and (max-width: 749px) {
+      font-size: 29px;
+      letter-spacing: 2px;
+      line-height: 30px;
+      margin-bottom: 10px;
     }
   }
   &__subtitle {
@@ -72,6 +55,12 @@
     color: #262a38;
     font-weight: 200;
     text-align: center;
+    @media only screen and (max-width: 749px) {
+      font-size: 14px;
+      line-height: 19px;
+      max-width: 180px;
+      margin-bottom: 25px;
+    }
     span {
       font-weight: 500;
     }
@@ -80,63 +69,76 @@
   .form-line {
     &+.form-line {
       margin-top: 17px;
+      @media only screen and (max-width: 749px) {
+        margin-top: 9px;
+      }
     }
   }
   .form-line-btn {
     margin-top: 24px;
-  }
-  p {
-    font-size: 14px;
-    line-height: 20px;
-    margin: 0 0 20px 0;
-    text-align: left;
-    color: #5f5f5f;
-    @media only screen and (max-width: 620px) {
-      font-size: 11px;
-      line-height: 16px;
-    }
-    @media only screen and (max-width: 368px) {
+    @media only screen and (max-width: 749px) {
+      margin-top: 16px;
     }
   }
-  &__list {
-    li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 10px;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 6px;
-        left: 0;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #ff874c;
-    }
-    }
-  }
+  // &__list {
+  //   li {
+  //     position: relative;
+  //     padding-left: 20px;
+  //     margin-bottom: 10px;
+  //     &:before {
+  //       content: "";
+  //       position: absolute;
+  //       top: 6px;
+  //       left: 0;
+  //       width: 8px;
+  //       height: 8px;
+  //       border-radius: 50%;
+  //       background: #ff874c;
+  //   }
+  //   }
+  // }
   &-open {
       display: block;
   }
-  // &__maintitle {
-  //   font-size: 35px;
-  //   line-height: 1.2;
-  //   text-align: center;
-  //   margin-bottom: 22px;
-  //   color: $accent;
-  //   font-weight: 700;
-  // }
-  // &__mainsubtitle {
-  //   font-size: 18px;
-  //   line-height: 22px;
-  //   margin-bottom: 50px;
-  //   text-align: center;
-  // }
+  .agree {
+    margin-top: 31px;
+    margin-left: -14px;
+    margin-right: -14px;
+    text-align: left;
+    line-height: 1.5;
+    @media only screen and (max-width: 749px) {
+      margin-top: 17px;
+      margin-left: -17px;
+      padding-right: 0;
+      font-size: 9px;
+      line-height: 12px;
+    }
+    img {
+      margin-right: 17px;
+      @media only screen and (max-width: 749px) {
+        width: 19px;
+        height: 21px;
+        margin-top: 8px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .btn {
+    @media only screen and (max-width: 749px) {
+      font-size: 15px;
+      
+    }
+    .kviz__btn {
+      @media only screen and (max-width: 749px) {
+        padding: 19px 19px;
+      }
+    }
+  }
 }
 .close {
   position: absolute;
   right: -20px;
-  top: 0;
+  top: 10px;
   width: 46px;
   height: 46px;
   cursor: pointer;
@@ -146,27 +148,24 @@
   z-index: 1;
   background: #f0f0f0;
   border-radius: 50%;
+  @media only screen and (max-width: 749px) {
+
+    right: -11px;
+    width: 33px;
+    height: 33px;
+  }
   svg {
     fill: #121212;
     width: 15px;
     height: 15px;
+    @media only screen and (max-width: 749px) {
+      width: 10px;
+      height: 10px;
+    }
   }
   &:hover {
       opacity: .7;
   }
-  @media only screen and (max-width: 1045px) {
-    top: 36px;
-    right: 17px;
-    border-color: #000;
-    svg {
-      fill: $accent;
-    }
-  }
-  @media only screen and (max-width: 620px) {
-    top: 26px;
-    right: 6px;
-  }
-
 }
   
 .animated {
@@ -278,6 +277,11 @@
     width: 100%;
     max-width: 420px;
     text-align: center;
+    @media only screen and (max-width: 749px) {
+      //     max-width: 100%;
+          width: 95%;
+          padding-right: 1%;
+      }   
   }
   // .form-line {
   //   display: block;

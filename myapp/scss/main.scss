@@ -40,6 +40,11 @@ body {
 		&:required:valid {
 			border-color: green;
 		}
+		@media only screen and (max-width: 749px) {
+			font-size: 11px;
+			line-height: 15px;
+			padding: 19px 17px 17px;
+		}
 	}
 	input.empty_field {
 		border: 1px solid red;
