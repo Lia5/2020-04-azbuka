@@ -26,6 +26,12 @@ header {
         screen and (max-width: 1080px) {
             margin-top: 7px;
         }
+        @media screen and (max-width: 749px){
+            order: 1;
+            margin-top: 2px;
+            text-align: left;
+            letter-spacing: 1px;
+        }
     }
     &__phone {
         margin-top: 12px;
@@ -35,6 +41,15 @@ header {
         }
         span {
             font-size: 24px;
+        }
+    }
+    &__group {
+        @media screen and (max-width: 749px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            padding: 4px 10px 0;
         }
     }
 }
@@ -65,6 +80,10 @@ screen and (max-width: 1080px) {
     transition: 0.3s;
     font-size: 16px;
     margin-top: 12px;
+    @media screen and (max-width: 749px){
+        padding: 0 11px;
+        justify-content: center;
+    }
     &__item {
         display: flex;
         align-items: center;
@@ -74,6 +93,9 @@ screen and (max-width: 1080px) {
         screen and (max-width: 1080px) {
             padding: 5px 7px;
         }
+        @media screen and (max-width: 749px){
+            padding: 5px 11px;
+        }
         &+.social__item {
             margin-left: 10px;
         }
@@ -82,19 +104,22 @@ screen and (max-width: 1080px) {
         margin-right: 7px;
     }
     &--viber {
-        background: #7d3daf;
+        background: #222632;
         transition: 0.3s;
         img {
             width: 20px;
             height: 20px;
         }
         &:hover {
-            background: #222632;
+            background: #7d3daf;
         }
     }
     &--telegram {
         background: #222632;
         transition: 0.3s;
+        @media screen and (max-width: 749px){
+            padding: 5px 7px;
+        }
         img {
             width: 17px;
             height: 17px;
@@ -117,8 +142,7 @@ screen and (max-width: 1080px) {
 
 .mob {
     display: none;
-    @media only screen and (max-width: 1350px) and (orientation: portrait),
-screen and (max-width: 1080px) {
+    @media only screen and (max-width:  749px){
         display: flex;
         justify-content: center;
         align-items: center;
@@ -154,6 +178,10 @@ screen and (max-width: 1080px) {
         display: flex;
         align-items: center;
         height: 100%;
+        @media screen and (max-width: 749px){
+            margin-bottom: 20px;
+            justify-content: center;
+        }
         &__text {
             @media screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {

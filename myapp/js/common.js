@@ -78,51 +78,31 @@ $(function() {
         $(".modal-open").click(function (e){
           e.preventDefault();
           var btn = $(this);
-            $($(this).parent().parent()).each(function () {
-                var form = $(this);
-                form.find('.rfield').addClass('empty_field');
-
-                   // Функция проверки полей формы
-
-                    form.find('.rfield').each(function(){
-                    if($(this).val() != ''){
-                        // Если поле не пустое удаляем класс-указание
-                    $(this).removeClass('empty_field');
-
-                    if (!form.find('.empty_field').length) {
-                        var numModal = btn.attr('href');
-                        var modal =  $(numModal);
-                        modalWrap.removeClass('fadeOutUp');
-                        modalWrap.addClass('fadeInDown');
-                        modal.removeClass('disabled');
-                        modal.addClass('flex');
-                        $('body').addClass('body-modal-open');
-                        // body.addClass('body-modal');
-                        }
-                    } else {
-                        // Если поле пустое добавляем класс-указание
-                    $(this).addClass('empty_field');
-                    }
-                    });
-
-                
-
-
-            })
+          var numModal = btn.attr('href');
+          var modal =  $(numModal);
+          modalWrap.removeClass('fadeOutUp');
+          modalWrap.addClass('fadeInDown');
+          modal.removeClass('disabled');
+          modal.addClass('flex');
+          $('body').addClass('body-modal-open');
+          // body.addClass('body-modal');
+          
             
           
         });
       
         $('.modal-close').click(function (){
-          modalWrap.removeClass('fadeInDown');
-          modalWrap.addClass('fadeOutUp');
-          setTimeout(function() {
-              $('.modal').addClass('disabled');
-            }, 700);
-          setTimeout(function() {
-              $('.modal').removeClass('flex');
-              $('body').removeClass('body-modal-open');
-            }, 800);  
+            $('.main-menu').removeClass('active');
+            $('.menu-toggle').removeClass('active');
+            modalWrap.removeClass('fadeInDown');
+            modalWrap.addClass('fadeOutUp');
+            setTimeout(function() {
+                $('.modal').addClass('disabled');
+                }, 700);
+            setTimeout(function() {
+                $('.modal').removeClass('flex');
+                $('body').removeClass('body-modal-open');
+                }, 800);  
       
         });
         $('.modal').mouseup(function (e){ // событие клика по веб-документу
@@ -132,16 +112,18 @@ $(function() {
       
           } else if (!div.is(e.target) // если клик был не по нашему блоку
           && div.has(e.target).length === 0) { // и не по его дочерним элементам
-              var modalWrap = $('.modal__wrap');
-              modalWrap.removeClass('fadeInDown');
-              modalWrap.addClass('fadeOutUp');
-              setTimeout(function() {
-                  $('.modal').addClass('disabled');
-              }, 700);
-              setTimeout(function() {
-                  $('.modal').removeClass('flex');
-                  $('body').removeClass('body-modal-open');
-              }, 800); 
+                $('.main-menu').removeClass('active');
+                $('.menu-toggle').removeClass('active');
+                var modalWrap = $('.modal__wrap');
+                modalWrap.removeClass('fadeInDown');
+                modalWrap.addClass('fadeOutUp');
+                setTimeout(function() {
+                    $('.modal').addClass('disabled');
+                }, 700);
+                setTimeout(function() {
+                    $('.modal').removeClass('flex');
+                    $('body').removeClass('body-modal-open');
+                }, 800); 
             
           }
         });
