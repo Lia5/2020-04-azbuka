@@ -8,10 +8,11 @@
   left: 0;
   position: fixed;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   // align-items: center;
   &__wrap {
+    width: 100%;
     padding-top: 20px;
       max-width: 954px;
       position: relative;
@@ -158,13 +159,17 @@
     fill: #121212;
     width: 15px;
     height: 15px;
+    transition: 0.3s;
     @media only screen and (max-width: 749px) {
       width: 10px;
       height: 10px;
     }
   }
   &:hover {
-      opacity: .7;
+      svg {
+        fill: #000;
+        transform: rotate(90deg);
+      }
   }
 }
   
@@ -274,7 +279,6 @@
 
 #modalSupport {
   .modal__wrap {
-    width: 100%;
     max-width: 420px;
     text-align: center;
     @media only screen and (max-width: 749px) {
@@ -283,27 +287,58 @@
           padding-right: 1%;
       }   
   }
-  // .form-line {
-  //   display: block;
-  //   label {
-  //     display: block;
-  //     margin-bottom: 22px;
-  //     &+label {
-  //       margin-left: 0;
-  //     }
-  //   }
-  // }
-  // input {
-
-  // }
-  // .form-line-wrap {
-  //   justify-content: center;
-  // }
-  // .modal__body {
-  //   padding: 75px 20px;
-  // }
-
-
+}
+#modalFinish {
+  .modal{
+    &__wrap {
+      max-width: 420px;
+      text-align: center;
+      @media only screen and (max-width: 749px) {
+        //     max-width: 100%;
+          width: 95%;
+          padding-right: 1%;
+      }
+    }
+    &__body {
+      
+      padding: 65px 40px 64px;
+      background: #000 url('../img/bg-thank.jpg') no-repeat;
+      background-size: cover;
+      background-position: left bottom;
+      @media only screen and (max-width: 749px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 73px;
+      }
+    }
+    &__title {
+      color: #ff9232;
+      @media only screen and (max-width: 749px) {
+        font-size: 45px;
+        line-height: 45px;
+        margin-bottom: 18px;
+      }
+    }
+    &__subtitle {
+      max-width: 265px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 28px;
+      @media only screen and (max-width: 749px) {
+        line-height: 25px;
+      }
+    }
+  }
+  .close {
+    top: -9px;
+    right: -36px;
+    width: 34px;
+    height: 34px;
+    @media only screen and (max-width: 749px) {
+      top: 10px;
+      right: -6px;
+    }
+  }
 }
 #policy {
   .modal__mainsubtitle {

@@ -73,7 +73,6 @@ $(function() {
     //popup
     if(jQuery('.modal__wrap').length) {
         let modalWrap = $('.modal__wrap');
-        
         //popup
         $(".modal-open").click(function (e){
           e.preventDefault();
@@ -86,14 +85,13 @@ $(function() {
           modal.addClass('flex');
           $('body').addClass('body-modal-open');
           // body.addClass('body-modal');
-          
-            
-          
+
         });
-      
         $('.modal-close').click(function (){
-            $('.main-menu').removeClass('active');
-            $('.menu-toggle').removeClass('active');
+            if ( window.innerWidth < 750 || window.screen.width < 750) {
+                $('.main-menu').removeClass('active');
+                $('.menu-toggle').removeClass('active');
+            }
             modalWrap.removeClass('fadeInDown');
             modalWrap.addClass('fadeOutUp');
             setTimeout(function() {
@@ -103,13 +101,11 @@ $(function() {
                 $('.modal').removeClass('flex');
                 $('body').removeClass('body-modal-open');
                 }, 800);  
-      
         });
         $('.modal').mouseup(function (e){ // событие клика по веб-документу
           var div = $(".modal__body"); // тут указываем ID элемента
           var close = $('.modal-close');
           if (close.is(e.target)) {
-      
           } else if (!div.is(e.target) // если клик был не по нашему блоку
           && div.has(e.target).length === 0) { // и не по его дочерним элементам
                 $('.main-menu').removeClass('active');
@@ -123,8 +119,7 @@ $(function() {
                 setTimeout(function() {
                     $('.modal').removeClass('flex');
                     $('body').removeClass('body-modal-open');
-                }, 800); 
-            
+                }, 800);
           }
         });
     }
@@ -132,7 +127,9 @@ $(function() {
 
     //click on form submit button - AMO
     $('.kviz__btn').on('click', function(){
-        $($(this).parent().parent()).each(function () {
+        var btn = $(this);
+        $($(this).closest('form')).each(function () {
+            console.log($(this));
             var form = $(this);
             form.find('.rfield').addClass('empty_field');
 
@@ -145,10 +142,10 @@ $(function() {
 
                 if (!form.find('.empty_field').length) {
                 console.log('form');
-                form = $('.quizForm');
+                form2 = $('.quizForm');
                 jQuery.ajax({
                     method: "POST",
-                    data: form.serialize(),
+                    data: form2.serialize(),
                     // url: quizAjax.url,
                     url: '../sendamo.php',
                     dataType: "json",
@@ -159,7 +156,18 @@ $(function() {
                         // }
                     }
                 });
-                fbq('track', 'Lead');
+                /*window thank*/
+                var numModal = btn.attr('href');
+                var modal =  $(numModal);
+                var modalWrap = $('.modal__wrap');
+                modalWrap.removeClass('fadeOutUp');
+                modalWrap.addClass('fadeInDown');
+                $('.modal').addClass('disabled');
+                modal.removeClass('disabled');
+                modal.addClass('flex');
+                $('body').addClass('body-modal-open');
+                /*end window thank*/
+                // fbq('track', 'Lead');
                 }
 
                 } else {}
