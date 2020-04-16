@@ -161,82 +161,48 @@ $(function() {
         var form = $(this);
         console.log(form);
         console.log(form.find('.btn-finish').attr('data-modal'));
-		$.ajax({
-			type: "POST",
-			url: "../mail.php", //Change
-			data: form.serialize()
-		}).done(function() {
-            var numModal = form.find('.btn-finish').attr('data-modal');
-            var modal =  $(numModal);
-            var modalWrap = $('.modal__wrap');
-            modalWrap.removeClass('fadeOutUp');
-            modalWrap.addClass('fadeInDown');
-            $('.modal').addClass('disabled');
-            modal.removeClass('disabled');
-            modal.addClass('flex');
-            $('body').addClass('body-modal-open');
-			setTimeout(function() {
-				// Done Functions
-				form.trigger("reset");
-            }, 1000);
-		});
+        form.find('.rfield').addClass('empty_field');
+
+        // Функция проверки полей формы
+
+        form.find('.rfield').each(function(){
+            
+        console.log($(this));
+            if($(this).val() != ''){
+                // Если поле не пустое удаляем класс-указание
+                $(this).removeClass('empty_field');
+                if (!form.find('.empty_field').length) {
+                    console.log($(this));
+                    $.ajax({
+                        type: "POST",
+                        url: "../mail.php", //Change
+                        data: form.serialize()
+                    }).done(function() {
+                        var numModal = form.find('.btn-finish').attr('data-modal');
+                        var modal =  $(numModal);
+                        var modalWrap = $('.modal__wrap');
+                        modalWrap.removeClass('fadeOutUp');
+                        modalWrap.addClass('fadeInDown');
+                        $('.modal').addClass('disabled');
+                        modal.removeClass('disabled');
+                        modal.addClass('flex');
+                        $('body').addClass('body-modal-open');
+                        setTimeout(function() {
+                            // Done Functions
+                            form.trigger("reset");
+                        }, 1000);
+                    });
+                }
+            } else {}
+        });
 		return false;
     });
 
-    //click on form submit button - AMO
-    $('.quiz__btn').on('click', function(){
-        var btn = $(this);
-        $($(this).closest('form')).each(function () {
-            console.log($(this));
-            var form = $(this);
-            form.find('.rfield').addClass('empty_field');
-
-                // Функция проверки полей формы
-
-                form.find('.rfield').each(function(){
-                if($(this).val() != ''){
-                    // Если поле не пустое удаляем класс-указание
-                $(this).removeClass('empty_field');
-
-                if (!form.find('.empty_field').length) {
-                console.log('form');
-                form2 = $('.quizForm');
-                jQuery.ajax({
-                    method: "POST",
-                    data: form2.serialize(),
-                    // url: quizAjax.url,
-                    url: '../mail.php',
-                    dataType: "json",
-                    success: function (json) {
-                        // if (json.success) {
-                            // jQuery(".wizard-section").fadeOut(100);
-                            // window.location.href = "/quiz-thanks/";
-                        // }
-                    }
-                });
-                /*window thank*/
-                var numModal = btn.attr('href');
-                var modal =  $(numModal);
-                var modalWrap = $('.modal__wrap');
-                modalWrap.removeClass('fadeOutUp');
-                modalWrap.addClass('fadeInDown');
-                $('.modal').addClass('disabled');
-                modal.removeClass('disabled');
-                modal.addClass('flex');
-                $('body').addClass('body-modal-open');
-                /*end window thank*/
-                // fbq('track', 'Lead');
-                }
-
-                } else {}
-                });
-        })
-    });
     if(jQuery('.time_of_day_hello').length) {
-            var night = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">й</span> <span class="animated">н</span><span class="animated">о</span><span class="animated">ч</span><span class="animated">и,</span>';
-            var morning = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">е</span> <span class="animated">у</span><span class="animated">т</span><span class="animated">р</span><span class="animated">о,</span>';
-            var day = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">д</span><span class="animated">е</span><span class="animated">н</span><span class="animated">ь,</span>';
-            var evening = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">в</span><span class="animated">е</span><span class="animated">ч</span><span class="animated">е</span><span class="animated">р,</span>';
+        var night = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">й</span> <span class="animated">н</span><span class="animated">о</span><span class="animated">ч</span><span class="animated">и,</span>';
+        var morning = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">е</span> <span class="animated">у</span><span class="animated">т</span><span class="animated">р</span><span class="animated">о,</span>';
+        var day = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">д</span><span class="animated">е</span><span class="animated">н</span><span class="animated">ь,</span>';
+        var evening = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">в</span><span class="animated">е</span><span class="animated">ч</span><span class="animated">е</span><span class="animated">р,</span>';
             
         var d = new Date()
         var time = d.getHours()
