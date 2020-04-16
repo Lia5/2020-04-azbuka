@@ -109,17 +109,17 @@
             screen and (max-width: 1080px) {
                 width: 41%;
             }
-            &:nth-child(1) {
-                animation-delay:1.6s;
-            }
-            &:nth-child(2) {
-                animation-delay:1.9s;
-            }
-            &:nth-child(3) {
-                animation-delay:2.2s;
-            }
+            // &:nth-child(1) {
+            //     animation-delay:1.6s;
+            // }
+            // &:nth-child(2) {
+            //     animation-delay:1.9s;
+            // }
+            // &:nth-child(3) {
+            //     animation-delay:2.2s;
+            // }
             &:nth-child(4) {
-                animation-delay:2.5s;
+                // animation-delay:2.5s;
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
                     width: 50%;
@@ -222,3 +222,20 @@
         opacity: 1;
     }
 }
+
+.letters {
+    opacity: 0;
+    &.active {
+        opacity: 1;
+    }
+}
+
+    .animated {
+        opacity: 0;
+        &.fadeIn {
+            opacity: 1;
+        }
+        &.fadeInUp {
+            opacity: 1;
+        }
+    }

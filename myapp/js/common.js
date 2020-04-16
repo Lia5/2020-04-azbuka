@@ -46,22 +46,48 @@ $(function() {
 
     // }
     //animation
-    if(jQuery('.move-btn').length) {
-        $('.move-btn').addClass('animated').addClass('fadeInUp'); 
-    }
+    // if(jQuery('.move-btn').length) {
+    //     $('.move-btn').addClass('animated').addClass('fadeInUp'); 
+    // }
     //animatio-text
     $.fn.animate_Text = function() {
+        this.addClass('active');
         var string = this.text();
+        console.log(string);
         return this.each(function(){
             var $this = $(this);
-            $this.html(string.replace(/./g, '<span class="new">$&</span>'));
-            $this.find('span.new').each(function(i, el){
-            setTimeout(function(){ $(el).addClass('div_opacity'); }, 40 * i);
-            });
+            $this.html(string.replace(/./g, '<span class="animated">$&</span>'));
+            // $this.find('span.new').each(function(i, el){
+            // setTimeout(function(){ $(el).addClass('fadeIn'); }, 40 * i);
+            // });
         });
     };
-    $('.print').show();
-    $('.print').animate_Text();
+    // $('.print').show();
+    var letters = $('.letters');
+    console.log(letters);
+    for (var j=0; j<=letters.length; j++) {
+        console.log(letters);
+        $(letters[j]).animate_Text();
+    }
+
+
+    setTimeout(function(){  
+            
+        var introLetter = $(".promo-home__title").find('.animated');
+
+        introLetter.each(function(i,t) {
+            var $this = $(t);				
+            setTimeout(function(){ $this.addClass('fadeIn'); },i*20);
+        });
+        
+        var IntroLinks = $(".promo-home__links").find('.animated');
+
+        IntroLinks.each(function(i,t) {
+            var $this = $(t);				
+            setTimeout(function(){ $this.addClass('fadeInUp'); },i*200);
+        });
+        
+    },500);
     //quiz
     if(jQuery('.quiz').length) {
         $('.qa-next').click(function(e){
@@ -189,6 +215,24 @@ $(function() {
                 });
         })
     });
+    if(jQuery('.time_of_day_hello').length) {
+            var night = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">й</span> <span class="animated">н</span><span class="animated">о</span><span class="animated">ч</span><span class="animated">и,</span>';
+            var morning = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">е</span> <span class="animated">у</span><span class="animated">т</span><span class="animated">р</span><span class="animated">о,</span>';
+            var day = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">д</span><span class="animated">е</span><span class="animated">н</span><span class="animated">ь,</span>';
+            var evening = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">в</span><span class="animated">е</span><span class="animated">ч</span><span class="animated">е</span><span class="animated">р,</span>';
+            
+        var d = new Date()
+        var time = d.getHours()
+        if (time >= 5 && time < 12){
+            $('.time_of_day_hello').html(morning);
+        } else if (time >= 12 && time < 18) {
+            $('.time_of_day_hello').html(day);
+        } else if (time >= 18 && time < 23) {
+            $('.time_of_day_hello').html(evening);
+        } else {
+            $('.time_of_day_hello').html(night);
+        }
+    }
 
 
 });
