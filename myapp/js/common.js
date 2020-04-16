@@ -45,8 +45,23 @@ $(function() {
     // if (window.innerHeight < 821 || window.screen.height < 821) {
 
     // }
-
-
+    //animation
+    if(jQuery('.move-btn').length) {
+        $('.move-btn').addClass('animated').addClass('fadeInUp'); 
+    }
+    //animatio-text
+    $.fn.animate_Text = function() {
+        var string = this.text();
+        return this.each(function(){
+            var $this = $(this);
+            $this.html(string.replace(/./g, '<span class="new">$&</span>'));
+            $this.find('span.new').each(function(i, el){
+            setTimeout(function(){ $(el).addClass('div_opacity'); }, 40 * i);
+            });
+        });
+    };
+    $('.print').show();
+    $('.print').animate_Text();
     //quiz
     if(jQuery('.quiz').length) {
         $('.qa-next').click(function(e){
