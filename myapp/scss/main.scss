@@ -205,10 +205,7 @@ ul,li {
 		padding-top: 19px;
 		padding-bottom: 25px;
 	}
-	.quiz__btn {
-		display: block;
-		color: #fff;
-	}
+
 	&:hover {
 		box-shadow: 0px 7px 18px -6px rgba(0,121,238,1);
 	}
@@ -223,7 +220,12 @@ ul,li {
 			padding: 0;
 		}
 		.quiz__btn {
+			display: block;
+			color: #fff;
 			padding: 24px 30px 24px 7px;
+			background: transparent;
+			font-size: 15px;
+			font-weight: 700;
 			@media screen and (max-width: 749px){
 				padding-top: 19px;
 				padding-bottom: 25px;

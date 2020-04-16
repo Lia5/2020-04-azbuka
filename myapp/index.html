@@ -113,7 +113,12 @@
           <div class="modal__body-pic"></div>
           <div class="modal__title">Оставьте заявку</div>
           <div class="modal__subtitle">и наш менеджер свяжется <span>с вами через 3 минуты </span></div>
-          <form action="#">
+          <form>
+            <!-- Hidden Required Fields-->
+            <input type="hidden" name="project_name" value="Azbuka digital">
+            <input type="hidden" name="admin_email" value="">
+            <input type="hidden" name="form_subject" value="Оставить заявку">
+            <!-- END Hidden Required Fields-->
             <input type="hidden" name="utm_source" class="utm_source hidden">
             <input type="hidden" name="utm_medium" class="utm_medium hidden">
             <input type="hidden" name="utm_campaign" class="utm_campaign hidden">
@@ -132,7 +137,9 @@
                 </label>
               </div>
               <div class="form-line-btn">
-                <button type="submit" class="btn btn-finish"><a href="#modalFinish" class="quiz__btn">Оставить заявку</a></button>
+                <div data-modal="#modalFinish" class="btn btn-finish">
+                  <input type="submit" value="Оставить заявку" class="quiz__btn">
+                </div>
               </div>
             </div>
             <div class="agree"><img src="img/agree.png" alt="agree">

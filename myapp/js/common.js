@@ -41,36 +41,27 @@ $(function() {
             $(".phone-mask").mask("+38(999) 999-9999");
         });
     }
-    //time
-    // if (window.innerHeight < 821 || window.screen.height < 821) {
 
-    // }
-    //animation
-    // if(jQuery('.move-btn').length) {
-    //     $('.move-btn').addClass('animated').addClass('fadeInUp'); 
-    // }
     //animatio-text
-    $.fn.animate_Text = function() {
-        this.addClass('active');
-        var string = this.text();
-        console.log(string);
-        return this.each(function(){
-            var $this = $(this);
-            $this.html(string.replace(/./g, '<span class="animated">$&</span>'));
-            // $this.find('span.new').each(function(i, el){
-            // setTimeout(function(){ $(el).addClass('fadeIn'); }, 40 * i);
-            // });
-        });
-    };
-    // $('.print').show();
-    var letters = $('.letters');
-    console.log(letters);
-    for (var j=0; j<=letters.length; j++) {
-        console.log(letters);
-        $(letters[j]).animate_Text();
+    if(jQuery('.letters').length) {
+        $.fn.animate_Text = function() {
+            this.addClass('active');
+            var string = this.text();
+            return this.each(function(){
+                var $this = $(this);
+                $this.html(string.replace(/./g, '<span class="animated">$&</span>'));
+                // $this.find('span.new').each(function(i, el){
+                // setTimeout(function(){ $(el).addClass('fadeIn'); }, 40 * i);
+                // });
+            });
+        };
+        var letters = $('.letters');
+        for (var j=0; j<=letters.length; j++) {
+            $(letters[j]).animate_Text();
+        }
     }
 
-
+    //animation
     setTimeout(function(){  
             
         var introLetter = $(".promo-home__title").find('.animated');
@@ -88,6 +79,7 @@ $(function() {
         });
         
     },500);
+
     //quiz
     if(jQuery('.quiz').length) {
         $('.qa-next').click(function(e){
@@ -165,6 +157,31 @@ $(function() {
         });
     }
 
+    $('form').submit(function() { 
+        var form = $(this);
+        console.log(form);
+        console.log(form.find('.btn-finish').attr('data-modal'));
+		$.ajax({
+			type: "POST",
+			url: "../mail.php", //Change
+			data: form.serialize()
+		}).done(function() {
+            var numModal = form.find('.btn-finish').attr('data-modal');
+            var modal =  $(numModal);
+            var modalWrap = $('.modal__wrap');
+            modalWrap.removeClass('fadeOutUp');
+            modalWrap.addClass('fadeInDown');
+            $('.modal').addClass('disabled');
+            modal.removeClass('disabled');
+            modal.addClass('flex');
+            $('body').addClass('body-modal-open');
+			setTimeout(function() {
+				// Done Functions
+				form.trigger("reset");
+            }, 1000);
+		});
+		return false;
+    });
 
     //click on form submit button - AMO
     $('.quiz__btn').on('click', function(){
@@ -188,12 +205,12 @@ $(function() {
                     method: "POST",
                     data: form2.serialize(),
                     // url: quizAjax.url,
-                    url: '../sendamo.php',
+                    url: '../mail.php',
                     dataType: "json",
                     success: function (json) {
                         // if (json.success) {
                             // jQuery(".wizard-section").fadeOut(100);
-                            window.location.href = "/quiz-thanks/";
+                            // window.location.href = "/quiz-thanks/";
                         // }
                     }
                 });
