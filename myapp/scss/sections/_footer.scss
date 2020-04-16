@@ -33,6 +33,9 @@
         padding-right: 23px;
         color: #7c7d7f;
         letter-spacing: 1px;
+        span {
+            color: #7c7d7f;
+        }
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             letter-spacing: 0.5px;
