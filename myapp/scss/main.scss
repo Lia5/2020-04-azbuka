@@ -50,13 +50,13 @@ body {
 	input.empty_field {
 		border: 1px solid red;
 	  }
-	label {
-		img {
-			width: 22px;
-			margin-right: 10px;
-		}
+	// label {
+	// 	img {
+	// 		width: 22px;
+	// 		margin-right: 10px;
+	// 	}
 
-	}
+	// }
 }
 .body-modal-open {
 	height: 100vh;
@@ -109,6 +109,9 @@ b, strong {
 		padding: 0 14px;
 		// max-width: 320px;
 
+	}
+	@media screen and (max-height: 850px) and  (min-width: 1081px) {
+		max-width: 1200px;
 	}
 }
 a {

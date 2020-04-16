@@ -156,7 +156,49 @@ $(function() {
           }
         });
     }
+   // UTM
+   function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
 
+    $('form').find('input.utm_source').each(function() {
+        var a = getQueryVariable('utm_source');
+        if(a){
+            $(this).val(a);
+        }
+    }); 
+    $('form').find('input.utm_medium').each(function() {
+        var a = getQueryVariable('utm_medium');
+        if(a){
+            $(this).val(a);
+        }
+    });
+    $('form').find('input.utm_campaign').each(function() {
+        var a = getQueryVariable('utm_campaign');
+        if(a){
+            $(this).val(a);
+        }
+    });
+    $('form').find('input.utm_term').each(function() {
+        var a = getQueryVariable('utm_term');
+        if(a){
+            $(this).val(a);
+        }
+    });
+    $('form').find('input.utm_content').each(function() {
+        var a = getQueryVariable('utm_content');
+        if(a){
+            $(this).val(a);
+        }
+    });
+
+    // form
     $('form').submit(function() { 
         var form = $(this);
         console.log(form);
@@ -199,10 +241,10 @@ $(function() {
     });
 
     if(jQuery('.time_of_day_hello').length) {
-        var night = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">й</span> <span class="animated">н</span><span class="animated">о</span><span class="animated">ч</span><span class="animated">и,</span>';
-        var morning = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">е</span> <span class="animated">у</span><span class="animated">т</span><span class="animated">р</span><span class="animated">о,</span>';
-        var day = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">д</span><span class="animated">е</span><span class="animated">н</span><span class="animated">ь,</span>';
-        var evening = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">в</span><span class="animated">е</span><span class="animated">ч</span><span class="animated">е</span><span class="animated">р,</span>';
+        var night = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">й</span> <span class="animated">н</span><span class="animated">о</span><span class="animated">ч</span><span class="animated">и, </span>';
+        var morning = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">е</span> <span class="animated">у</span><span class="animated">т</span><span class="animated">р</span><span class="animated">о, </span>';
+        var day = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">д</span><span class="animated">е</span><span class="animated">н</span><span class="animated">ь, </span>';
+        var evening = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">в</span><span class="animated">е</span><span class="animated">ч</span><span class="animated">е</span><span class="animated">р, </span>';
             
         var d = new Date()
         var time = d.getHours()

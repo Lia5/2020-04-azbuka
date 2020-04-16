@@ -11,6 +11,9 @@
         text-align: center;
         padding-bottom: 29px;
     }
+    @media screen and (max-height: 850px) and  (min-width: 1081px) {
+        font-size: 11px;
+    }
     .wrap {
         display: flex;
         align-items: center;

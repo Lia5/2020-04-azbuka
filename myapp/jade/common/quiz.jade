@@ -1,4 +1,4 @@
-#modalQuiz.modal.disabled
+#modalQuiz.modal.disabled1
     .modal__wrap.animated.fadeInDown    
         .close.modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -17,20 +17,54 @@
                         | руб.
             form(class="quizForm")
                 .step-slide.step-slide--active.step-slide--first
-                    .step-slide__title Где именно вы хотите <br>установить станцию?
+                    .step-slide__title Для начала, выберите <br> 2 подарка из 4:
                     .quiz__ans.question__ans--radio
-                        label.pick-item(for="step1-1")
-                            input#step1-1.pick-item__input(type='radio', name='question1', value='На земле (наземной конструкции)')
-                            .pick-item__label На земле (наземной конструкции)
-                        label.pick-item(for="step1-2")
-                            input#step1-2.pick-item__input(type='radio', name='question1', value='На крыше (скатной, плоской)')
-                            .pick-item__label На крыше (скатной, плоской) 
-                        label.pick-item(for="step1-3")
-                            input#step1-3.pick-item__input(type='radio', name='question1', value='Комбинированно')
-                            .pick-item__label Комбинированно
+                        label.pick-item
+                            .label-img
+                                img(src="img/qa1-1.png", alt="quiz")
+                            input.pick-item__input(type='radio', name='question1', value='Скидка 500 рублей на рекламу в соцсетях')
+                            .pick-item__label 
+                                span Скидка 
+                                br
+                                span 500 рублей 
+                                br 
+                                | на рекламу 
+                                br
+                                | в соцсетях
+                        label.pick-item
+                            .label-img
+                                img(src="img/qa1-2.png", alt="quiz")
+                            input.pick-item__input(type='radio', name='question1', value='Аудит спросана ваш продукт в интернете')
+                            .pick-item__label 
+                                span Аудит спроса
+                                br
+                                | на ваш продукт
+                                br
+                                | в интернете
+                        label.pick-item
+                            .label-img
+                                img(src="img/qa1-3.png", alt="quiz")
+                            input.pick-item__input(type='radio', name='question1', value='Чек-лист для настройки Яндекс Директ')
+                            .pick-item__label 
+                                span Чек-лист 
+                                br
+                                | для настройки
+                                br
+                                | Яндекс Директ
+                        label.pick-item
+                            .label-img
+                                img(src="img/qa1-4.png", alt="quiz")
+                            input.pick-item__input(type='radio', name='question1', value='Чек-лист для оформления Вконтакте')
+                            .pick-item__label 
+                                span Чек-лист
+                                br
+                                | для оформления
+                                br
+                                | Вконтакте
                     .step-slide__bottom
                         .quiz-progress
-                            .quiz-progress__title Расчет пройден на 20%
+                            .quiz-progress__title Готово:
+                                span 0%
                             .quiz-progress__steps
                                 .quiz-progress__item.active
                                 .quiz-progress__item

@@ -29,8 +29,8 @@
                       <div class="support__text">Поддержка клиентов</div></a></li>
                   <li>
                     <div class="social-text">Мгновенная связь через: </div>
-                    <div class="social"><a href="#" class="social__item social--viber"><img src="img/icons/viber.svg" alt="viber">
-                        <div class="text">Viber</div></a><a href="#" class="social__item social--telegram"><img src="img/icons/telegram.svg" alt="telegram">
+                    <div class="social"><a href="viber://add?number=795312345674954123884" class="social__item social--viber"><img src="img/icons/viber.svg" alt="viber">
+                        <div class="text">Viber</div></a><a href="tg://resolve?domain=azbukadigital" class="social__item social--telegram"><img src="img/icons/telegram.svg" alt="telegram">
                         <div class="text">Telegram</div></a></div>
                   </li>
                   <li class="header__group">
@@ -116,7 +116,7 @@
           <form>
             <!-- Hidden Required Fields-->
             <input type="hidden" name="project_name" value="Azbuka digital">
-            <input type="hidden" name="admin_email" value="">
+            <input type="hidden" name="admin_email" value="liaforweb@gmail.com">
             <input type="hidden" name="form_subject" value="Оставить заявку">
             <!-- END Hidden Required Fields-->
             <input type="hidden" name="utm_source" class="utm_source hidden">
@@ -149,7 +149,7 @@
         </div>
       </div>
     </div>
-    <div id="modalQuiz" class="modal disabled">
+    <div id="modalQuiz" class="modal disabled1">
       <div class="modal__wrap animated fadeInDown">   
         <div class="close modal-close">
           <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="t-popup__close-icon">
@@ -169,24 +169,32 @@
           </div>
           <form class="quizForm">
             <div class="step-slide step-slide--active step-slide--first">
-              <div class="step-slide__title">Где именно вы хотите <br>установить станцию?</div>
+              <div class="step-slide__title">Для начала, выберите <br> 2 подарка из 4:</div>
               <div class="quiz__ans question__ans--radio">
-                <label for="step1-1" class="pick-item">
-                  <input id="step1-1" type="radio" name="question1" value="На земле (наземной конструкции)" class="pick-item__input">
-                  <div class="pick-item__label">На земле (наземной конструкции)</div>
+                <label class="pick-item">
+                  <div class="label-img"><img src="img/qa1-1.png" alt="quiz"></div>
+                  <input type="radio" name="question1" value="Скидка 500 рублей на рекламу в соцсетях" class="pick-item__input">
+                  <div class="pick-item__label"> <span>Скидка </span><br><span>500 рублей </span><br>на рекламу <br>в соцсетях</div>
                 </label>
-                <label for="step1-2" class="pick-item">
-                  <input id="step1-2" type="radio" name="question1" value="На крыше (скатной, плоской)" class="pick-item__input">
-                  <div class="pick-item__label">На крыше (скатной, плоской) </div>
+                <label class="pick-item">
+                  <div class="label-img"><img src="img/qa1-2.png" alt="quiz"></div>
+                  <input type="radio" name="question1" value="Аудит спросана ваш продукт в интернете" class="pick-item__input">
+                  <div class="pick-item__label"> <span>Аудит спроса</span><br>на ваш продукт<br>в интернете</div>
                 </label>
-                <label for="step1-3" class="pick-item">
-                  <input id="step1-3" type="radio" name="question1" value="Комбинированно" class="pick-item__input">
-                  <div class="pick-item__label">Комбинированно</div>
+                <label class="pick-item">
+                  <div class="label-img"><img src="img/qa1-3.png" alt="quiz"></div>
+                  <input type="radio" name="question1" value="Чек-лист для настройки Яндекс Директ" class="pick-item__input">
+                  <div class="pick-item__label"> <span>Чек-лист </span><br>для настройки<br>Яндекс Директ</div>
+                </label>
+                <label class="pick-item">
+                  <div class="label-img"><img src="img/qa1-4.png" alt="quiz"></div>
+                  <input type="radio" name="question1" value="Чек-лист для оформления Вконтакте" class="pick-item__input">
+                  <div class="pick-item__label"> <span>Чек-лист</span><br>для оформления<br>Вконтакте</div>
                 </label>
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Расчет пройден на 20%</div>
+                  <div class="quiz-progress__title">Готово:<span>0%</span></div>
                   <div class="quiz-progress__steps">
                     <div class="quiz-progress__item active"></div>
                     <div class="quiz-progress__item"></div>

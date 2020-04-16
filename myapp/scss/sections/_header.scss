@@ -16,6 +16,9 @@ header {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
+    @media screen and (max-height: 850px) and  (min-width: 1081px) {
+        padding-top: 24px;
+    }
 }
 .header {
     &__adress {
@@ -32,6 +35,9 @@ header {
             text-align: left;
             letter-spacing: 1px;
         }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+            margin-top: 0;
+        }
     }
     &__phone {
         margin-top: 12px;
@@ -39,8 +45,15 @@ header {
         screen and (max-width: 1080px) {
             margin-top: 9px;
         }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+            margin-top: 5px;
+        }
         span {
             font-size: 24px;
+            font-weight: 700;
+            @media screen and (max-height: 850px) and  (min-width: 1081px) {
+                font-size: 20px;
+            }
         }
     }
     &__group {
@@ -50,6 +63,10 @@ header {
             align-items: center;
             margin-top: 20px;
             padding: 4px 10px 0;
+        }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+            margin-top: 5px;
+            padding-right: 22px;
         }
     }
 }
@@ -71,6 +88,9 @@ header {
         @media screen and (max-width: 749px){
             width: 178px;
         }
+    	@media screen and (max-height: 850px) and  (min-width: 1081px) {
+            width: 192px;
+        }
     }
 }
 .social {
@@ -78,9 +98,14 @@ header {
     transition: 0.3s;
     font-size: 16px;
     margin-top: 12px;
+    font-weight: 700;
     @media screen and (max-width: 749px){
         padding: 0 11px;
         justify-content: center;
+    }
+    @media screen and (max-height: 850px) and  (min-width: 1081px) {
+        font-size: 12px;
+        margin-top: 8px;
     }
     &__item {
         display: flex;
@@ -93,6 +118,10 @@ header {
         }
         @media screen and (max-width: 749px){
             padding: 5px 11px;
+        }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+            padding-top: 2px;
+            padding-bottom: 2px;
         }
         &+.social__item {
             margin-left: 10px;
@@ -107,6 +136,10 @@ header {
         img {
             width: 20px;
             height: 20px;
+            @media screen and (max-height: 850px) and  (min-width: 1081px) {
+                width: 16px;
+                height: 16px;
+            }
         }
         &:hover {
             background: #7d3daf;
@@ -121,6 +154,10 @@ header {
         img {
             width: 17px;
             height: 17px;
+            @media screen and (max-height: 850px) and  (min-width: 1081px) {
+                width: 15px;
+                height: 15px;
+            }
         }
         &:hover {
             background: #039be5;
@@ -170,6 +207,9 @@ header {
 }
 .main-menu {
     font-size: 17px;
+    @media screen and (max-height: 850px) and  (min-width: 1081px) {
+        font-size: 14px;
+    }
     ul {
         display: flex;
         justify-content: space-between;
@@ -186,6 +226,7 @@ header {
             justify-content: center;
         }
         &__text {
+            font-weight: 700;
             @media screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 display: none;
