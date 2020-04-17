@@ -1,4 +1,4 @@
-#modalQuiz.modal.disabled1
+#modalQuiz.modal.disabled
     .modal__wrap.animated.fadeInDown    
         //- .close.modal-close
         //-     svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -15,6 +15,11 @@
                     .quiz__discount-total
                         span 1.000 
                         | руб.
+                    .arrows.quiz__discount__arrows
+                        svg.arrow(width='10', height='10', viewBox='0 0 10 10', fill='none')
+                            path(d='M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z', fill='#615333')
+                            path(d='M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z', fill='#615333')
+
             .quiz-sidebar
                 .quiz-sidebar__title Ответьте за 10 простых вопросов и узнайте 
                 .quiz-sidebar__subtitle как мы сможем увеличить ваши продажи на первой неделе работы квиз сайта
@@ -318,19 +323,19 @@
                     .quiz__ans.question__ans--radio
                         label.pick-item
                             input.pick-item__input(type='radio', name='question9', value='Готов заключить с Вами договор  сегодня, если договоримся')
-                            .pick-item__label Готов заключить с Вами договор  сегодня, если договоримся
+                            .pick-item__label Готов заключить с Вами договор <br> сегодня, если договоримся
                         label.pick-item
                             input.pick-item__input(type='radio', name='question9', value='Никуда не тороплюсь,  рассматриваю разные варианты')
-                            .pick-item__label Никуда не тороплюсь,  рассматриваю разные варианты
+                            .pick-item__label Никуда не тороплюсь, <br> рассматриваю разные варианты
                         label.pick-item
                             input.pick-item__input(type='radio', name='question9', value='Хотелось бы запустить проект  как можно быстрее')
-                            .pick-item__label Хотелось бы запустить проект  как можно быстрее
+                            .pick-item__label Хотелось бы запустить проект <br> как можно быстрее
                         label.pick-item
                             input.pick-item__input(type='radio', name='question9', value='Необходимо протестировать нишу')
                             .pick-item__label Необходимо протестировать нишу
                         label.pick-item
                             input.pick-item__input(type='radio', name='question9', value='Пока выбираю каналы продаж  и сравниваю подрядчиков')
-                            .pick-item__label Пока выбираю каналы продаж  и сравниваю подрядчиков
+                            .pick-item__label Пока выбираю каналы продаж <br> и сравниваю подрядчиков
                     .step-slide__bottom
                         .quiz-progress
                             .quiz-progress__title Готово:
@@ -353,7 +358,7 @@
                             .pick-item__label нет
                         label.pick-item
                             input.pick-item__input(type='radio', name='question10', value='Маркетинговая проработка  проекта')
-                            .pick-item__label Маркетинговая проработка  проекта
+                            .pick-item__label Маркетинговая проработка <br> проекта
                         label.pick-item
                             input.pick-item__input(type='radio', name='question10', value='Фирменный стиль и упаковка')
                             .pick-item__label Фирменный стиль и упаковка
@@ -365,10 +370,10 @@
                             .pick-item__label Внедрение CRM системы
                         label.pick-item
                             input.pick-item__input(type='radio', name='question10', value='Контекстная реклама  (Яндекс + Google)')
-                            .pick-item__label Контекстная реклама  (Яндекс + Google)
+                            .pick-item__label Контекстная реклама <br> (Яндекс + Google)
                         label.pick-item
                             input.pick-item__input(type='radio', name='question10', value='Интересует весь спектр  интернет-маркетинга')
-                            .pick-item__label Интересует весь спектр  интернет-маркетинга
+                            .pick-item__label Интересует весь спектр <br> интернет-маркетинга
                         label.pick-item
                             input.pick-item__input(type='radio', name='question10', value='Построение отдела продаж')
                             .pick-item__label Построение отдела продаж
