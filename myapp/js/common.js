@@ -84,6 +84,9 @@ $(function() {
     if(jQuery('.quiz').length) {
         $('.qa-next').click(function(e){
             // console.log($(this).closest('.step-slide').find('input:checked').length);
+            if($(this).hasClass('qa-del-discount')) {
+                $('.quiz__discount').css('display', 'none');
+            } 
             e.preventDefault();
             if($(this).closest('.step-slide').hasClass('step-slide--first') && $(this).closest('.step-slide').find('input:checked').length <2 ) {
                 $(this).closest('.prev-next-container').find('.quiz__error').text('Выберите 2 варианта ответа!');
@@ -137,6 +140,10 @@ $(function() {
           e.preventDefault();
           var btn = $(this);
           var numModal = btn.attr('href');
+          if(numModal == '#modalQuiz'){
+
+            $('.qa-del-discount').css('display', 'block');
+          }
           var modal =  $(numModal);
           modalWrap.removeClass('fadeOutUp');
           modalWrap.addClass('fadeInDown');

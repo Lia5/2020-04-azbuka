@@ -68,7 +68,7 @@
         justify-content: flex-start;
         margin-bottom: 20px;
         flex-wrap: wrap;
-        max-width: 590px;
+        max-width: 604px;
         &--text {
             max-width: 734px;
         }
@@ -136,13 +136,16 @@
 .step {
     &-slide {
         display: none;
-        padding: 48px 42px 50px 55px;
+        flex-direction: column;
+        padding: 65px 42px 50px 55px;
+        min-height: 650px;
         &--active {
-            display: block;
+            display: flex;
         }
         &__bottom {
             display: flex;
             align-items: center;
+            margin-top: auto;
         }
         &__title {
             font-family: "AABebasNeue", Arial, Helvetica, sans-serif;
@@ -204,11 +207,36 @@
                 transform: translate(-50%, 0) rotate(-45deg);
             }
         }
+        &--finish {
+            padding: 56px 93px 62px 39px;
+            background: #000 url('../img/bg-kviz.jpg') no-repeat;
+            background-position: top center;
+            background-size: cover;
+            .modal__title {
+                color: #e8ebf4;
+                font-size: 36px;
+                line-height: 43px;
+                span {
+                    display: block;
+                    color: #ff9232;
+                }
+            }
+            .modal__subtitle {
+                max-width: 500px;
+                font-weight: 200;
+                color: #fff;
+                font-size: 14px;
+                line-height: 21px;
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
     }
 }
 .pick-item {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     cursor: pointer;
     width: 49%;
 
@@ -278,11 +306,11 @@
     &__label {
         display: flex;
         align-items: center;
-        min-height: 65px;
+        min-height: 63px;
         font-size: 12px;
         line-height: 16px;
         position: relative;
-        padding: 5px 20px 5px 50px;
+        padding: 5px 13px 5px 59px;
         color: #606060;
         background: #fafafa;
         text-transform: uppercase;
@@ -340,4 +368,80 @@
 }
 .quizForm {
     width: 76%;
+}
+.finish {
+    &__body {
+        display: flex;
+    }
+    &-sidebar {
+        width: 33%;
+        color: #fff;
+        margin-top: -22px;
+        &__item {
+            display: flex;
+            align-items: center;
+            &+.finish-sidebar__item {
+                margin-top: -11px;
+            }
+        }
+        &__icon {
+            // width: 30px;
+            // height: 30px;
+            margin-right: -6px;
+            img {
+                max-width: 100%;
+            }
+        }
+        &__name {
+            text-transform: uppercase;
+            font-weight: 200;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+    &-form {
+        width: 67%;
+        max-width: 284px;
+        padding-top: 5px;
+        input[type="text"],
+        input[type="email"] {
+            font-weight: 700;
+            padding: 20px 30px;
+            &::placeholder {
+                font-size: 12px;
+                line-height: 22px;
+                color: #8a8a8a;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+        .form-line-btn {
+            margin-top: 20px;
+        }
+        .btn-finish .quiz__btn {
+            min-width: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .btn-finish {
+            min-width: auto;
+            width: 100%;
+        }
+        .agree {
+            max-width: 300px;
+            font-size: 10px;
+            line-height: 15px;
+            margin-top: 13px;
+            text-align: center;
+            img {
+                width: 19px;
+                height: 25px;
+                margin-right: 4px;
+            }
+        }
+        .agree__policy {
+            display: block;
+        }
+    }
 }

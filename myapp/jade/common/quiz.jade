@@ -1,10 +1,10 @@
 #modalQuiz.modal.disabled1
     .modal__wrap.animated.fadeInDown    
-        .close.modal-close
-            svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                g(stroke='none', stroke-width='1', fill-rule='evenodd')
-                    rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
-                    rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+        //- .close.modal-close
+        //-     svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+        //-         g(stroke='none', stroke-width='1', fill-rule='evenodd')
+        //-             rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+        //-             rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
         .modal__body.quiz
             .quiz__discount
                 .quiz__discount-text Ваша <br> скидка:
@@ -19,6 +19,16 @@
                 .quiz-sidebar__title Ответьте за 10 простых вопросов и узнайте 
                 .quiz-sidebar__subtitle как мы сможем увеличить ваши продажи на первой неделе работы квиз сайта
             form(class="quizForm")
+                // Hidden Required Fields
+                input(type='hidden', name='project_name', value='Azbuka digital')
+                input(type='hidden', name='admin_email', value='Info@azbuka.digital')
+                input(type='hidden', name='form_subject', value='Оставить заявку')
+                // END Hidden Required Fields
+                input.utm_source.hidden(type='hidden', name='utm_source')
+                input.utm_medium.hidden(type='hidden', name='utm_medium')
+                input.utm_campaign.hidden(type='hidden', name='utm_campaign')
+                input.utm_term.hidden(type='hidden', name='utm_term')
+                input.utm_content.hidden(type='hidden', name='utm_content')
                 .step-slide.step-slide--active.step-slide--first
                     .step-slide__title Для начала, выберите <br> 2 подарка из 4:
                     .step-slide__subtitle Можно выбрать несколько
@@ -241,19 +251,19 @@
                             .pick-item__label Рекламы нет
                         label.pick-item
                             input.pick-item__input(type='radio', name='question7', value='Контекстная реклама  (Яндекс/Google)')
-                            .pick-item__label Контекстная реклама  (Яндекс/Google)
+                            .pick-item__label Контекстная реклама <br> (Яндекс/Google)
                         label.pick-item
                             input.pick-item__input(type='radio', name='question7', value='SEO')
                             .pick-item__label SEO
                         label.pick-item
                             input.pick-item__input(type='radio', name='question7', value='Реклама через  социальные сети')
-                            .pick-item__label Реклама через  социальные сети
+                            .pick-item__label Реклама через <br> социальные сети
                         label.pick-item
                             input.pick-item__input(type='radio', name='question7', value='Заходят на сайт через  наружную рекламу')
-                            .pick-item__label Заходят на сайт через  наружную рекламу
+                            .pick-item__label Заходят на сайт через <br> наружную рекламу
                         label.pick-item
                             input.pick-item__input(type='radio', name='question7', value='Как то заходят,  не знаю откуда')
-                            .pick-item__label Как то заходят,  не знаю откуда
+                            .pick-item__label Как то заходят, <br> не знаю откуда
                         label.pick-item
                             input.pick-item__input(type='radio', name='question7', value='Затрудняюсь ответить')
                             .pick-item__label Затрудняюсь ответить
@@ -377,35 +387,60 @@
                         .prev-next-container
                             .quiz__error
                             a.btn.btn-prev.qa-prev(href='#') 
-                            a.btn.btn-next.qa-next(href='#') Далее
+                            a.btn.btn-next.qa-next.qa-del-discount(href='#') Далее
                                 svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
                                     path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
                                     C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
                                     c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide.step-slide--finish
-                    .modal__title Оставьте заявку
-                    .modal__subtitle и наш менеджер свяжется 
-                        span с вами через 3 минуты 
-                        .form-line
-                            label
-                                input(type="text" placeholder="Введите ваше имя" name="name" required).rfield.name-icon
-                        .form-line
-                            label
-                                input(type="text" placeholder="Введите ваш телефон" name="phone" required).rfield.phone-mask
-                        .form-line-btn
-                            button.btn.btn-finish(type="submit")
-                                    a(href="#modalFinish").quiz__btn Оставить заявку
-                        .agree
-                            img(src="img/agree.png", alt="agree")
-                            .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
-                                span.agree__policy с политикой конфиденциальности
-                    .step-slide__left
-                        .step-slide__title Спасибо за ответы! <br>Остался последний шаг
-                        p Мы уже анализируем ваши ответы. В ближайшее время наш менеджер свяжется с вами.
-                    .form.step-slide__form
-                        input(type="text" placeholder="Имя" name="name2" required).rfield.name-icon
-                        input(type="text" placeholder="Телефон" name="phone" required).rfield.phone-mask
-                        //- input.btn.btn--orange(type='submit', value='Получить предложение')
-                        button.btn.btn--orange(type="submit")
-                            a(href="#modalQuiz").modal-open.quiz__btn Получить предложение
-
+                    .modal__title До рассчёта эффективности <br>
+                        | и получения 6 бонусов 
+                        span Вас отделяет всего 1 шаг
+                    .modal__subtitle Наши маркетологи уже изучают Ваши ответы, чтобы проанализировать <br> эффективность сайта-квиза в Вашем бизнесе. 
+                        span Осталось корректно заполнить форму, чтобы получить всю информацию 
+                    .finish__body
+                        .finish-sidebar
+                            .finish-sidebar__item
+                                .finish-sidebar__icon
+                                    img(src="img/icons/tick.png", alt="tick")
+                                .finish-sidebar__name 
+                                    span чек-лист
+                                    br
+                                    | для директ
+                            .finish-sidebar__item
+                                .finish-sidebar__icon
+                                    img(src="img/icons/loupe.png", alt="loupe")
+                                .finish-sidebar__name 
+                                    span Аудит 
+                                    | вашего
+                                    br
+                                    | продукта
+                            .finish-sidebar__item
+                                .finish-sidebar__icon
+                                    img(src="img/icons/computer.png", alt="computer")
+                                .finish-sidebar__name 
+                                    span Аудит 
+                                    br
+                                    | вашего сайта
+                            .finish-sidebar__item
+                                .finish-sidebar__icon.finish-sidebar__icon--work
+                                    img(src="img/icons/work.png", alt="work")
+                                .finish-sidebar__name 
+                                    span Кейсы по 
+                                    br
+                                    | вашей нише
+                        .finish-form
+                            .form-line
+                                label
+                                    input(type="text" placeholder="ваш номер телефона" name="phone" required).rfield.phone-mask
+                            .form-line
+                                label
+                                    input(type="email" placeholder="введите вашу почту" name="email" required).rfield
+                            .form-line-btn
+                                .btn.btn-finish(data-modal="#modalFinish")
+                                    input(type="submit" value="Получить расчет и бонусы").quiz__btn 
+                            .agree
+                                img(src="img/agree.png", alt="agree")
+                                .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
+                                    span.agree__policy с политикой конфиденциальности
+                    
