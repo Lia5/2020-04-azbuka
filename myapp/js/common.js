@@ -38,7 +38,7 @@ $(function() {
     //select-number form
     if(jQuery('.phone-mask').length) {
         jQuery(function($){
-            $(".phone-mask").mask("+38(999) 999-9999");
+            $(".phone-mask").mask("+7(999) 999-9999");
         });
     }
 
