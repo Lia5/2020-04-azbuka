@@ -1,11 +1,12 @@
 .quiz {
     position: relative;
+    display: flex;
     color: #000;
     padding: 0;
     &__discount {
         position: absolute;
-        top: 60px;
-        right: 60px;
+        top: 45px;
+        right: 50px;
         display: flex;
         font-size: 15px;
         line-height: 1;
@@ -37,6 +38,25 @@
         }
         
     }
+    &-sidebar {
+        width: 24%;
+        padding: 40px 40px 55px;
+        display: flex;
+        flex-direction: column;
+        background: #000 url('../img/gift.png') no-repeat;
+        background-position: top center;
+        background-size: cover;
+        color: #e8ebf4;
+        font-size: 16px;
+        line-height: 24px;
+        &__title {
+            margin-top: auto;
+            font-weight: 700;
+        }
+        &__subtitle {
+            font-weight: 200;
+        }
+    }
     &-qa {
         width: 80%;
         @media screen and (max-width: 820px) {
@@ -49,16 +69,24 @@
         margin-bottom: 20px;
         flex-wrap: wrap;
         max-width: 590px;
+        &--text {
+            max-width: 734px;
+        }
     }
     &-progress {
         flex-grow: 1;
         padding-right: 30px;
+        margin-bottom: 20px;
+        border-radius: 7px;
         @media screen and (max-width: 560px) {
             // padding-right: 0;
             // margin-bottom: 20px;
         }
         &__title {
+            margin-bottom: 11px;
             span {
+                padding-left: 5px;
+                color: #006fe8;
                 font-weight: 700;
             }
         }
@@ -68,8 +96,7 @@
         }
         &__item {
             flex-grow: 1;
-            height: 13px;
-            border-radius: 10px;
+            height: 25px;
             transition: 0.7s all;
             position: relative;
 
@@ -109,12 +136,13 @@
 .step {
     &-slide {
         display: none;
-        padding: 68px 50px 50px;
+        padding: 48px 42px 50px 55px;
         &--active {
             display: block;
         }
         &__bottom {
             display: flex;
+            align-items: center;
         }
         &__title {
             font-family: "AABebasNeue", Arial, Helvetica, sans-serif;
@@ -122,13 +150,21 @@
             line-height: 43px;
             color: #0b0f15;
             letter-spacing: 3px;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
             max-width: 555px;
         }
+        &__subtitle {
+            font-size: 17px;
+            line-height: 1.2;
+            color: #8a8a8a;
+            padding-left: 25px;
+            
+        }
         &--first {
+            padding-bottom: 30px;
             .quiz__ans {
-                max-width: 690px;
-
+                max-width: 685px;
+                margin-bottom: 30px;
             }
             .label-img {
                 text-align: center;
@@ -147,7 +183,7 @@
                     line-height: 20px;
                     color: #090303;
                     background: transparent;
-                    padding: 30px 20px 20px;
+                    padding: 30px 10px 20px;
                     text-align: center;
                     span {
                         font-weight: 700;
@@ -159,6 +195,13 @@
                         transform: translate(-50%, 0);
                     }
                 }
+            }
+            .pick-item__input[type="radio" ]:checked+.pick-item__label:after,
+            .pick-item__input[type="checkbox"]:checked+.pick-item__label:after{
+                top: 5px;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, 0) rotate(-45deg);
             }
         }
     }
@@ -182,7 +225,8 @@
         padding: 15px;
         font-size: 22px;
         margin-right: 10px;
-        &[type="radio"]:checked + .pick-item__label:before {
+        &[type="radio"]:checked + .pick-item__label:before,
+        &[type="checkbox"]:checked + .pick-item__label:before {
             background: #fb9032;
             border-color: #fb9032;
         }
@@ -256,6 +300,15 @@
             left: 20px;
         }
     }
+    &--text {
+        width: 100%;
+        input::placeholder {
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 16px;
+            color: #606060;
+        }
+    }
 }
 .question__ans--radio {
     .pick-item__label:before {
@@ -284,4 +337,7 @@
     100%{
          background-position:1000px 0;
    }
- }
+}
+.quizForm {
+    width: 76%;
+}

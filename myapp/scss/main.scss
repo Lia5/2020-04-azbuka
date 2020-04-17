@@ -260,6 +260,10 @@ ul,li {
 		min-width: 168px;
 		padding: 15px;
 		box-shadow: none;
+		svg {
+			width: 21px;
+			height: 15px;
+		}
 	}
 	&-prev {
 		min-width: 67px;

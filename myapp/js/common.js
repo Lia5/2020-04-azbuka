@@ -83,11 +83,22 @@ $(function() {
     //quiz
     if(jQuery('.quiz').length) {
         $('.qa-next').click(function(e){
+            // console.log($(this).closest('.step-slide').find('input:checked').length);
             e.preventDefault();
-            if($(this).parent().prev().find('input:checked').length) {
-                $(this).parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
+            if($(this).closest('.step-slide').hasClass('step-slide--first') && $(this).closest('.step-slide').find('input:checked').length <2 ) {
+                $(this).closest('.prev-next-container').find('.quiz__error').text('Выберите 2 варианта ответа!');
+            } else if ($(this).closest('.step-slide').hasClass('step-slide--first') && $(this).closest('.step-slide').find('input:checked').length >2 ) {
+                $(this).closest('.prev-next-container').find('.quiz__error').text('Выберите только 2 варианта ответа!');
+            } else if ($(this).closest('.step-slide').hasClass('step-slide--text') && $(this).closest('.step-slide').find('input').val() == '' ) {
+                $(this).closest('.prev-next-container').find('.quiz__error').text('Введите ответ');
+            } else if ($(this).closest('.step-slide').hasClass('step-slide--text') && $(this).closest('.step-slide').find('input').val() != '' ) {
+                $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
             } else {
-                $(this).parent().find('.quiz__error').text('Выберите вариант ответа!');
+                if($(this).closest('.step-slide').find('input:checked').length) {
+                    $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
+                } else {
+                    $(this).closest('.prev-next-container').find('.quiz__error').text('Выберите вариант ответа!');
+                }
             }
 
             
@@ -99,7 +110,22 @@ $(function() {
 
         $(".qa-prev").click(function(e) {
             e.preventDefault();
-            $(this).parent().parent('.step-slide').removeClass('step-slide--active').prev().addClass('step-slide--active');
+            console.log($(this).closest('.step-slide').prev());
+            if($(this).closest('.step-slide').prev().length == 0) {
+                let modalWrap = $('.modal__wrap');
+                modalWrap.removeClass('fadeInDown');
+                modalWrap.addClass('fadeOutUp');
+                setTimeout(function() {
+                    $('.modal').addClass('disabled');
+                    }, 700);
+                setTimeout(function() {
+                    $('.modal').removeClass('flex');
+                    $('body').removeClass('body-modal-open');
+                    }, 800);  
+            } else {
+
+                $(this).closest('.step-slide').removeClass('step-slide--active').prev().addClass('step-slide--active');
+            }
         });
     }
 

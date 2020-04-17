@@ -164,28 +164,33 @@
               <div class="quiz__discount-total"><span>1.000 </span>руб.</div>
             </div>
           </div>
+          <div class="quiz-sidebar">
+            <div class="quiz-sidebar__title">Ответьте за 10 простых вопросов и узнайте </div>
+            <div class="quiz-sidebar__subtitle">как мы сможем увеличить ваши продажи на первой неделе работы квиз сайта</div>
+          </div>
           <form class="quizForm">
             <div class="step-slide step-slide--active step-slide--first">
               <div class="step-slide__title">Для начала, выберите <br> 2 подарка из 4:</div>
-              <div class="quiz__ans question__ans--radio">
+              <div class="step-slide__subtitle">Можно выбрать несколько</div>
+              <div class="quiz__ans question__ans--checkbox">
                 <label class="pick-item">
                   <div class="label-img"><img src="img/qa1-1.png" alt="quiz"></div>
-                  <input type="radio" name="question1" value="Скидка 500 рублей на рекламу в соцсетях" class="pick-item__input">
+                  <input type="checkbox" name="question1-1" value="Скидка 500 рублей на рекламу в соцсетях" class="pick-item__input">
                   <div class="pick-item__label"> <span>Скидка </span><br><span>500 рублей </span><br>на рекламу <br>в соцсетях</div>
                 </label>
                 <label class="pick-item">
                   <div class="label-img"><img src="img/qa1-2.png" alt="quiz"></div>
-                  <input type="radio" name="question1" value="Аудит спросана ваш продукт в интернете" class="pick-item__input">
+                  <input type="checkbox" name="question1-2" value="Аудит спросана ваш продукт в интернете" class="pick-item__input">
                   <div class="pick-item__label"> <span>Аудит спроса</span><br>на ваш продукт<br>в интернете</div>
                 </label>
                 <label class="pick-item">
                   <div class="label-img"><img src="img/qa1-3.png" alt="quiz"></div>
-                  <input type="radio" name="question1" value="Чек-лист для настройки Яндекс Директ" class="pick-item__input">
+                  <input type="checkbox" name="question1-3" value="Чек-лист для настройки Яндекс Директ" class="pick-item__input">
                   <div class="pick-item__label"> <span>Чек-лист </span><br>для настройки<br>Яндекс Директ</div>
                 </label>
                 <label class="pick-item">
                   <div class="label-img"><img src="img/qa1-4.png" alt="quiz"></div>
-                  <input type="radio" name="question1" value="Чек-лист для оформления Вконтакте" class="pick-item__input">
+                  <input type="checkbox" name="question1-4" value="Чек-лист для оформления Вконтакте" class="pick-item__input">
                   <div class="pick-item__label"> <span>Чек-лист</span><br>для оформления<br>Вконтакте</div>
                 </label>
               </div>
@@ -193,7 +198,12 @@
                 <div class="quiz-progress">
                   <div class="quiz-progress__title">Готово:<span>0%</span></div>
                   <div class="quiz-progress__steps">
-                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
                     <div class="quiz-progress__item"></div>
                     <div class="quiz-progress__item"></div>
                     <div class="quiz-progress__item"></div>
@@ -201,122 +211,462 @@
                   </div>
                 </div>
                 <div class="prev-next-container">
-                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее</a>
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
                 </div>
               </div>
             </div>
             <div class="step-slide">
-              <div class="step-slide__title">Где именно вы хотите <br>установить станцию?</div>
+              <div class="step-slide__title">Какая у Вас сфера деятельности?</div>
               <div class="quiz__ans question__ans--radio">
-                <label for="step1-1" class="pick-item">
-                  <input id="step1-1" type="radio" name="question1" value="На земле (наземной конструкции)" class="pick-item__input">
-                  <div class="pick-item__label">На земле (наземной конструкции)</div>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Услуги" class="pick-item__input">
+                  <div class="pick-item__label">Услуги</div>
                 </label>
-                <label for="step1-2" class="pick-item">
-                  <input id="step1-2" type="radio" name="question1" value="На крыше (скатной, плоской)" class="pick-item__input">
-                  <div class="pick-item__label">На крыше (скатной, плоской) </div>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Инфобизнес" class="pick-item__input">
+                  <div class="pick-item__label">Инфобизнес</div>
                 </label>
-                <label for="step1-3" class="pick-item">
-                  <input id="step1-3" type="radio" name="question1" value="Комбинированно" class="pick-item__input">
-                  <div class="pick-item__label">Комбинированно</div>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Опт" class="pick-item__input">
+                  <div class="pick-item__label">Опт</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Розница" class="pick-item__input">
+                  <div class="pick-item__label">Розница</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Недвижимость" class="pick-item__input">
+                  <div class="pick-item__label">Недвижимость</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Строительство" class="pick-item__input">
+                  <div class="pick-item__label">Строительство</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Товарка" class="pick-item__input">
+                  <div class="pick-item__label">Товарка</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Ресторанный бизнес" class="pick-item__input">
+                  <div class="pick-item__label">Ресторанный бизнес</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="Производство" class="pick-item__input">
+                  <div class="pick-item__label">Производство</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question2" value="другое" class="pick-item__input">
+                  <div class="pick-item__label">другое</div>
                 </label>
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Расчет пройден на 20%</div>
+                  <div class="quiz-progress__title">Готово:<span>10%</span></div>
                   <div class="quiz-progress__steps">
                     <div class="quiz-progress__item active"></div>
                     <div class="quiz-progress__item"></div>
                     <div class="quiz-progress__item"></div>
                     <div class="quiz-progress__item"></div>
                     <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
                   </div>
                 </div>
                 <div class="prev-next-container">
-                  <div class="quiz__error"></div><a href="#" class="btn btn-next qa-next">Далее</a>
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
                 </div>
               </div>
             </div>
             <div class="step-slide">
-              <div class="step-slide__num"> <span>2</span>/5</div>
-              <div class="step-slide__title">Какая мощность подведенной к вашему <br>объекту линии электропередачи
-                <div class="step-slide__subtitle">(мощность в кВт вы можете посмотреть в договоре с вашей энергораспределительной компанией)</div>
-              </div>
+              <div class="step-slide__title">Какой Ваш текущий статус?</div>
               <div class="quiz__ans question__ans--radio">
-                <label for="step2-1" class="pick-item">
-                  <input id="step2-1" type="radio" name="question2" value="Знаю сколько кВт, фаз" class="pick-item__input">
-                  <div class="pick-item__label">Знаю сколько кВт, фаз</div>
+                <label class="pick-item">
+                  <input type="radio" name="question3" value="Уже имею бизнес" class="pick-item__input">
+                  <div class="pick-item__label">Уже имею бизнес</div>
                 </label>
-                <label for="step2-2" class="pick-item">
-                  <input id="step2-2" type="radio" name="question2" value="Не знаю" class="pick-item__input">
-                  <div class="pick-item__label">Не знаю</div>
+                <label class="pick-item">
+                  <input type="radio" name="question3" value="Начинающий предприниматель" class="pick-item__input">
+                  <div class="pick-item__label">Начинающий предприниматель</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question3" value="Хочу начать свой бизнес" class="pick-item__input">
+                  <div class="pick-item__label">Хочу начать свой бизнес</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question3" value="Работаю в компании" class="pick-item__input">
+                  <div class="pick-item__label">Работаю в компании</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question3" value="Маркетолог" class="pick-item__input">
+                  <div class="pick-item__label">Маркетолог</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question3" value="Ваш конкурент" class="pick-item__input">
+                  <div class="pick-item__label">Ваш конкурент</div>
                 </label>
               </div>
-              <div class="prev-next-container">
-                <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev">Назад</a><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
+              <div class="step-slide__bottom">
+                <div class="quiz-progress">
+                  <div class="quiz-progress__title">Готово:<span>20%</span></div>
+                  <div class="quiz-progress__steps">
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                  </div>
+                </div>
+                <div class="prev-next-container">
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
+                </div>
               </div>
             </div>
             <div class="step-slide">
-              <div class="step-slide__num"> <span>3</span>/5</div>
-              <div class="step-slide__title">Хотите ли вы быть обеспеченным <br>электроэнергией, даже когда нет внешней сети?</div>
+              <div class="step-slide__title">Какой бюджет на рекламу <br> Вы сможете выделить?</div>
               <div class="quiz__ans question__ans--radio">
-                <label for="step3-1" class="pick-item">
-                  <input id="step3-1" type="radio" name="question3" value="Нет, хочу просто зарабатывать  на зеленом тарифе" class="pick-item__input">
-                  <div class="pick-item__label">Нет, хочу просто зарабатывать  на зеленом тарифе</div>
+                <label class="pick-item">
+                  <input type="radio" name="question4" value="от 20 000 до 50 000 рублей" class="pick-item__input">
+                  <div class="pick-item__label">от 20 000 до 50 000 рублей</div>
                 </label>
-                <label for="step3-2" class="pick-item">
-                  <input id="step3-2" type="radio" name="question3" value="Да, знаю собственное потребление, а значит понимаю сколько нужно запасать" class="pick-item__input">
-                  <div class="pick-item__label">Да, знаю собственное потребление, а значит понимаю сколько нужно запасать</div>
+                <label class="pick-item">
+                  <input type="radio" name="question4" value="от 50 000 рублей 100 000 рублей" class="pick-item__input">
+                  <div class="pick-item__label">от 50 000 рублей 100 000 рублей</div>
                 </label>
-                <label for="step3-3" class="pick-item">
-                  <input id="step3-3" type="radio" name="question3" value="Да, но не понимаю сколько нужно запасать" class="pick-item__input">
-                  <div class="pick-item__label">Да, но не понимаю сколько нужно запасать</div>
+                <label class="pick-item">
+                  <input type="radio" name="question4" value="От 100 000 до 200 000 рублей" class="pick-item__input">
+                  <div class="pick-item__label">От 100 000 до 200 000 рублей</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question4" value="Больше 200 000 рублей" class="pick-item__input">
+                  <div class="pick-item__label">Больше 200 000 рублей</div>
                 </label>
               </div>
-              <div class="prev-next-container">
-                <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev">Назад</a><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
+              <div class="step-slide__bottom">
+                <div class="quiz-progress">
+                  <div class="quiz-progress__title">Готово:<span>30%</span></div>
+                  <div class="quiz-progress__steps">
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                  </div>
+                </div>
+                <div class="prev-next-container">
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="step-slide step-slide--text">
+              <div class="step-slide__title">На какой регион, область <br> или город работаете?</div>
+              <div class="quiz__ans quiz__ans--text">
+                <label class="pick-item pick-item--text">
+                  <input type="text" name="question5" placeholder="Например: москва">
+                </label>
+              </div>
+              <div class="step-slide__bottom">
+                <div class="quiz-progress">
+                  <div class="quiz-progress__title">Готово:<span>40%</span></div>
+                  <div class="quiz-progress__steps">
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                  </div>
+                </div>
+                <div class="prev-next-container">
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
+                </div>
               </div>
             </div>
             <div class="step-slide">
-              <div class="step-slide__num"> <span>4</span>/5</div>
-              <div class="step-slide__title">Знаете ли вы площадь и ориентацию <br>скатов крыши?</div>
+              <div class="step-slide__title">Есть ли у Вас действующий сайт?</div>
               <div class="quiz__ans question__ans--radio">
-                <label for="step4-1" class="pick-item">
-                  <input id="step4-1" type="radio" name="question4" value="Знаю площадь и примерно ориентацию по сторонам света" class="pick-item__input">
-                  <div class="pick-item__label">Знаю площадь и примерно ориентацию по сторонам света</div>
+                <label class="pick-item">
+                  <input type="radio" name="question6" value="Да" class="pick-item__input">
+                  <div class="pick-item__label">Да</div>
                 </label>
-                <label for="step4-2" class="pick-item">
-                  <input id="step4-2" type="radio" name="question4" value="Знаю площадь, ориентации не знаю, но могу указать адрес" class="pick-item__input">
-                  <div class="pick-item__label">Знаю площадь, ориентации не знаю, но могу указать адрес</div>
-                </label>
-                <label for="step4-3" class="pick-item">
-                  <input id="step4-3" type="radio" name="question4" value="Не знаю ничего, но есть чертежи (проект) дома" class="pick-item__input">
-                  <div class="pick-item__label">Не знаю ничего, но есть чертежи (проект) дома</div>
-                </label>
-                <label for="step4-4" class="pick-item">
-                  <input id="step4-4" type="radio" name="question4" value="Не знаю ничего, нужен  выезд специалиста" class="pick-item__input">
-                  <div class="pick-item__label">Не знаю ничего, нужен  выезд специалиста</div>
+                <label class="pick-item">
+                  <input type="radio" name="question6" value="Нет" class="pick-item__input">
+                  <div class="pick-item__label">Нет</div>
                 </label>
               </div>
-              <div class="prev-next-container">
-                <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev">Назад</a><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
+              <div class="step-slide__bottom">
+                <div class="quiz-progress">
+                  <div class="quiz-progress__title">Готово:<span>50%</span></div>
+                  <div class="quiz-progress__steps">
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                  </div>
+                </div>
+                <div class="prev-next-container">
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
+                </div>
               </div>
             </div>
             <div class="step-slide">
-              <div class="step-slide__num"> <span>5</span>/5</div>
-              <div class="step-slide__title">Знаете ли вы, что нужно для <br>подключения “зеленого тарифа”?</div>
+              <div class="step-slide__title">Идёт ли у Вас реклама на сайт?</div>
               <div class="quiz__ans question__ans--radio">
-                <label for="step5-1" class="pick-item">
-                  <input id="step5-1" type="radio" name="question5" value="Да, но есть вопросы по процедурам и/или нормам закона" class="pick-item__input">
-                  <div class="pick-item__label">Да, но есть вопросы по процедурам и/или нормам закона</div>
+                <label class="pick-item">
+                  <input type="radio" name="question7" value="Рекламы нет" class="pick-item__input">
+                  <div class="pick-item__label">Рекламы нет</div>
                 </label>
-                <label for="step5-2" class="pick-item">
-                  <input id="step5-2" type="radio" name="question5" value="Нет, объясните (мощность линии, требования к счетчику, нормы закона)" class="pick-item__input">
-                  <div class="pick-item__label">Нет, объясните (мощность линии, требования к счетчику, нормы закона)</div>
+                <label class="pick-item">
+                  <input type="radio" name="question7" value="Контекстная реклама  (Яндекс/Google)" class="pick-item__input">
+                  <div class="pick-item__label">Контекстная реклама  (Яндекс/Google)</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question7" value="SEO" class="pick-item__input">
+                  <div class="pick-item__label">SEO</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question7" value="Реклама через  социальные сети" class="pick-item__input">
+                  <div class="pick-item__label">Реклама через  социальные сети</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question7" value="Заходят на сайт через  наружную рекламу" class="pick-item__input">
+                  <div class="pick-item__label">Заходят на сайт через  наружную рекламу</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question7" value="Как то заходят,  не знаю откуда" class="pick-item__input">
+                  <div class="pick-item__label">Как то заходят,  не знаю откуда</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question7" value="Затрудняюсь ответить" class="pick-item__input">
+                  <div class="pick-item__label">Затрудняюсь ответить</div>
                 </label>
               </div>
-              <div class="prev-next-container">
-                <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev">Назад</a><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
+              <div class="step-slide__bottom">
+                <div class="quiz-progress">
+                  <div class="quiz-progress__title">Готово:<span>60%</span></div>
+                  <div class="quiz-progress__steps">
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                  </div>
+                </div>
+                <div class="prev-next-container">
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="step-slide">
+              <div class="step-slide__title">Для чего Вы к нам обратились?</div>
+              <div class="quiz__ans question__ans--radio">
+                <label class="pick-item">
+                  <input type="radio" name="question8" value="Нужно больше заявок" class="pick-item__input">
+                  <div class="pick-item__label">Нужно больше заявок</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question8" value="Хочу внедрить/улучшить  интернет-маркетинг в компании" class="pick-item__input">
+                  <div class="pick-item__label">Хочу внедрить/улучшить  интернет-маркетинг в компании</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question8" value="Необходимо протестировать  нишу" class="pick-item__input">
+                  <div class="pick-item__label">Необходимо протестировать  нишу</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question8" value="Нужна консультация эксперта " class="pick-item__input">
+                  <div class="pick-item__label">Нужна консультация эксперта </div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question8" value="другое" class="pick-item__input">
+                  <div class="pick-item__label">другое</div>
+                </label>
+              </div>
+              <div class="step-slide__bottom">
+                <div class="quiz-progress">
+                  <div class="quiz-progress__title">Готово:<span>70%</span></div>
+                  <div class="quiz-progress__steps">
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                  </div>
+                </div>
+                <div class="prev-next-container">
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="step-slide">
+              <div class="step-slide__title">Как срочно Вы готовы запустить <br> проект и получать заявки?</div>
+              <div class="quiz__ans question__ans--radio">
+                <label class="pick-item">
+                  <input type="radio" name="question9" value="Готов заключить с Вами договор  сегодня, если договоримся" class="pick-item__input">
+                  <div class="pick-item__label">Готов заключить с Вами договор  сегодня, если договоримся</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question9" value="Никуда не тороплюсь,  рассматриваю разные варианты" class="pick-item__input">
+                  <div class="pick-item__label">Никуда не тороплюсь,  рассматриваю разные варианты</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question9" value="Хотелось бы запустить проект  как можно быстрее" class="pick-item__input">
+                  <div class="pick-item__label">Хотелось бы запустить проект  как можно быстрее</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question9" value="Необходимо протестировать нишу" class="pick-item__input">
+                  <div class="pick-item__label">Необходимо протестировать нишу</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question9" value="Пока выбираю каналы продаж  и сравниваю подрядчиков" class="pick-item__input">
+                  <div class="pick-item__label">Пока выбираю каналы продаж  и сравниваю подрядчиков</div>
+                </label>
+              </div>
+              <div class="step-slide__bottom">
+                <div class="quiz-progress">
+                  <div class="quiz-progress__title">Готово:<span>80%</span></div>
+                  <div class="quiz-progress__steps">
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                    <div class="quiz-progress__item"></div>
+                  </div>
+                </div>
+                <div class="prev-next-container">
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="step-slide">
+              <div class="step-slide__title">Вас интересует что-то, кроме <br> разработки сайта?</div>
+              <div class="quiz__ans question__ans--radio">
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="нет" class="pick-item__input">
+                  <div class="pick-item__label">нет</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Маркетинговая проработка  проекта" class="pick-item__input">
+                  <div class="pick-item__label">Маркетинговая проработка  проекта</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Фирменный стиль и упаковка" class="pick-item__input">
+                  <div class="pick-item__label">Фирменный стиль и упаковка</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Конверсионный чат-бот" class="pick-item__input">
+                  <div class="pick-item__label">Конверсионный чат-бот</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Внедрение CRM системы" class="pick-item__input">
+                  <div class="pick-item__label">Внедрение CRM системы</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Контекстная реклама  (Яндекс + Google)" class="pick-item__input">
+                  <div class="pick-item__label">Контекстная реклама  (Яндекс + Google)</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Интересует весь спектр  интернет-маркетинга" class="pick-item__input">
+                  <div class="pick-item__label">Интересует весь спектр  интернет-маркетинга</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Построение отдела продаж" class="pick-item__input">
+                  <div class="pick-item__label">Построение отдела продаж</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Реклама в социальных сетях" class="pick-item__input">
+                  <div class="pick-item__label">Реклама в социальных сетях</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question10" value="Затрудняюсь ответить" class="pick-item__input">
+                  <div class="pick-item__label">Затрудняюсь ответить</div>
+                </label>
+              </div>
+              <div class="step-slide__bottom">
+                <div class="quiz-progress">
+                  <div class="quiz-progress__title">Готово:<span>90%</span></div>
+                  <div class="quiz-progress__steps">
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item active"></div>
+                    <div class="quiz-progress__item"></div>
+                  </div>
+                </div>
+                <div class="prev-next-container">
+                  <div class="quiz__error"></div><a href="#" class="btn btn-prev qa-prev"> </a><a href="#" class="btn btn-next qa-next">Далее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+                      <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                    </svg></a>
+                </div>
               </div>
             </div>
             <div class="step-slide step-slide--finish">
@@ -341,7 +691,7 @@
               </div>
               <div class="step-slide__left">
                 <div class="step-slide__title">Спасибо за ответы! <br>Остался последний шаг</div>
-                <p>Мы уже анализируем ваши ответы. В ближайшее время наш менеджер свяжется с вами и предложит оптимальную комплектацию станции, расскажет, какой бюджет установки и как скоро вы сможете зарабатывать на “зеленом тарифе”.</p>
+                <p>Мы уже анализируем ваши ответы. В ближайшее время наш менеджер свяжется с вами.</p>
               </div>
               <div class="form step-slide__form">
                 <input type="text" placeholder="Имя" name="name2" required class="rfield name-icon">

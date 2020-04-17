@@ -15,14 +15,18 @@
                     .quiz__discount-total
                         span 1.000 
                         | руб.
+            .quiz-sidebar
+                .quiz-sidebar__title Ответьте за 10 простых вопросов и узнайте 
+                .quiz-sidebar__subtitle как мы сможем увеличить ваши продажи на первой неделе работы квиз сайта
             form(class="quizForm")
                 .step-slide.step-slide--active.step-slide--first
                     .step-slide__title Для начала, выберите <br> 2 подарка из 4:
-                    .quiz__ans.question__ans--radio
+                    .step-slide__subtitle Можно выбрать несколько
+                    .quiz__ans.question__ans--checkbox
                         label.pick-item
                             .label-img
                                 img(src="img/qa1-1.png", alt="quiz")
-                            input.pick-item__input(type='radio', name='question1', value='Скидка 500 рублей на рекламу в соцсетях')
+                            input.pick-item__input(type='checkbox', name='question1-1', value='Скидка 500 рублей на рекламу в соцсетях')
                             .pick-item__label 
                                 span Скидка 
                                 br
@@ -34,7 +38,7 @@
                         label.pick-item
                             .label-img
                                 img(src="img/qa1-2.png", alt="quiz")
-                            input.pick-item__input(type='radio', name='question1', value='Аудит спросана ваш продукт в интернете')
+                            input.pick-item__input(type='checkbox', name='question1-2', value='Аудит спросана ваш продукт в интернете')
                             .pick-item__label 
                                 span Аудит спроса
                                 br
@@ -44,7 +48,7 @@
                         label.pick-item
                             .label-img
                                 img(src="img/qa1-3.png", alt="quiz")
-                            input.pick-item__input(type='radio', name='question1', value='Чек-лист для настройки Яндекс Директ')
+                            input.pick-item__input(type='checkbox', name='question1-3', value='Чек-лист для настройки Яндекс Директ')
                             .pick-item__label 
                                 span Чек-лист 
                                 br
@@ -54,7 +58,7 @@
                         label.pick-item
                             .label-img
                                 img(src="img/qa1-4.png", alt="quiz")
-                            input.pick-item__input(type='radio', name='question1', value='Чек-лист для оформления Вконтакте')
+                            input.pick-item__input(type='checkbox', name='question1-4', value='Чек-лист для оформления Вконтакте')
                             .pick-item__label 
                                 span Чек-лист
                                 br
@@ -66,6 +70,257 @@
                             .quiz-progress__title Готово:
                                 span 0%
                             .quiz-progress__steps
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
+                            a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                .step-slide
+                    .step-slide__title Какая у Вас сфера деятельности?
+                    .quiz__ans.question__ans--radio
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Услуги')
+                            .pick-item__label Услуги
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Инфобизнес')
+                            .pick-item__label Инфобизнес
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Опт')
+                            .pick-item__label Опт
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Розница')
+                            .pick-item__label Розница
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Недвижимость')
+                            .pick-item__label Недвижимость
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Строительство')
+                            .pick-item__label Строительство
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Товарка')
+                            .pick-item__label Товарка
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Ресторанный бизнес')
+                            .pick-item__label Ресторанный бизнес
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='Производство')
+                            .pick-item__label Производство
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question2', value='другое')
+                            .pick-item__label другое
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Готово:
+                                span 10%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
+                            a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                .step-slide
+                    .step-slide__title Какой Ваш текущий статус?
+                    .quiz__ans.question__ans--radio
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question3', value='Уже имею бизнес')
+                            .pick-item__label Уже имею бизнес
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question3', value='Начинающий предприниматель')
+                            .pick-item__label Начинающий предприниматель
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question3', value='Хочу начать свой бизнес')
+                            .pick-item__label Хочу начать свой бизнес
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question3', value='Работаю в компании')
+                            .pick-item__label Работаю в компании
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question3', value='Маркетолог')
+                            .pick-item__label Маркетолог
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question3', value='Ваш конкурент')
+                            .pick-item__label Ваш конкурент
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Готово:
+                                span 20%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
+                            a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                .step-slide
+                    .step-slide__title Какой бюджет на рекламу <br> Вы сможете выделить?
+                    .quiz__ans.question__ans--radio
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question4', value='от 20 000 до 50 000 рублей')
+                            .pick-item__label от 20 000 до 50 000 рублей
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question4', value='от 50 000 рублей 100 000 рублей')
+                            .pick-item__label от 50 000 рублей 100 000 рублей
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question4', value='От 100 000 до 200 000 рублей')
+                            .pick-item__label От 100 000 до 200 000 рублей
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question4', value='Больше 200 000 рублей')
+                            .pick-item__label Больше 200 000 рублей
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Готово:
+                                span 30%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
+                            a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                .step-slide.step-slide--text
+                    .step-slide__title На какой регион, область <br> или город работаете?
+                    .quiz__ans.quiz__ans--text
+                        label.pick-item.pick-item--text
+                            input(type='text', name='question5', placeholder='Например: москва')
+                       
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Готово:
+                                span 40%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
+                            a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                .step-slide
+                    .step-slide__title Есть ли у Вас действующий сайт?
+                    .quiz__ans.question__ans--radio
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question6', value='Да')
+                            .pick-item__label Да
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question6', value='Нет')
+                            .pick-item__label Нет
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Готово:
+                                span 50%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
+                            a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                .step-slide
+                    .step-slide__title Идёт ли у Вас реклама на сайт?
+                    .quiz__ans.question__ans--radio
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question7', value='Рекламы нет')
+                            .pick-item__label Рекламы нет
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question7', value='Контекстная реклама  (Яндекс/Google)')
+                            .pick-item__label Контекстная реклама  (Яндекс/Google)
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question7', value='SEO')
+                            .pick-item__label SEO
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question7', value='Реклама через  социальные сети')
+                            .pick-item__label Реклама через  социальные сети
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question7', value='Заходят на сайт через  наружную рекламу')
+                            .pick-item__label Заходят на сайт через  наружную рекламу
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question7', value='Как то заходят,  не знаю откуда')
+                            .pick-item__label Как то заходят,  не знаю откуда
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question7', value='Затрудняюсь ответить')
+                            .pick-item__label Затрудняюсь ответить
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Готово:
+                                span 60%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
                                 .quiz-progress__item.active
                                 .quiz-progress__item
                                 .quiz-progress__item
@@ -75,104 +330,148 @@
                             .quiz__error
                             a.btn.btn-prev.qa-prev(href='#') 
                             a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide
-                    .step-slide__title Где именно вы хотите <br>установить станцию?
+                    .step-slide__title Для чего Вы к нам обратились?
                     .quiz__ans.question__ans--radio
-                        label.pick-item(for="step1-1")
-                            input#step1-1.pick-item__input(type='radio', name='question1', value='На земле (наземной конструкции)')
-                            .pick-item__label На земле (наземной конструкции)
-                        label.pick-item(for="step1-2")
-                            input#step1-2.pick-item__input(type='radio', name='question1', value='На крыше (скатной, плоской)')
-                            .pick-item__label На крыше (скатной, плоской) 
-                        label.pick-item(for="step1-3")
-                            input#step1-3.pick-item__input(type='radio', name='question1', value='Комбинированно')
-                            .pick-item__label Комбинированно
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question8', value='Нужно больше заявок')
+                            .pick-item__label Нужно больше заявок
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question8', value='Хочу внедрить/улучшить  интернет-маркетинг в компании')
+                            .pick-item__label Хочу внедрить/улучшить  интернет-маркетинг в компании
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question8', value='Необходимо протестировать  нишу')
+                            .pick-item__label Необходимо протестировать  нишу
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question8', value='Нужна консультация эксперта ')
+                            .pick-item__label Нужна консультация эксперта 
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question8', value='другое')
+                            .pick-item__label другое
                     .step-slide__bottom
                         .quiz-progress
-                            .quiz-progress__title Расчет пройден на 20%
+                            .quiz-progress__title Готово:
+                                span 70%
                             .quiz-progress__steps
                                 .quiz-progress__item.active
-                                .quiz-progress__item
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
                                 .quiz-progress__item
                                 .quiz-progress__item
                                 .quiz-progress__item
                         .prev-next-container
                             .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
                             a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide
-                    .step-slide__num 
-                        span 2
-                        | /5
-                    .step-slide__title Какая мощность подведенной к вашему <br>объекту линии электропередачи
-                        .step-slide__subtitle (мощность в кВт вы можете посмотреть в договоре с вашей энергораспределительной компанией)
+                    .step-slide__title Как срочно Вы готовы запустить <br> проект и получать заявки?
                     .quiz__ans.question__ans--radio
-                        label.pick-item(for="step2-1")
-                            input#step2-1.pick-item__input(type='radio', name='question2', value='Знаю сколько кВт, фаз')
-                            .pick-item__label Знаю сколько кВт, фаз
-                        label.pick-item(for="step2-2")
-                            input#step2-2.pick-item__input(type='radio', name='question2', value='Не знаю')
-                            .pick-item__label Не знаю
-                    .prev-next-container
-                        .quiz__error
-                        a.btn.btn-prev.qa-prev(href='#') Назад
-                        a.btn.btn--orange.btn-next.qa-next(href='#') Далее
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question9', value='Готов заключить с Вами договор  сегодня, если договоримся')
+                            .pick-item__label Готов заключить с Вами договор  сегодня, если договоримся
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question9', value='Никуда не тороплюсь,  рассматриваю разные варианты')
+                            .pick-item__label Никуда не тороплюсь,  рассматриваю разные варианты
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question9', value='Хотелось бы запустить проект  как можно быстрее')
+                            .pick-item__label Хотелось бы запустить проект  как можно быстрее
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question9', value='Необходимо протестировать нишу')
+                            .pick-item__label Необходимо протестировать нишу
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question9', value='Пока выбираю каналы продаж  и сравниваю подрядчиков')
+                            .pick-item__label Пока выбираю каналы продаж  и сравниваю подрядчиков
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Готово:
+                                span 80%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
+                            a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide
-                    .step-slide__num 
-                        span 3
-                        | /5
-                    .step-slide__title Хотите ли вы быть обеспеченным <br>электроэнергией, даже когда нет внешней сети?
+                    .step-slide__title Вас интересует что-то, кроме <br> разработки сайта?
                     .quiz__ans.question__ans--radio
-                        label.pick-item(for="step3-1")
-                            input#step3-1.pick-item__input(type='radio', name='question3', value='Нет, хочу просто зарабатывать  на зеленом тарифе')
-                            .pick-item__label Нет, хочу просто зарабатывать  на зеленом тарифе
-                        label.pick-item(for="step3-2")
-                            input#step3-2.pick-item__input(type='radio', name='question3', value='Да, знаю собственное потребление, а значит понимаю сколько нужно запасать')
-                            .pick-item__label Да, знаю собственное потребление, а значит понимаю сколько нужно запасать
-                        label.pick-item(for="step3-3")
-                            input#step3-3.pick-item__input(type='radio', name='question3', value='Да, но не понимаю сколько нужно запасать')
-                            .pick-item__label Да, но не понимаю сколько нужно запасать
-                    .prev-next-container
-                        .quiz__error
-                        a.btn.btn-prev.qa-prev(href='#') Назад
-                        a.btn.btn--orange.btn-next.qa-next(href='#') Далее
-                .step-slide
-                    .step-slide__num 
-                        span 4
-                        | /5
-                    .step-slide__title Знаете ли вы площадь и ориентацию <br>скатов крыши?
-                    .quiz__ans.question__ans--radio
-                        label.pick-item(for="step4-1")
-                            input#step4-1.pick-item__input(type='radio', name='question4', value='Знаю площадь и примерно ориентацию по сторонам света')
-                            .pick-item__label Знаю площадь и примерно ориентацию по сторонам света
-                        label.pick-item(for="step4-2")
-                            input#step4-2.pick-item__input(type='radio', name='question4', value='Знаю площадь, ориентации не знаю, но могу указать адрес')
-                            .pick-item__label Знаю площадь, ориентации не знаю, но могу указать адрес
-                        label.pick-item(for="step4-3")
-                            input#step4-3.pick-item__input(type='radio', name='question4', value='Не знаю ничего, но есть чертежи (проект) дома')
-                            .pick-item__label Не знаю ничего, но есть чертежи (проект) дома
-                        label.pick-item(for="step4-4")
-                            input#step4-4.pick-item__input(type='radio', name='question4', value='Не знаю ничего, нужен  выезд специалиста')
-                            .pick-item__label Не знаю ничего, нужен  выезд специалиста
-                    .prev-next-container
-                        .quiz__error
-                        a.btn.btn-prev.qa-prev(href='#') Назад
-                        a.btn.btn--orange.btn-next.qa-next(href='#') Далее
-                .step-slide
-                    .step-slide__num 
-                        span 5
-                        | /5
-                    .step-slide__title Знаете ли вы, что нужно для <br>подключения “зеленого тарифа”?
-                    .quiz__ans.question__ans--radio
-                        label.pick-item(for="step5-1")
-                            input#step5-1.pick-item__input(type='radio', name='question5', value='Да, но есть вопросы по процедурам и/или нормам закона')
-                            .pick-item__label Да, но есть вопросы по процедурам и/или нормам закона
-                        label.pick-item(for="step5-2")
-                            input#step5-2.pick-item__input(type='radio', name='question5', value='Нет, объясните (мощность линии, требования к счетчику, нормы закона)')
-                            .pick-item__label Нет, объясните (мощность линии, требования к счетчику, нормы закона)
-                    .prev-next-container
-                        .quiz__error
-                        a.btn.btn-prev.qa-prev(href='#') Назад
-                        a.btn.btn--orange.btn-next.qa-next(href='#') Далее
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='нет')
+                            .pick-item__label нет
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Маркетинговая проработка  проекта')
+                            .pick-item__label Маркетинговая проработка  проекта
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Фирменный стиль и упаковка')
+                            .pick-item__label Фирменный стиль и упаковка
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Конверсионный чат-бот')
+                            .pick-item__label Конверсионный чат-бот
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Внедрение CRM системы')
+                            .pick-item__label Внедрение CRM системы
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Контекстная реклама  (Яндекс + Google)')
+                            .pick-item__label Контекстная реклама  (Яндекс + Google)
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Интересует весь спектр  интернет-маркетинга')
+                            .pick-item__label Интересует весь спектр  интернет-маркетинга
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Построение отдела продаж')
+                            .pick-item__label Построение отдела продаж
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Реклама в социальных сетях')
+                            .pick-item__label Реклама в социальных сетях
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question10', value='Затрудняюсь ответить')
+                            .pick-item__label Затрудняюсь ответить
+                    .step-slide__bottom
+                        .quiz-progress
+                            .quiz-progress__title Готово:
+                                span 90%
+                            .quiz-progress__steps
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item.active
+                                .quiz-progress__item
+                        .prev-next-container
+                            .quiz__error
+                            a.btn.btn-prev.qa-prev(href='#') 
+                            a.btn.btn-next.qa-next(href='#') Далее
+                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide.step-slide--finish
                     .modal__title Оставьте заявку
                     .modal__subtitle и наш менеджер свяжется 
@@ -192,7 +491,7 @@
                                 span.agree__policy с политикой конфиденциальности
                     .step-slide__left
                         .step-slide__title Спасибо за ответы! <br>Остался последний шаг
-                        p Мы уже анализируем ваши ответы. В ближайшее время наш менеджер свяжется с вами и предложит оптимальную комплектацию станции, расскажет, какой бюджет установки и как скоро вы сможете зарабатывать на “зеленом тарифе”.
+                        p Мы уже анализируем ваши ответы. В ближайшее время наш менеджер свяжется с вами.
                     .form.step-slide__form
                         input(type="text" placeholder="Имя" name="name2" required).rfield.name-icon
                         input(type="text" placeholder="Телефон" name="phone" required).rfield.phone-mask
