@@ -310,6 +310,21 @@ ul,li {
 		}
 	}
 }
+.tooltip {
+	position: relative;
+	&__body-wrap {
+		// display: none;
+		padding-left: 20px;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+	&:hover {
+		.tooltip__body-wrap {
+			display: block;
+		}
+	}
+}
 .br-mobile {
 	display: none;
 	@media screen and (max-width: 749px){
@@ -325,10 +340,16 @@ ul,li {
 
 @import "sections/header";
 @import "sections/1home";
-@import "sections/promo-home";
 
 @import "sections/modal";
 @import "sections/footer";
 @import "sections/quiz";
+@import "sections/menu-burger";
 
-@import "media"; // Always at the end
+//pages
+
+@import "pages/page-promo-home";
+@import "pages/page-light-theme";
+
+
+// @import "media"; // Always at the end

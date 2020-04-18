@@ -71,6 +71,14 @@ $(function() {
             setTimeout(function(){ $this.addClass('fadeIn'); },i*20);
         });
         
+                    
+        var introLetter = $(".animated-parent").find('.animated');
+
+        introLetter.each(function(i,t) {
+            var $this = $(t);				
+            setTimeout(function(){ $this.addClass('fadeIn'); },i*20);
+        });
+
         var IntroLinks = $(".promo-home__links").find('.animated');
 
         IntroLinks.each(function(i,t) {
