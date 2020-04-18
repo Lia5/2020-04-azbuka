@@ -260,6 +260,16 @@ ul,li {
 		min-width: 168px;
 		padding: 15px;
 		box-shadow: none;
+		@media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+			min-width: 154px;
+			padding: 14px;
+		}
+		@media screen and (max-width: 749px){
+			min-width: 172px;
+			font-size: 20px;
+			padding: 16px;
+		}
 		svg {
 			width: 21px;
 			height: 15px;
@@ -272,6 +282,14 @@ ul,li {
 		position: relative;
 		background: linear-gradient(to right,#d8d8d8,#f3f3f3);
 		box-shadow: none;
+		@media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+			min-width: 55px;
+			padding: 14px;
+		}
+		@media screen and (max-width: 749px){
+			min-width: 60px;
+		}
 		&:after {
 			content: "";
 			position: absolute;
@@ -284,6 +302,18 @@ ul,li {
 			background-position: center;
 			transform: rotate(180deg);
 		}
+	}
+}
+.br-mobile {
+	display: none;
+	@media screen and (max-width: 749px){
+		display: inline;
+	}
+}
+
+.br-desktop {
+	@media screen and (max-width: 749px){
+		display: none;
 	}
 }
 

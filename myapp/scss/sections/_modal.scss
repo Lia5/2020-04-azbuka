@@ -135,6 +135,11 @@
       }
     }
   }
+  .btn-next {
+    @media screen and (max-width: 749px){
+      font-size: 20px;
+    }
+  }
 }
 .close {
   position: absolute;
@@ -336,6 +341,15 @@
     @media only screen and (max-width: 749px) {
       top: 10px;
       right: -6px;
+    }
+  }
+}
+#modalQuiz {
+  .modal__wrap {
+    @media only screen and (max-width: 749px) {
+      width: 100%;
+      padding-top: 0;
+      padding-right: 0;
     }
   }
 }
