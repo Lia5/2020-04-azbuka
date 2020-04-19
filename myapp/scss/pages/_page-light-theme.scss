@@ -24,12 +24,24 @@
     .social a {
         color: #fff;
     }
+    .menu-toggle {
+        .one,
+        .two,
+        .three {
+            @media screen and (max-width: 749px){
+                background-color: #222532;
+            }
+        }
+    }
     //home
     .home {
         overflow: hidden;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             padding-top: 35px;
+        }
+        @media screen and (max-width: 749px){
+            padding-top: 47px;
         }
         @media screen and (max-height: 850px) and (min-width: 1081px) {
             padding-bottom: 24px;
@@ -46,6 +58,9 @@
             screen and (max-width: 1080px) {
                 width: 100%;
             }
+            @media screen and (max-width: 749px){
+                padding-bottom: 45px;
+            }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 padding-top: 52px;
             }
@@ -59,6 +74,10 @@
                 font-size: 40px;
                 line-height: 55px;
                 letter-spacing: 3px;
+            }
+            @media screen and (max-width: 749px){
+                font-size: 34px;
+                line-height: 39px;
             }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 font-size: 40px;
@@ -77,6 +96,13 @@
                 margin-left: 15px;
                 margin-bottom: 28px;
             }
+            @media screen and (max-width: 749px){
+                font-size: 25px;
+                line-height: 35px;
+                padding-left: 0;
+                margin-left: auto;
+                text-align: center;
+            }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 font-size: 41px;
                 line-height: 61px;
@@ -88,12 +114,21 @@
                     padding-left: 27px;
                     letter-spacing: 3px;
                 }
+                @media screen and (max-width: 749px){
+                    padding-left: 19px;
+                    padding-right: 10px;
+                    letter-spacing: 2px;
+                }
                 &+.home__subtitle--other {
                     margin-left: 32px;
                     @media only screen and (max-width: 1350px) and (orientation: portrait),
                     screen and (max-width: 1080px) {
                         margin-left: 19px;
                         padding-left: 22px;
+                    }
+                    @media screen and (max-width: 749px){
+                        margin-left: 0;
+                        padding-right: 15px;
                     }
                 }
             }
@@ -107,6 +142,11 @@
             screen and (max-width: 1080px) {
                 margin-left: 45px;
                 margin-bottom: 47px;
+            }
+            @media screen and (max-width: 749px){
+                margin-left: 0;
+                padding-bottom: 0;
+                margin-bottom: 10px;
             }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 max-width: 412px;
@@ -122,6 +162,10 @@
                 flex-wrap: wrap;
                 margin-left: 32px;
                 margin-bottom: 44px;
+            }
+            @media screen and (max-width: 749px){
+                margin-left: 0;
+                margin-bottom: 34px;
             }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 margin-left: 58px;
@@ -152,6 +196,13 @@
                     margin-bottom: 24px;
                     letter-spacing: 2px;
                 }
+                @media screen and (max-width: 749px){
+                    font-size: 20px;
+                    line-height: 32px;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    justify-content: center;
+                }
                 @media screen and (max-height: 850px) and (min-width: 1081px) {
                     font-size: 20px;
                     line-height: 27px;
@@ -166,6 +217,13 @@
                 screen and (max-width: 1080px) {
                     top: -70px;
                     left: -100px;
+                }
+                @media screen and (max-width: 749px){
+                    min-width: 320px;
+                    top: -65px;
+                    left: -13px;
+                    padding-left: 0;
+                    margin-right: -14px;
                 }
                 @media screen and (max-height: 850px) and (min-width: 1081px) {
                     left: 50px;
@@ -182,11 +240,16 @@
                     // box-shadow: 25px 15px 152px 42px rgba(26,27,44,0.25);
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
-                    padding: 157px 143px;
+                    padding: 170px 153px 200px 127px;
                     background-image: url('../img/l-home-tooltip-750.png');
+                    background-size: 100% 100%;
                 }
                 @media screen and (max-width: 749px){
+                    letter-spacing: 1px;
+                    text-align: center;
+                    padding: 150px 27px 183px;
                     background-image: url('../img/l-home-tooltip-320.png');
+                    // background-position: center;
                 }
                 p {
                     margin: 0;
@@ -207,6 +270,15 @@
                 color: #646464;
                 letter-spacing: 1px;
             }
+            @media screen and (max-width: 749px){
+                letter-spacing: 0;
+            }
+            &__text {
+                @media screen and (max-width: 749px){
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+            }
         }
         &__price {
             position: absolute;
@@ -226,6 +298,11 @@
                 font-size: 20px;
                 line-height: 29px;
                 padding: 16px 29px;
+            }
+            @media screen and (max-width: 749px){
+                position: static;
+                margin: 13px auto 0;
+                width: 200px;
             }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 font-size: 18px;
@@ -268,6 +345,8 @@
         background-image: url('../img/l-list-bg-750.png');
     }
     @media screen and (max-width: 749px){
+        padding: 77px 48px 57px;
+        display: block;
         background-image: url('../img/l-list-bg-320.png');
     }
     @media screen and (max-height: 850px) and (min-width: 1081px) {
@@ -291,6 +370,13 @@
         screen and (max-width: 1080px) {
             display: none;
         }
+        @media screen and (max-width: 749px){
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            line-height: 27px;
+            letter-spacing: 1px;
+        }
         @media screen and (max-height: 850px) and (min-width: 1081px) {
             max-width: 161px;
             font-size: 18px;
@@ -310,6 +396,11 @@
             flex-grow: 1;
             flex-basis: 0;
         }
+        @media screen and (max-width: 749px){
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         &+.complex__item {
             margin-top: 18px;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -317,7 +408,7 @@
                 margin-top: 0;
             }
             @media screen and (max-width: 749px){
-                // margin-top: 0;
+                margin-top: 18px;
             }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 margin-top: 10px;
@@ -364,6 +455,10 @@
     &__name {
         text-transform: uppercase;
         font-weight: 200;
+        @media screen and (max-width: 749px){
+            font-size: 14px;
+            line-height: 21px;
+        }
         span {
             font-weight: 700;
         }

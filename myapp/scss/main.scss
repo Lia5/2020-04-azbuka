@@ -344,6 +344,12 @@ ul,li {
 		display: none;
 	}
 }
+.br-mobile-320 {
+	display: none;
+	@media screen and (max-width: 340px){
+		display: inline;
+	}
+}
 .br-mobile {
 	display: none;
 	@media screen and (max-width: 749px){
