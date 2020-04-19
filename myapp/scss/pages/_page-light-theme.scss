@@ -224,44 +224,54 @@
                 }
             }
             .tooltip__body-wrap {
-                top: -181px;
-                left: 105px;
-                min-width: 692px;
+                top: -61px;
+                left: 130px;
+                min-width: 512px;
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
-                    top: -70px;
-                    left: -100px;
+
                 }
                 @media screen and (max-width: 749px){
-                    min-width: 320px;
-                    top: -65px;
-                    left: -13px;
+                    min-width: 290px;
+                    top: 53px;
+                    left: 0;
                     padding-left: 0;
-                    margin-right: -14px;
                 }
                 @media screen and (max-height: 850px) and (min-width: 1081px) {
-                    left: 50px;
+                    // left: 50px;
                 }
             }
             .tooltip__body {
+                position: relative;
                 font-size: 14px;
                 color: #262a38;
                 font-weight: 200;
-                padding: 146px 131px 139px 127px;
+                padding: 27px 36px;
                 background: #fff;
                 background: url('../img/l-home-tooltip.png') no-repeat;
                 background-position: top center;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(0.9);
+                    box-shadow: 25px 15px 152px 42px rgba(26,27,44,0.25);
+                    z-index: -1;
+
+                    
+                }
                     // box-shadow: 25px 15px 152px 42px rgba(26,27,44,0.25);
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
-                    padding: 170px 153px 200px 127px;
                     background-image: url('../img/l-home-tooltip-750.png');
                     background-size: 100% 100%;
                 }
                 @media screen and (max-width: 749px){
                     letter-spacing: 1px;
                     text-align: center;
-                    padding: 150px 27px 183px;
                     background-image: url('../img/l-home-tooltip-320.png');
                     // background-position: center;
                 }
