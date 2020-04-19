@@ -352,6 +352,11 @@
       padding-right: 0;
     }
   }
+  .close {
+    @media only screen and (max-width: 749px) {
+        right: 10px;
+    }
+  }
 }
 #policy {
   .modal__mainsubtitle {
