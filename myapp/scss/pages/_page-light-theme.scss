@@ -282,9 +282,10 @@
             margin-left: 14px;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
+                max-width: 386px;
                 margin-left: 0;
                 color: #646464;
-                letter-spacing: 1px;
+                letter-spacing: 0;
             }
             @media screen and (max-width: 749px){
                 letter-spacing: 0;
