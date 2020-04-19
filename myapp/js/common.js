@@ -106,6 +106,14 @@ $(function() {
             } else if ($(this).closest('.step-slide').hasClass('step-slide--text') && $(this).closest('.step-slide').find('input').val() != '' ) {
                 $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
 
+                // bubble +500
+                if(jQuery('.quiz__discount-plus').length) {
+                    $('.quiz__discount-plus').addClass('bubble');
+                    setTimeout(function() {
+                        $('.quiz__discount-plus').removeClass('bubble');
+                    }, 1510);
+                }
+                
                 // итоговая скидка
                 if(jQuery('#total').length) {
                     var sum = +($('#total').html());
@@ -118,6 +126,13 @@ $(function() {
                 if($(this).closest('.step-slide').find('input:checked').length) {
                     $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
                     
+                    // bubble +500
+                    if(jQuery('.quiz__discount-plus').length) {
+                        $('.quiz__discount-plus').addClass('bubble');
+                        setTimeout(function() {
+                            $('.quiz__discount-plus').removeClass('bubble');
+                        }, 1510);
+                    }
                     // итоговая скидка
                     if(jQuery('#total').length) {
                         var sum = +($('#total').html());

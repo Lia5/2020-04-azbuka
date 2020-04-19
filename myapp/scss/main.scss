@@ -241,8 +241,6 @@ ul,li {
 	}
 	&:active {
 		background-image: linear-gradient(to right, #0065d8, #0097ee);
-		top: 3px;
-
 	}
 	&-finish {
 		padding: 0;
@@ -382,7 +380,6 @@ ul,li {
 		box-shadow: none;
 	}
 }
-
 @-webkit-keyframes si-button-pulse {
 	from {
 		box-shadow: 0 0 8px 6px #135ba6, 0 0 12px 14px #135ba6; }
@@ -403,6 +400,23 @@ ul,li {
 		box-shadow: 0 0 8px 6px #135ba6, 0 0 12px 14px #135ba6; }
 	to {
 		box-shadow: 0 0 18px 6px rgba(19, 91, 166, 0), 0 0 4px 71px rgba(19, 91, 166, 0); } }
+
+.bubble{
+	position: relative;
+	opacity: 0;
+    animation-name: bubble;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes bubble{
+	0%{opacity:0;top:0}
+	50%{top:-15px;opacity:1}
+	to{opacity:0}
+}
+@keyframes bubble{
+	0%{opacity:0;top:0}
+	50%{top:-15px;opacity:1}
+	to{opacity:0}
+}
 
 
 //br 
