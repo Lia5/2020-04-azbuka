@@ -359,12 +359,15 @@ body.promo-body {
     }
 }
 
-    .animated {
-        opacity: 0;
-        &.fadeIn {
-            opacity: 1;
-        }
-        &.fadeInUp {
-            opacity: 1;
-        }
+.animated {
+    opacity: 0;
+    &.fadeIn {
+        opacity: 1;
     }
+    &.fadeInUp {
+        opacity: 1;
+    }
+    &.zoomIn {
+        opacity: 1;
+    }
+}

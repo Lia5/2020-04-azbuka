@@ -65,24 +65,26 @@ $(function() {
     setTimeout(function(){  
             
         var introLetter = $(".promo-home__title").find('.animated');
-
         introLetter.each(function(i,t) {
-            var $this = $(t);				
+            var $this = $(t);
             setTimeout(function(){ $this.addClass('fadeIn'); },i*20);
         });
         
-                    
         var introLetter = $(".animated-parent").find('.animated');
-
         introLetter.each(function(i,t) {
-            var $this = $(t);				
+            var $this = $(t);
             setTimeout(function(){ $this.addClass('fadeIn'); },i*20);
         });
 
         var IntroLinks = $(".promo-home__links").find('.animated');
-
         IntroLinks.each(function(i,t) {
-            var $this = $(t);				
+            var $this = $(t);
+            setTimeout(function(){ $this.addClass('fadeInUp'); },i*200);
+        });
+
+        var IntroLinks = $(".home__text.animated");
+        IntroLinks.each(function(i,t) {
+            var $this = $(t);
             setTimeout(function(){ $this.addClass('fadeInUp'); },i*200);
         });
         
@@ -180,8 +182,10 @@ $(function() {
             $('.qa-del-discount').css('display', 'block');
           }
           var modal =  $(numModal);
-          modalWrap.removeClass('fadeOutUp');
-          modalWrap.addClass('fadeInDown');
+        //   modalWrap.removeClass('fadeOutUp');
+        //   modalWrap.addClass('fadeInDown');
+          modalWrap.removeClass('animated zoomOut');
+          modalWrap.addClass('animated zoomIn');
           modal.removeClass('disabled');
           modal.addClass('flex');
           $('body').addClass('body-modal-open');
@@ -193,8 +197,10 @@ $(function() {
                 $('.main-menu').removeClass('active');
                 $('.menu-toggle').removeClass('active');
             }
-            modalWrap.removeClass('fadeInDown');
-            modalWrap.addClass('fadeOutUp');
+            // modalWrap.removeClass('fadeInDown');
+            // modalWrap.addClass('fadeOutUp');
+            modalWrap.removeClass('animated zoomIn');
+            modalWrap.addClass('animated zoomOut');
             setTimeout(function() {
                 $('.modal').addClass('disabled');
                 }, 700);
@@ -212,8 +218,10 @@ $(function() {
                 $('.main-menu').removeClass('active');
                 $('.menu-toggle').removeClass('active');
                 var modalWrap = $('.modal__wrap');
-                modalWrap.removeClass('fadeInDown');
-                modalWrap.addClass('fadeOutUp');
+                // modalWrap.removeClass('fadeInDown');
+                // modalWrap.addClass('fadeOutUp');
+                modalWrap.removeClass('animated zoomIn');
+                modalWrap.addClass('animated zoomOut');
                 setTimeout(function() {
                     $('.modal').addClass('disabled');
                 }, 700);
@@ -291,8 +299,10 @@ $(function() {
                         var numModal = form.find('.btn-finish').attr('data-modal');
                         var modal =  $(numModal);
                         var modalWrap = $('.modal__wrap');
-                        modalWrap.removeClass('fadeOutUp');
-                        modalWrap.addClass('fadeInDown');
+                        // modalWrap.removeClass('fadeOutUp');
+                        // modalWrap.addClass('fadeInDown');
+                        modalWrap.removeClass('animated zoomOut');
+                        modalWrap.addClass('animated zoomIn');
                         $('.modal').addClass('disabled');
                         modal.removeClass('disabled');
                         modal.addClass('flex');

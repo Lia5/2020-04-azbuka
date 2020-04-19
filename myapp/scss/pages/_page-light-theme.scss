@@ -12,6 +12,17 @@
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             background-image: url('../img/l-main-bg-750.jpg');
+            background-position: top center;
+        }
+
+        @media only screen and (max-width: 1350px) and  (min-width: 1241px) {
+            background-position: top left 29%;
+        }
+        @media only screen and (max-width: 1240px) and  (min-width: 1161px) {
+            background-position: top left 51%;
+        }
+        @media only screen and (max-width: 1160px) and  (min-width: 1081px) {
+            background-position: top left 42%;
         }
         @media screen and (max-width: 749px){
             background-image: url('../img/l-main-bg-320.jpg');
@@ -265,8 +276,10 @@
         .agree {
             font-size: 14px;
             line-height: 21px;
-            max-width: 469px;
-            margin-left: 37px;
+            // max-width: 469px;
+            max-width: 420px;
+            // margin-left: 37px;
+            margin-left: 14px;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 margin-left: 0;

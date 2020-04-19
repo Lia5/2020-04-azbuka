@@ -1,5 +1,5 @@
 #modalFinish.modal.disabled
-    .modal__wrap.animated.fadeInDown    
+    .modal__wrap  
         .close.modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                 g(stroke='none', stroke-width='1', fill-rule='evenodd')
@@ -11,7 +11,7 @@
             .modal__subtitle Скоро мы с вами свяжемся.<br>
                 span А пока можете ознакомиться <br>с обещанными бонусами
 #modalSupport.modal.disabled
-    .modal__wrap.animated.fadeInDown    
+    .modal__wrap 
         .close.modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                 g(stroke='none', stroke-width='1', fill-rule='evenodd')
@@ -36,10 +36,10 @@
                 .form.step-slide__form
                     .form-line
                         label
-                            input(type="text" placeholder="Введите ваше имя" name="name" required).rfield.name-icon
+                            input(type="text" placeholder="Введите ваше имя" name="name").rfield.name-icon
                     .form-line
                         label
-                            input(type="text" placeholder="Введите ваш телефон" name="phone" required).rfield.phone-mask
+                            input(type="text" placeholder="Введите ваш телефон" name="phone").rfield.phone-mask
                     .form-line-btn
                         .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
                             .blick
@@ -50,7 +50,7 @@
                         span.agree__policy с политикой конфиденциальности
 include quiz.jade
 // #policy.packagesForm.modal.disabled
-    .modal__wrap.animated.fadeInDown    
+    .modal__wrap
         .close.modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                 g(stroke='none', stroke-width='1', fill-rule='evenodd')

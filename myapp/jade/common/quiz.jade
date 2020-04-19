@@ -1,5 +1,5 @@
 #modalQuiz.modal.disabled
-    .modal__wrap.animated.fadeInDown    
+    .modal__wrap    
         .close.modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                 g(stroke='none', stroke-width='1', fill-rule='evenodd')
@@ -445,10 +445,10 @@
                         .finish-form
                             .form-line
                                 label
-                                    input(type="text" placeholder="ваш номер телефона" name="phone" required).rfield.phone-mask
+                                    input(type="text" placeholder="ваш номер телефона" name="phone").rfield.phone-mask
                             .form-line
                                 label
-                                    input(type="email" placeholder="введите вашу почту" name="email" required).rfield
+                                    input(type="email" placeholder="введите вашу почту" name="email").rfield
                             .form-line-btn
                                 .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
                                     .blick
