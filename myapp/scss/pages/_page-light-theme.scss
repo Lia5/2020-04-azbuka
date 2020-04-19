@@ -260,6 +260,10 @@
     line-height: 20px;
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
+        font-size: 13px;
+        top: 0;
+        padding: 77px 16px 57px;
+        display: flex;
         width: 100%;
         background-image: url('../img/l-list-bg-750.png');
     }
@@ -283,6 +287,10 @@
         font-size: 23px;
         line-height: 26px;
         margin-bottom: 20px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            display: none;
+        }
         @media screen and (max-height: 850px) and (min-width: 1081px) {
             max-width: 161px;
             font-size: 18px;
@@ -294,16 +302,19 @@
     }
     &__item {
         display: flex;
-        @media screen and (max-width: 749px){
-            // width: 50%;
-            // padding-right: 5px;
-            // margin-bottom: 10px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            display: block;
+            text-align: center;
+            padding: 0 5px;
+            flex-grow: 1;
+            flex-basis: 0;
         }
         &+.complex__item {
             margin-top: 18px;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
-                // margin-top: 10px;
+                margin-top: 0;
             }
             @media screen and (max-width: 749px){
                 // margin-top: 0;
@@ -312,6 +323,14 @@
                 margin-top: 10px;
             }
         }
+        &:nth-child(1) {
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+
+            }
+
+
+        }
     }
     &__icon {
         margin-right: 6px;
@@ -319,8 +338,9 @@
         min-width: 30px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            // width: 60px;
-            // height: 60px;
+            margin: 0 auto 10px;
+            width: 50px;
+            height: 36px;
         }
 
         @media screen and (max-width: 749px){
@@ -335,6 +355,10 @@
 
         img {
             max-width: 100%;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                height: 100%;
+            }
         }
     }
     &__name {
