@@ -321,9 +321,17 @@ ul,li {
 		top: 0;
 		z-index: 1;
 	}
-	&:hover {
+	&.active{
 		.tooltip__body-wrap {
 			display: block;
+		}
+	}
+	&:hover {
+		@media only screen and (min-width: 1350px) {
+			.tooltip__body-wrap {
+				display: block;
+			}
+
 		}
 	}
 }

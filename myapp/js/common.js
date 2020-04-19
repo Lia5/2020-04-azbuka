@@ -42,7 +42,24 @@ $(function() {
         });
     }
 
-    //animatio-text
+    if (jQuery('.tooltip').length) {
+        if (window.innerWidth < 1350 || window.screen.width < 1350) {
+            $('.tooltip__title').on('click', function () {
+                $(this).parent().toggleClass('active');
+                var tooltipQa = $(this);
+                $('body').mouseup(function (e) { // событие клика по веб-документу
+                    var div = $(".tooltip"); // тут указываем ID элемента
+                    // var close = $('.modal-close');
+                    if (!div.is(e.target) // если клик был не по нашему блоку
+                        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+                        tooltipQa.parent().removeClass('active');
+                    }
+                });
+            });
+        }
+    }
+
+    //animation-text
     if(jQuery('.letters').length) {
         $.fn.animate_Text = function() {
             this.addClass('active');
