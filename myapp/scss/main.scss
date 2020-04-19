@@ -206,7 +206,7 @@ ul,li {
 	text-align: center;
 	border-radius: 7px;
 	font-weight: 700;
-	span {
+	.ident {
 		position: relative;
 		&:after {
 			content: "";
@@ -263,6 +263,7 @@ ul,li {
 		}
 	}
 	&-next {
+		display: block;
 		min-width: 168px;
 		padding: 15px;
 		box-shadow: none;
@@ -282,6 +283,7 @@ ul,li {
 		}
 	}
 	&-prev {
+		display: block;
 		min-width: 67px;
 		padding: 15px;
 		margin-right: 21px;
@@ -369,6 +371,37 @@ ul,li {
 	30% { left: 110%; margin-left: 80px; }
 	100% { left: 110%; margin-left: 80px; } 
 }
+
+.si-button-pulse {
+	border-radius: 7px;
+	&:hover {
+		will-change: transform;
+		transform: translate3d(0, 0, 0);
+		animation: si-button-pulse 0.8s 0s ease-out 1;
+		box-shadow: none;
+	}
+}
+
+@-webkit-keyframes si-button-pulse {
+	from {
+		box-shadow: 0 0 8px 6px #135ba6, 0 0 12px 14px #135ba6; }
+	to {
+		box-shadow: 0 0 18px 6px rgba(19, 91, 166, 0), 0 0 4px 71px rgba(19, 91, 166, 0); } }
+@-moz-keyframes si-button-pulse {
+	from {
+		box-shadow: 0 0 8px 6px #135ba6, 0 0 12px 14px #135ba6; }
+	to {
+		box-shadow: 0 0 18px 6px rgba(19, 91, 166, 0), 0 0 4px 71px rgba(19, 91, 166, 0); } }
+@-ms-keyframes si-button-pulse {
+	from {
+		box-shadow: 0 0 8px 6px #135ba6, 0 0 12px 14px #135ba6; }
+	to {
+		box-shadow: 0 0 18px 6px rgba(19, 91, 166, 0), 0 0 4px 71px rgba(19, 91, 166, 0); } }
+@keyframes si-button-pulse {
+	from {
+		box-shadow: 0 0 8px 6px #135ba6, 0 0 12px 14px #135ba6; }
+	to {
+		box-shadow: 0 0 18px 6px rgba(19, 91, 166, 0), 0 0 4px 71px rgba(19, 91, 166, 0); } }
 
 
 //br 
