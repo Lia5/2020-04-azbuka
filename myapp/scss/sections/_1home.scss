@@ -229,6 +229,7 @@
         @media screen and (max-width: 749px){
             margin-left: 0;
             margin-bottom: 34px;
+            justify-content: center;
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
             margin-left: 62px;
@@ -242,7 +243,8 @@
             margin-left: 42px;
         }
         @media screen and (max-width: 749px){
-            margin-left: 0;
+            margin-left: auto;
+            margin-right: auto;
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
             max-width: 395px;
