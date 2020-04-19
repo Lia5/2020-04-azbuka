@@ -1,16 +1,20 @@
 
 .light {
     color: #1a1a24;
-    background: #fff url(../img/l-main-bg.jpg) no-repeat;
+    background: #fff url('../img/l-main-bg.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     .main {
-        background: #fff url(../img/l-main-bg.jpg) no-repeat;
+        background: #fff url('../img/l-main-bg.jpg') no-repeat;
         background-position: center;
         background-size: cover;
 
-        @media screen and (max-height: 850px) and (min-width: 1081px) {
-
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            background-image: url('../img/l-main-bg-750.jpg');
+        }
+        @media screen and (max-width: 749px){
+            background-image: url('../img/l-main-bg-320.jpg');
         }
     }
     //header
@@ -23,6 +27,10 @@
     //home
     .home {
         overflow: hidden;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            padding-top: 35px;
+        }
         @media screen and (max-height: 850px) and (min-width: 1081px) {
             padding-bottom: 24px;
         }
@@ -34,6 +42,10 @@
         }
         &__body {
             width: 67%;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                width: 100%;
+            }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 padding-top: 52px;
             }
@@ -42,6 +54,12 @@
             font-size: 50px;
             line-height: 70px;
             color: #222532;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                font-size: 40px;
+                line-height: 55px;
+                letter-spacing: 3px;
+            }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 font-size: 40px;
                 line-height: 57px;
@@ -52,13 +70,32 @@
             line-height: 75px;
             margin-left: 0;
             color: #e8ebf4;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                font-size: 41px;
+                line-height: 55px;
+                margin-left: 15px;
+                margin-bottom: 28px;
+            }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 font-size: 41px;
                 line-height: 61px;
                 margin-bottom: 24px;
             }
-            &--other+.home__subtitle--other {
-                margin-left: 32px;
+            &--other {
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    padding-left: 27px;
+                    letter-spacing: 3px;
+                }
+                &+.home__subtitle--other {
+                    margin-left: 32px;
+                    @media only screen and (max-width: 1350px) and (orientation: portrait),
+                    screen and (max-width: 1080px) {
+                        margin-left: 19px;
+                        padding-left: 22px;
+                    }
+                }
             }
         }
         &__text {
@@ -66,6 +103,11 @@
             max-width: 492px;
             margin-left: 34px;
             margin-bottom: 95px;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                margin-left: 45px;
+                margin-bottom: 47px;
+            }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 max-width: 412px;
                 font-size: 17px;
@@ -75,11 +117,22 @@
         }
         &__btn {
             margin-left: 48px;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                flex-wrap: wrap;
+                margin-left: 32px;
+                margin-bottom: 44px;
+            }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 margin-left: 58px;
             }
         }
         &__tooltip {
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                order: -1;
+                width: 100%;
+            }
             .tooltip__title {
                 max-width: 230px;
                 display: flex;
@@ -91,6 +144,14 @@
                 text-decoration: underline;
                 font-family: "AABebasNeue", Arial, Helvetica, sans-serif;
                 color: #ff8c2c;
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    max-width: 100%;
+                    margin-left: 0;
+                    padding: 10px;
+                    margin-bottom: 24px;
+                    letter-spacing: 2px;
+                }
                 @media screen and (max-height: 850px) and (min-width: 1081px) {
                     font-size: 20px;
                     line-height: 27px;
@@ -101,6 +162,11 @@
                 top: -181px;
                 left: 105px;
                 min-width: 692px;
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    top: -70px;
+                    left: -100px;
+                }
                 @media screen and (max-height: 850px) and (min-width: 1081px) {
                     left: 50px;
                 }
@@ -113,7 +179,15 @@
                 background: #fff;
                 background: url('../img/l-home-tooltip.png') no-repeat;
                 background-position: top center;
-                // box-shadow: 25px 15px 152px 42px rgba(26,27,44,0.25);
+                    // box-shadow: 25px 15px 152px 42px rgba(26,27,44,0.25);
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    padding: 157px 143px;
+                    background-image: url('../img/l-home-tooltip-750.png');
+                }
+                @media screen and (max-width: 749px){
+                    background-image: url('../img/l-home-tooltip-320.png');
+                }
                 p {
                     margin: 0;
                     &+p {
@@ -127,6 +201,12 @@
             line-height: 21px;
             max-width: 469px;
             margin-left: 37px;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                margin-left: 0;
+                color: #646464;
+                letter-spacing: 1px;
+            }
         }
         &__price {
             position: absolute;
@@ -139,6 +219,14 @@
             font-size: 23px;
             line-height: 29px;
             color: #323442;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                bottom: -36px;
+                right: 70px;
+                font-size: 20px;
+                line-height: 29px;
+                padding: 16px 29px;
+            }
             @media screen and (max-height: 850px) and (min-width: 1081px) {
                 font-size: 18px;
                 line-height: 24px;
@@ -172,19 +260,11 @@
     line-height: 20px;
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
-        // margin-left: -15px;
-        // margin-top: -13px;
-        // font-size: 13px;
-        // line-height: 18px;
+        width: 100%;
+        background-image: url('../img/l-list-bg-750.png');
     }
     @media screen and (max-width: 749px){
-        // width: 100%;
-        // display: flex;
-        // flex-wrap: wrap;
-        // margin-top: 15px;
-        // margin-left: -12px;
-        // font-size: 14px;
-        // line-height: 20px;
+        background-image: url('../img/l-list-bg-320.png');
     }
     @media screen and (max-height: 850px) and (min-width: 1081px) {
         top: 47px;
