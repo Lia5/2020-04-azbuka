@@ -168,6 +168,9 @@
                 line-height: 26px;
                 margin-bottom: 52px;
             }
+            &:after {
+                display: none;
+            }
         }
         &__btn {
             margin-left: 48px;

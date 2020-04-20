@@ -22,11 +22,11 @@
             .quiz-sidebar
                 .quiz-sidebar__title Ответьте за 10 простых вопросов и узнайте 
                 .quiz-sidebar__subtitle как мы сможем увеличить ваши продажи на первой неделе работы квиз сайта
-            form(class="quizForm")
+            form(class="quizForm" action="telegram.php" method="post")
                 // Hidden Required Fields
                 input(type='hidden', name='project_name', value='Azbuka digital')
                 input(type='hidden', name='admin_email', value='Info@azbuka.digital')
-                input(type='hidden', name='form_subject', value='Оставить заявку')
+                input(type='hidden', name='form_subject', value='Квиз')
                 // END Hidden Required Fields
                 input.utm_source.hidden(type='hidden', name='utm_source')
                 input.utm_medium.hidden(type='hidden', name='utm_medium')

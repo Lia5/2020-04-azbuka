@@ -91,9 +91,60 @@
         </div>
         <div class="modal__body">
           <div class="modal__body-pic"></div>
+          <div class="modal__title">Поддержка клиентов</div>
+          <div class="modal__subtitle">Оставьте заявку <br> и наш менеджер свяжется <span>с вами через 3 минуты </span></div>
+          <form action="telegram.php" method="post">
+            <!-- Hidden Required Fields-->
+            <input type="hidden" name="project_name" value="Azbuka digital">
+            <input type="hidden" name="admin_email" value="Info@azbuka.digital">
+            <input type="hidden" name="form_subject" value="Оставить заявку">
+            <!-- END Hidden Required Fields-->
+            <input type="hidden" name="utm_source" class="utm_source hidden">
+            <input type="hidden" name="utm_medium" class="utm_medium hidden">
+            <input type="hidden" name="utm_campaign" class="utm_campaign hidden">
+            <input type="hidden" name="utm_term" class="utm_term hidden">
+            <input type="hidden" name="utm_content" class="utm_content hidden">
+            <div class="form step-slide__form">
+              <div class="form-line">
+                <label>
+                  <input type="text" placeholder="Введите ваше имя" name="name" class="rfield name-icon">
+                </label>
+              </div>
+              <div class="form-line">
+                <label>
+                  <input type="text" placeholder="Введите ваш телефон" name="phone" class="rfield phone-mask">
+                </label>
+              </div>
+              <div class="form-line-btn">
+                <div data-modal="#modalFinish" class="btn btn-finish si-button-pulse">
+                  <div class="blick">
+                    <input type="submit" value="Оставить заявку" class="quiz__btn">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="agree"><img src="img/agree.png" alt="agree">
+              <div class="agree__text">Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь <span class="agree__policy">с политикой конфиденциальности</span></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modalSend" class="modal disabled">
+      <div class="modal__wrap"> 
+        <div class="close modal-close">
+          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="t-popup__close-icon">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+              <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+              <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+            </g>
+          </svg>
+        </div>
+        <div class="modal__body">
+          <div class="modal__body-pic"></div>
           <div class="modal__title">Оставьте заявку</div>
           <div class="modal__subtitle">и наш менеджер свяжется <span>с вами через 3 минуты </span></div>
-          <form>
+          <form action="telegram.php" method="post">
             <!-- Hidden Required Fields-->
             <input type="hidden" name="project_name" value="Azbuka digital">
             <input type="hidden" name="admin_email" value="Info@azbuka.digital">
@@ -158,11 +209,11 @@
             <div class="quiz-sidebar__title">Ответьте за 10 простых вопросов и узнайте </div>
             <div class="quiz-sidebar__subtitle">как мы сможем увеличить ваши продажи на первой неделе работы квиз сайта</div>
           </div>
-          <form class="quizForm">
+          <form action="telegram.php" method="post" class="quizForm">
             <!-- Hidden Required Fields-->
             <input type="hidden" name="project_name" value="Azbuka digital">
             <input type="hidden" name="admin_email" value="Info@azbuka.digital">
-            <input type="hidden" name="form_subject" value="Оставить заявку">
+            <input type="hidden" name="form_subject" value="Квиз">
             <!-- END Hidden Required Fields-->
             <input type="hidden" name="utm_source" class="utm_source hidden">
             <input type="hidden" name="utm_medium" class="utm_medium hidden">

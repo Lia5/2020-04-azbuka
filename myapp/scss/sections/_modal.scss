@@ -287,8 +287,17 @@
 //     }
 //   }
 // }
-
 #modalSupport {
+  .modal__title {
+    font-size: 39px;
+    letter-spacing: 2px;
+    @media only screen and (max-width: 749px) {
+      font-size: 25px;
+    }
+  }
+}
+#modalSupport,
+#modalSend {
   .modal__wrap {
     max-width: 420px;
     text-align: center;
