@@ -15,7 +15,12 @@
 		start = new Date().getTime();
 
 		$.fn.preloadinator.disableScroll = function() {
-			$('body').css('overflow', 'hidden');
+			// $('body').css('overflow', 'hidden');
+			if($('body').hasClass('promo-body')){
+
+			} else {
+				$('body').addClass('body-modal-open');
+			}
 
 			if(typeof settings.afterDisableScroll == 'function') {
 				settings.afterDisableScroll.call(this);

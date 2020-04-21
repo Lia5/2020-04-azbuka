@@ -2,8 +2,8 @@ $(function() {
     $('.js-preloader').preloadinator({
         minTime: 2000,
         afterRemovePreloader: function() {
-            // $(this).remove();
-
+            $(this).remove();
+            $('body').removeClass('body-modal-open');
         }
     });
     //menu
