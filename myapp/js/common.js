@@ -1,4 +1,11 @@
 $(function() {
+    $('.js-preloader').preloadinator({
+        minTime: 2000,
+        afterRemovePreloader: function() {
+            // $(this).remove();
+
+        }
+    });
     //menu
     if(jQuery('.menu-toggle').length) {
         var menu = $('.menu-toggle');
@@ -294,20 +301,21 @@ $(function() {
     // form
     $('form').submit(function() { 
         var form = $(this);
-        console.log(form);
-        console.log(form.find('.btn-finish').attr('data-modal'));
         form.find('.rfield').addClass('empty_field');
 
         // Функция проверки полей формы
 
         form.find('.rfield').each(function(){
-            
-        console.log($(this));
             if($(this).val() != ''){
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
                 if (!form.find('.empty_field').length) {
-                    console.log($(this));
+                    if(form.attr("name") == "podderjka"){
+                        ym(62113519,'reachGoal','callback');
+                    }
+                    if(form.attr("name") == "quiz"){
+                        ym(62113519,'reachGoal','order'); 
+                    }
                     $.ajax({
                         type: "POST",
                         url: "../mail.php", //Change
@@ -326,9 +334,15 @@ $(function() {
                         $('body').addClass('body-modal-open');
                         setTimeout(function() {
                             // Done Functions
-                            form.trigger("reset");
+                            // form.trigger("reset");
                         }, 1000);
                     });
+
+                    $.ajax({
+                        method: "POST",
+                        url: "../telegram.php", //Change
+                        data: form.serialize()
+                    }).done(function(){});
                 }
             } else {}
         });

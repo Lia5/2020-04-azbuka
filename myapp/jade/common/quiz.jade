@@ -22,12 +22,13 @@
             .quiz-sidebar
                 .quiz-sidebar__title Ответьте за 10 простых вопросов и узнайте 
                 .quiz-sidebar__subtitle как мы сможем увеличить ваши продажи на первой неделе работы квиз сайта
-            form(class="quizForm" action="telegram.php" method="post")
+            form(class="quizForm", name="quiz")
                 // Hidden Required Fields
                 input(type='hidden', name='project_name', value='Azbuka digital')
-                input(type='hidden', name='admin_email', value='Info@azbuka.digital')
+                input(type='hidden', name='admin_email', value='Nn-diamond@ya.ru, Info@azbuka.digital')
                 input(type='hidden', name='form_subject', value='Квиз')
                 // END Hidden Required Fields
+                input(type='hidden', name='info', value='Квиз')
                 input.utm_source.hidden(type='hidden', name='utm_source')
                 input.utm_medium.hidden(type='hidden', name='utm_medium')
                 input.utm_campaign.hidden(type='hidden', name='utm_campaign')
@@ -456,5 +457,5 @@
                             .agree
                                 img(src="img/agree.png", alt="agree")
                                 .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
-                                    span.agree__policy с политикой конфиденциальности
+                                    a(href="policy.html" target="_blank").agree__policy с политикой конфиденциальности
                     

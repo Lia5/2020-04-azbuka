@@ -376,7 +376,35 @@
 }
 #policy {
   .modal__mainsubtitle {
-    margin-bottom: 20px;
-    margin-top: 40px;
   }
+
+  .modal__wrap {
+    text-align: left;
+    max-width: 670px;
+  }
+  .modal {
+    &__body {
+      padding: 5%;
+      background: #fff;
+    }
+    &__maintitle {
+      font-size: 24px;
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 22px;
+      color: $accent;
+      font-weight: 700;
+    }
+    &__mainsubtitle {
+      font-size: 18px;
+      line-height: 22px;
+
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+  }
+}
+.policy__body {
+  padding-top: 50px;
 }
