@@ -7,6 +7,13 @@
     @media screen and (max-width: 749px){
         padding-top: 66px;
     }
+    .wrap {
+        
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            justify-content: center;
+        }
+    }
     &__body {
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
             width: 100%;
@@ -370,5 +377,21 @@ body.promo-body {
     }
     &.zoomIn {
         opacity: 1;
+    }
+}
+.accent-color {
+    color: #ff9232;
+}
+.plus-mob span {
+    @media screen and (max-width: 749px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        text-align: center;
+        width: 27px;
+        height: 27px;
+        border: 1px solid #ff9232;
+        border-radius: 50%;
     }
 }
