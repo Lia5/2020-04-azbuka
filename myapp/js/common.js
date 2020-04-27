@@ -143,7 +143,7 @@ $(function() {
                 // итоговая скидка
                 if(jQuery('#total').length) {
                     var sum = +($('#total').html());
-                    var total = sum + 500;
+                    var total = sum + 1000;
                     $('#total').html(total);
                     console.log(total);
                     
@@ -162,7 +162,7 @@ $(function() {
                     // итоговая скидка
                     if(jQuery('#total').length) {
                         var sum = +($('#total').html());
-                        var total = sum + 500;
+                        var total = sum + 1000;
                         $('#total').html(total);
                         console.log(total);
                         
@@ -309,41 +309,51 @@ $(function() {
             if($(this).val() != ''){
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
-                if (!form.find('.empty_field').length) {
-                    if(form.attr("name") == "podderjka"){
-                        ym(62113519,'reachGoal','callback');
-                    }
-                    if(form.attr("name") == "quiz"){
-                        ym(62113519,'reachGoal','order'); 
-                    }
-                    $.ajax({
-                        type: "POST",
-                        url: "../mail.php", //Change
-                        data: form.serialize()
-                    }).done(function() {
-                        var numModal = form.find('.btn-finish').attr('data-modal');
-                        var modal =  $(numModal);
-                        var modalWrap = $('.modal__wrap');
-                        // modalWrap.removeClass('fadeOutUp');
-                        // modalWrap.addClass('fadeInDown');
-                        modalWrap.removeClass('animated zoomOut');
-                        modalWrap.addClass('animated zoomIn');
-                        $('.modal').addClass('disabled');
-                        modal.removeClass('disabled');
-                        modal.addClass('flex');
-                        $('body').addClass('body-modal-open');
-                        setTimeout(function() {
-                            // Done Functions
-                            // form.trigger("reset");
-                        }, 1000);
-                    });
 
-                    $.ajax({
-                        method: "POST",
-                        url: "../telegram.php", //Change
-                        data: form.serialize()
-                    }).done(function(){});
-                }
+                if((form.attr("name") == "quiz") && form.find('.useful__input:checked').length) {
+                        
+                console.log('jr');
+                    
+
+                    if (!form.find('.empty_field').length) {
+                        if(form.attr("name") == "podderjka"){
+                            ym(62113519,'reachGoal','callback');
+                        }
+                        if(form.attr("name") == "quiz"){
+                            ym(62113519,'reachGoal','order'); 
+                        }
+                        $.ajax({
+                            type: "POST",
+                            url: "../mail.php", //Change
+                            data: form.serialize()
+                        }).done(function() {
+                            var numModal = form.find('.btn-finish').attr('data-modal');
+                            var modal =  $(numModal);
+                            var modalWrap = $('.modal__wrap');
+                            // modalWrap.removeClass('fadeOutUp');
+                            // modalWrap.addClass('fadeInDown');
+                            modalWrap.removeClass('animated zoomOut');
+                            modalWrap.addClass('animated zoomIn');
+                            $('.modal').addClass('disabled');
+                            modal.removeClass('disabled');
+                            modal.addClass('flex');
+                            $('body').addClass('body-modal-open');
+                            setTimeout(function() {
+                                // Done Functions
+                                // form.trigger("reset");
+                            }, 1000);
+                        });
+
+                        $.ajax({
+                            method: "POST",
+                            url: "../telegram.php", //Change
+                            data: form.serialize()
+                        }).done(function(){});
+                    }
+
+            } else {
+                $('.useful__label').css('border-color', 'red');
+            }
             } else {}
         });
 		return false;

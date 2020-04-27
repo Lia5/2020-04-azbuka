@@ -6,22 +6,23 @@
                     rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
                     rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
         .modal__body.quiz
-            .quiz__discount
-                .quiz__discount-text Ваша <br> скидка:
-                .quiz__discount-price
-                    .quiz__discount-plus 
-                        span +500 
-                        | руб.
-                    .quiz__discount-total
-                        span#total 0 
-                        | руб.
-                    .arrows.quiz__discount__arrows
-                        svg.arrow(width='10', height='10', viewBox='0 0 10 10', fill='none')
-                            path(d='M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z', fill='#615333')
-                            path(d='M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z', fill='#615333')
+
             .quiz-sidebar
-                .quiz-sidebar__title Ответьте за 10 простых вопросов и узнайте 
+                .quiz-sidebar__title Ответьте за 7 простых вопросов и узнайте 
                 .quiz-sidebar__subtitle как мы сможем увеличить ваши продажи на первой неделе работы квиз сайта
+                .quiz__discount
+                    .quiz__discount-text Ваша <br> скидка:
+                    .quiz__discount-price
+                        .quiz__discount-plus 
+                            span +1000 
+                            | руб.
+                        .quiz__discount-total
+                            span#total 0 
+                            | руб.
+                        .arrows.quiz__discount__arrows
+                            svg.arrow(width='10', height='10', viewBox='0 0 10 10', fill='none')
+                                path(d='M5 3.70904e-07L0.757355 4.24265L2.17157 5.65686L5 2.82843L7.82843 5.65686L9.24265 4.24265L5 3.70904e-07Z', fill='#615333')
+                                path(d='M5 4L0.757355 8.24265L2.17157 9.65686L5 6.82843L7.82843 9.65686L9.24265 8.24265L5 4Z', fill='#615333')
             form(class="quizForm", name="quiz")
                 // Hidden Required Fields
                 input(type='hidden', name='project_name', value='Azbuka digital')

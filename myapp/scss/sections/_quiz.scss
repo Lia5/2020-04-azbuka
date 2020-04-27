@@ -12,27 +12,31 @@
         padding-top: 0;
     }
     &__discount {
-        position: absolute;
-        top: 35px;
-        right: 40px;
         display: flex;
         font-size: 15px;
         line-height: 1;
-        padding: 25px 55px 30px;
+        color: #000;
+        padding: 20px 28px 30px;
         background: url(../img/price.png) no-repeat;
+        background-size: 100% 100%;
         background-position: center;
+        margin-left: -10px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            top: 40px;
-            right: 20px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+            max-width: 220px;
             font-size: 14px;
-            background-size: 100% 100%;
             padding: 20px 32px 26px;
         }
         @media screen and (max-width: 749px){
             position: static;
             max-width: 320px;
-            margin: 0 auto;
+            margin: 0 auto -10px;
+            transform: none;
+            top: 0;
             font-size: 15px;
             line-height: 15px;
             padding: 20px 42px 26px;
@@ -91,8 +95,9 @@
         
     }
     &-sidebar {
+        position: relative;
         width: 24%;
-        padding: 40px 40px 55px;
+        padding: 40px 30px 55px;
         display: flex;
         flex-direction: column;
         background: #000 url('../img/gift.png') no-repeat;
@@ -109,21 +114,28 @@
             order: 1;
             font-size: 14px;
             line-height: 21px;
-            padding: 28px 40px 28px 27%;
+            padding: 28px 220px 28px 27%;
             
         }
         @media screen and (max-width: 749px){
-            display: none;
+            order: 0;
+            padding: 0;
         }
         &__title {
             margin-top: auto;
             font-weight: 700;
+            @media screen and (max-width: 749px){
+                display: none;
+            }
         }
         &__subtitle {
             font-weight: 200;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 max-width: 350px;
+            }
+            @media screen and (max-width: 749px){
+                display: none;
             }
         }
     }
@@ -870,6 +882,7 @@
                 display: flex;
                 align-items: center;
                 background: #222632;
+                border: 1px solid #222632;
             }
             .social--sms:hover {
                 background: #884409;
