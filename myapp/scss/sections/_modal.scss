@@ -369,6 +369,9 @@
     }
   }
   .close {
+    @media only screen and (max-width: 1224px) {
+        right: 0;
+    }
     @media only screen and (max-width: 749px) {
         right: 10px;
     }

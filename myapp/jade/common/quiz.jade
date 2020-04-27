@@ -34,68 +34,68 @@
                 input.utm_campaign.hidden(type='hidden', name='utm_campaign')
                 input.utm_term.hidden(type='hidden', name='utm_term')
                 input.utm_content.hidden(type='hidden', name='utm_content')
-                .step-slide.step-slide--active.step-slide--first
-                    .step-slide__title Для начала, выберите <br> 2 подарка из 4:
-                    .step-slide__subtitle Можно выбрать несколько
-                    .quiz__ans.question__ans--checkbox
-                        label.pick-item
-                            .label-img
-                                img(src="img/qa1-1.png", alt="quiz")
-                            input.pick-item__input(type='checkbox', name='question1-1', value='Скидка 500 рублей на рекламу в соцсетях')
-                            .pick-item__label 
-                                span Скидка 
-                                br
-                                span 500 рублей 
-                                br 
-                                | на рекламу 
-                                br
-                                | в соцсетях
-                        label.pick-item
-                            .label-img
-                                img(src="img/qa1-2.png", alt="quiz")
-                            input.pick-item__input(type='checkbox', name='question1-2', value='Аудит спросана ваш продукт в интернете')
-                            .pick-item__label 
-                                span Аудит спроса
-                                br
-                                | на ваш продукт
-                                br
-                                | в интернете
-                        label.pick-item
-                            .label-img
-                                img(src="img/qa1-3.png", alt="quiz")
-                            input.pick-item__input(type='checkbox', name='question1-3', value='Чек-лист для настройки Яндекс Директ')
-                            .pick-item__label 
-                                span Чек-лист 
-                                br
-                                | для настройки
-                                br
-                                | Яндекс Директ
-                        label.pick-item
-                            .label-img
-                                img(src="img/qa1-4.png", alt="quiz")
-                            input.pick-item__input(type='checkbox', name='question1-4', value='Чек-лист для оформления Вконтакте')
-                            .pick-item__label 
-                                span Чек-лист
-                                br
-                                | для оформления
-                                br
-                                | Вконтакте
-                    .step-slide__bottom
-                        .quiz-progress
-                            .quiz-progress__title Готово:
-                                span 0%
-                            .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:0%")
-                        .prev-next-container
-                            .quiz__error
-                            //- a.btn.btn-prev(href='#')
-                            .si-button-pulse
-                                a.btn.btn-next.qa-next(href='#').blick Далее
-                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
-                                        path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
-                                        C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
-                                        c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
-                .step-slide
+                //- .step-slide.step-slide--first
+                //-     .step-slide__title Для начала, выберите <br> 2 подарка из 4:
+                //-     .step-slide__subtitle Можно выбрать несколько
+                //-     .quiz__ans.question__ans--checkbox
+                //-         label.pick-item
+                //-             .label-img
+                //-                 img(src="img/qa1-1.png", alt="quiz")
+                //-             input.pick-item__input(type='checkbox', name='question1-1', value='Скидка 500 рублей на рекламу в соцсетях')
+                //-             .pick-item__label 
+                //-                 span Скидка 
+                //-                 br
+                //-                 span 500 рублей 
+                //-                 br 
+                //-                 | на рекламу 
+                //-                 br
+                //-                 | в соцсетях
+                //-         label.pick-item
+                //-             .label-img
+                //-                 img(src="img/qa1-2.png", alt="quiz")
+                //-             input.pick-item__input(type='checkbox', name='question1-2', value='Аудит спросана ваш продукт в интернете')
+                //-             .pick-item__label 
+                //-                 span Аудит спроса
+                //-                 br
+                //-                 | на ваш продукт
+                //-                 br
+                //-                 | в интернете
+                //-         label.pick-item
+                //-             .label-img
+                //-                 img(src="img/qa1-3.png", alt="quiz")
+                //-             input.pick-item__input(type='checkbox', name='question1-3', value='Чек-лист для настройки Яндекс Директ')
+                //-             .pick-item__label 
+                //-                 span Чек-лист 
+                //-                 br
+                //-                 | для настройки
+                //-                 br
+                //-                 | Яндекс Директ
+                //-         label.pick-item
+                //-             .label-img
+                //-                 img(src="img/qa1-4.png", alt="quiz")
+                //-             input.pick-item__input(type='checkbox', name='question1-4', value='Чек-лист для оформления Вконтакте')
+                //-             .pick-item__label 
+                //-                 span Чек-лист
+                //-                 br
+                //-                 | для оформления
+                //-                 br
+                //-                 | Вконтакте
+                //-     .step-slide__bottom
+                //-         .quiz-progress
+                //-             .quiz-progress__title Готово:
+                //-                 span 0%
+                //-             .quiz-progress__steps
+                //-                 .quiz-progress__item.active(style="width:0%")
+                //-         .prev-next-container
+                //-             .quiz__error
+                //-             //- a.btn.btn-prev(href='#')
+                //-             .si-button-pulse
+                //-                 a.btn.btn-next.qa-next(href='#').blick Далее
+                //-                     svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                //-                         path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                //-                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                //-                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                .step-slide.step-slide--active
                     .step-slide__title Какая у Вас сфера деятельности?
                     .quiz__ans.question__ans--radio
                         label.pick-item
@@ -130,7 +130,7 @@
                                 .quiz-progress__item.active(style="width:10%")
                         .prev-next-container
                             .quiz__error
-                            a.btn.btn-prev.qa-prev(href='#')
+                            //- a.btn.btn-prev.qa-prev(href='#')
                             .si-button-pulse
                                 a.btn.btn-next.qa-next(href='#').blick Далее
                                     svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
@@ -171,7 +171,7 @@
                                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
                                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide
-                    .step-slide__title Какой бюджет на рекламу <br> Вы сможете выделить?
+                    .step-slide__title Какой бюджет на рекламу <br> Вы выделяете?
                     .quiz__ans.question__ans--radio
                         label.pick-item
                             input.pick-item__input(type='radio', name='question4', value='от 20 000 до 50 000 рублей')
@@ -220,69 +220,69 @@
                                         path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
                                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
                                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
-                .step-slide
-                    .step-slide__title Есть ли у Вас действующий сайт?
-                    .quiz__ans.question__ans--radio
-                        label.pick-item
-                            input.pick-item__input(type='radio', name='question6', value='Да')
-                            .pick-item__label Да
-                        label.pick-item
-                            input.pick-item__input(type='radio', name='question6', value='Нет')
-                            .pick-item__label Нет
-                    .step-slide__bottom
-                        .quiz-progress
-                            .quiz-progress__title Готово:
-                                span 50%
-                            .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:50%")
-                        .prev-next-container
-                            .quiz__error
-                            a.btn.btn-prev.qa-prev(href='#')
-                            .si-button-pulse
-                                a.btn.btn-next.qa-next(href='#').blick Далее
-                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
-                                        path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
-                                        C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
-                                        c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
-                .step-slide
-                    .step-slide__title Идёт ли у Вас реклама на сайт?
-                    .quiz__ans.question__ans--checkbox
-                        label.pick-item
-                            input.pick-item__input(type='checkbox', name='question7-1', value='Рекламы нет')
-                            .pick-item__label Рекламы нет
-                        label.pick-item
-                            input.pick-item__input(type='checkbox', name='question7-2', value='Контекстная реклама  (Яндекс/Google)')
-                            .pick-item__label Контекстная реклама <br> (Яндекс/Google)
-                        label.pick-item
-                            input.pick-item__input(type='checkbox', name='question7-3', value='SEO')
-                            .pick-item__label SEO
-                        label.pick-item
-                            input.pick-item__input(type='checkbox', name='question7-4', value='Реклама через  социальные сети')
-                            .pick-item__label Реклама через <br> социальные сети
-                        label.pick-item
-                            input.pick-item__input(type='checkbox', name='question7-5', value='Заходят на сайт через  наружную рекламу')
-                            .pick-item__label Заходят на сайт через <br> наружную рекламу
-                        label.pick-item
-                            input.pick-item__input(type='checkbox', name='question7-6', value='Как то заходят,  не знаю откуда')
-                            .pick-item__label Как то заходят, <br> не знаю откуда
-                        label.pick-item
-                            input.pick-item__input(type='checkbox', name='question7-7', value='Затрудняюсь ответить')
-                            .pick-item__label Затрудняюсь ответить
-                    .step-slide__bottom
-                        .quiz-progress
-                            .quiz-progress__title Готово:
-                                span 60%
-                            .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:60%")
-                        .prev-next-container
-                            .quiz__error
-                            a.btn.btn-prev.qa-prev(href='#')
-                            .si-button-pulse
-                                a.btn.btn-next.qa-next(href='#').blick Далее
-                                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
-                                        path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
-                                        C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
-                                        c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                //- .step-slide
+                //-     .step-slide__title Есть ли у Вас действующий сайт?
+                //-     .quiz__ans.question__ans--radio
+                //-         label.pick-item
+                //-             input.pick-item__input(type='radio', name='question6', value='Да')
+                //-             .pick-item__label Да
+                //-         label.pick-item
+                //-             input.pick-item__input(type='radio', name='question6', value='Нет')
+                //-             .pick-item__label Нет
+                //-     .step-slide__bottom
+                //-         .quiz-progress
+                //-             .quiz-progress__title Готово:
+                //-                 span 50%
+                //-             .quiz-progress__steps
+                //-                 .quiz-progress__item.active(style="width:50%")
+                //-         .prev-next-container
+                //-             .quiz__error
+                //-             a.btn.btn-prev.qa-prev(href='#')
+                //-             .si-button-pulse
+                //-                 a.btn.btn-next.qa-next(href='#').blick Далее
+                //-                     svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                //-                         path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                //-                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                //-                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                //- .step-slide
+                //-     .step-slide__title Идёт ли у Вас реклама на сайт?
+                //-     .quiz__ans.question__ans--checkbox
+                //-         label.pick-item
+                //-             input.pick-item__input(type='checkbox', name='question7-1', value='Рекламы нет')
+                //-             .pick-item__label Рекламы нет
+                //-         label.pick-item
+                //-             input.pick-item__input(type='checkbox', name='question7-2', value='Контекстная реклама  (Яндекс/Google)')
+                //-             .pick-item__label Контекстная реклама <br> (Яндекс/Google)
+                //-         label.pick-item
+                //-             input.pick-item__input(type='checkbox', name='question7-3', value='SEO')
+                //-             .pick-item__label SEO
+                //-         label.pick-item
+                //-             input.pick-item__input(type='checkbox', name='question7-4', value='Реклама через  социальные сети')
+                //-             .pick-item__label Реклама через <br> социальные сети
+                //-         label.pick-item
+                //-             input.pick-item__input(type='checkbox', name='question7-5', value='Заходят на сайт через  наружную рекламу')
+                //-             .pick-item__label Заходят на сайт через <br> наружную рекламу
+                //-         label.pick-item
+                //-             input.pick-item__input(type='checkbox', name='question7-6', value='Как то заходят,  не знаю откуда')
+                //-             .pick-item__label Как то заходят, <br> не знаю откуда
+                //-         label.pick-item
+                //-             input.pick-item__input(type='checkbox', name='question7-7', value='Затрудняюсь ответить')
+                //-             .pick-item__label Затрудняюсь ответить
+                //-     .step-slide__bottom
+                //-         .quiz-progress
+                //-             .quiz-progress__title Готово:
+                //-                 span 60%
+                //-             .quiz-progress__steps
+                //-                 .quiz-progress__item.active(style="width:60%")
+                //-         .prev-next-container
+                //-             .quiz__error
+                //-             a.btn.btn-prev.qa-prev(href='#')
+                //-             .si-button-pulse
+                //-                 a.btn.btn-next.qa-next(href='#').blick Далее
+                //-                     svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                //-                         path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                //-                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                //-                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide
                     .step-slide__title Для чего Вы к нам обратились?
                     .quiz__ans.question__ans--radio
@@ -398,28 +398,62 @@
                                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
                                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide.step-slide--finish
-                    .modal__title До рассчёта эффективности <br>
-                        | и получения 6 бонусов 
+                    .modal__title 
                         span Вас отделяет всего 1 шаг
-                    .modal__subtitle Наши маркетологи уже изучают Ваши ответы, чтобы проанализировать <br> эффективность сайта-квиза в Вашем бизнесе. 
-                        span Осталось корректно заполнить форму, чтобы получить всю информацию 
+                        | Мы подготовим 3 варианта с расчётом 
+                        br.br-desctop
+                        | эффективности продающего сайта для Вашего бизнеса 
+
+                    .modal__subtitle Наши маркетологи уже изучают Ваши ответы, чтобы проанализировать <br> эффективность внедрения продающего сайта в Вашем бизнесе. 
+                        br
+                        span Осталось корректно заполнить форму, чтобы получить всю информацию
+
                     .finish__body
+                        .finish-form
+                            .modal__title 
+                                span Вам куда удобнее отправить расчет?
+                            .useful.social
+                                label.useful__item
+                                    input.useful__input(type='radio', name='question11', value='sms')
+                                    .useful__label.social__item.social--sms 
+                                        img(src="img/icons/sms.png", alt="sms") 
+                                        span sms
+                                label.useful__item
+                                    input.useful__input(type='radio', name='question11', value='sms')
+                                    .useful__label.social__item.social--viber 
+                                        img(src="img/icons/viber.svg", alt="viber") 
+                                        span Viber
+                                label.useful__item
+                                    input.useful__input(type='radio', name='question11', value='Telegram')
+                                    .useful__label.social__item.social--telegram 
+                                        img(src="img/icons/telegram.svg", alt="telegram") 
+                                        span Telegram
+                                label.useful__item
+                                    input.useful__input(type='radio', name='question11', value='WhatsApp')
+                                    .useful__label.social__item.social--wa 
+                                        img(src="img/icons/wa.png", alt="WhatsApp") 
+                                        span WhatsApp
+
+                            .form-line
+                                label
+                                    input(type="text" placeholder="Введите Ваш номер телефона" name="phone").rfield.phone-mask
+                                .form-line-btn
+                                    .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
+                                        .blick
+                                            .ident
+                                                input(type="submit" value="Получить расчет").quiz__btn 
+                            .agree
+                                img(src="img/agree.png", alt="agree")
+                                .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
+                                    a(href="policy.html" target="_blank").agree__policy с политикой конфиденциальности
                         .finish-sidebar
                             .finish-sidebar__item
                                 .finish-sidebar__icon
                                     img(src="img/icons/tick.png", alt="tick")
                                 .finish-sidebar__name 
-                                    span чек-<span class="br-mobile"><br></span>лист
-                                    <span class="br-desktop br-planshet"><br></span>
-                                    | для директ
-                            .finish-sidebar__item
-                                .finish-sidebar__icon
-                                    img(src="img/icons/loupe.png", alt="loupe")
-                                .finish-sidebar__name 
-                                    span Аудит 
-                                    | вашего
+                                    span чек-лист
                                     br
-                                    | продукта
+                                    | для директ
                             .finish-sidebar__item
                                 .finish-sidebar__icon
                                     img(src="img/icons/computer.png", alt="computer")
@@ -428,25 +462,18 @@
                                     br
                                     | вашего сайта
                             .finish-sidebar__item
-                                .finish-sidebar__icon.finish-sidebar__icon--work
-                                    img(src="img/icons/work.png", alt="work")
+                                .finish-sidebar__icon
+                                    img(src="img/icons/loupe.png", alt="loupe")
                                 .finish-sidebar__name 
-                                    span Кейсы по 
+                                    span Аудит 
+                                    | вашего
                                     br
-                                    | вашей нише
-                        .finish-form
-                            .form-line
-                                label
-                                    input(type="text" placeholder="ваш номер телефона" name="phone").rfield.phone-mask
-                            .form-line
-                                label
-                                    input(type="email" placeholder="введите вашу почту" name="email").rfield
-                            .form-line-btn
-                                .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
-                                    .blick
-                                        input(type="submit" value="Получить расчет и бонусы").quiz__btn 
-                            .agree
-                                img(src="img/agree.png", alt="agree")
-                                .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
-                                    a(href="policy.html" target="_blank").agree__policy с политикой конфиденциальности
+                                    | продукта
+                            //- .finish-sidebar__item
+                            //-     .finish-sidebar__icon.finish-sidebar__icon--work
+                            //-         img(src="img/icons/work.png", alt="work")
+                            //-     .finish-sidebar__name 
+                            //-         span Кейсы по 
+                            //-         br
+                            //-         | вашей нише
                     
