@@ -21,7 +21,7 @@ html {
 	width: 100%;
 	@media only screen and (max-width: 1350px) and (orientation: portrait),
 	screen and (max-width: 1080px) {
-		height: auto;
+		// height: auto;
 	}
 }
 body {
@@ -335,7 +335,17 @@ ul,li {
 		}
 	}
 }
-
+.text404 {
+	text-align: center;
+	font-size: 100px;
+	line-height: 1;
+	margin: auto;
+	font-family: AABebasNeue,Arial,Helvetica,sans-serif;
+	color: #e8ebf4;
+	&__subtitle {
+		font-size: 50px;
+	}
+}
 //custom animation
 .blick {
 	position: relative;

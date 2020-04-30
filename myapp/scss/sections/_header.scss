@@ -72,12 +72,16 @@ header {
 }
 .logo {
     margin-top: 10px;
+    display: block;
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
         margin-top: 14px;
     }
     @media screen and (max-width: 749px){
         margin: 2px auto 0;
+    }
+    &:hover {
+        opacity: 0.8;
     }
     img {
         width: 225px;
