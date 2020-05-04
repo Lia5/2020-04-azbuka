@@ -45,7 +45,7 @@ $(function() {
     //select-number form
     if(jQuery('.phone-mask').length) {
         jQuery(function($){
-            $(".phone-mask").mask("+7(999) 999-9999");
+            $(".phone-mask").mask("1 (111) 111-1111");
         });
     }
 
@@ -116,7 +116,17 @@ $(function() {
 
     //quiz
     if(jQuery('.quiz').length) {
-        
+        // input other
+        $('.pick-item__input').on('click', function(){
+            if ( $(this).hasClass('other-input')) {
+                var attrName =  $(this).attr('name');
+                $(this).closest('.step-slide').find('.quiz__ans--other-text').addClass('active').find('input').attr('name', attrName);
+            } else {
+                $(this).closest('.step-slide').find('.quiz__ans--other-text').removeClass('active').find('input').removeAttr('name');
+            }
+            console.log($(this).val());
+            
+        });
         $('.qa-next').click(function(e){
             // console.log($(this).closest('.step-slide').find('input:checked').length);
             if($(this).hasClass('qa-del-discount')) {
@@ -129,6 +139,10 @@ $(function() {
                 $(this).closest('.prev-next-container').find('.quiz__error').text('Выберите только 2 варианта ответа!');
             } else if ($(this).closest('.step-slide').hasClass('step-slide--text') && $(this).closest('.step-slide').find('input').val() == '' ) {
                 $(this).closest('.prev-next-container').find('.quiz__error').text('Введите ответ');
+            } else if ( $(this).closest('.step-slide').find('.quiz__ans--other-text.active input').val() == '') {
+                console.log($(this));
+                $(this).closest('.prev-next-container').find('.quiz__error').text('Введите ответ');
+            
             } else if ($(this).closest('.step-slide').hasClass('step-slide--text') && $(this).closest('.step-slide').find('input').val() != '' ) {
                 $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
 

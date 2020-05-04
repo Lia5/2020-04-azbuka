@@ -99,6 +99,7 @@
             font-size: 50px;
             line-height: 70px;
             color: #222532;
+            max-width: none;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 font-size: 40px;
@@ -518,4 +519,7 @@
 }
 .text--bold {
     font-weight: 700;
+}
+.text--accent {
+    color: $accent;
 }

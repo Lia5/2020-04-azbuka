@@ -121,14 +121,17 @@
                             input.pick-item__input(type='radio', name='question2', value='Ресторанный бизнес')
                             .pick-item__label Ресторанный бизнес
                         label.pick-item
-                            input.pick-item__input(type='radio', name='question2', value='другое')
+                            input.pick-item__input.other-input(type='radio', name='question2', value='другое')
                             .pick-item__label другое
+                    .quiz__ans.quiz__ans--other-text
+                        label.pick-item.pick-item--text
+                            input(type='text', placeholder='Введите текст')
                     .step-slide__bottom
                         .quiz-progress
                             .quiz-progress__title Готово:
-                                span 10%
+                                span 0%
                             .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:10%")
+                                .quiz-progress__item.active(style="width:0%")
                         .prev-next-container
                             .quiz__error
                             //- a.btn.btn-prev.qa-prev(href='#')
@@ -159,9 +162,9 @@
                     .step-slide__bottom
                         .quiz-progress
                             .quiz-progress__title Готово:
-                                span 20%
+                                span 14%
                             .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:20%")
+                                .quiz-progress__item.active(style="width:14%")
                         .prev-next-container
                             .quiz__error
                             a.btn.btn-prev.qa-prev(href='#') 
@@ -172,11 +175,14 @@
                                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
                                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
                 .step-slide
-                    .step-slide__title Какой бюджет на рекламу <br> Вы выделяете?
+                    .step-slide__title Какой бюджет на привлечение клиентов <br> Вы выделяете?
                     .quiz__ans.question__ans--radio
                         label.pick-item
-                            input.pick-item__input(type='radio', name='question4', value='от 20 000 до 50 000 рублей')
-                            .pick-item__label от 20 000 до 50 000 рублей
+                            input.pick-item__input(type='radio', name='question4', value='от 15 000 до 30 000 рублей')
+                            .pick-item__label от 15 000 до 30 000 рублей
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question4', value='от 30 000 рублей 50 000 рублей')
+                            .pick-item__label от 30 000 рублей 50 000 рублей
                         label.pick-item
                             input.pick-item__input(type='radio', name='question4', value='от 50 000 рублей 100 000 рублей')
                             .pick-item__label от 50 000 рублей 100 000 рублей
@@ -189,9 +195,9 @@
                     .step-slide__bottom
                         .quiz-progress
                             .quiz-progress__title Готово:
-                                span 30%
+                                span 28%
                             .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:30%")
+                                .quiz-progress__item.active(style="width:28%")
                         .prev-next-container
                             .quiz__error
                             a.btn.btn-prev.qa-prev(href='#') 
@@ -201,17 +207,54 @@
                                         path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
                                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
                                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
-                .step-slide.step-slide--text
+                //- .step-slide.step-slide--text
+                //-     .step-slide__title На какой регион, область <br> или город работаете?
+                //-     .quiz__ans.quiz__ans--text
+                //-         label.pick-item.pick-item--text
+                //-             input(type='text', name='question5', placeholder='Например: москва')
+                //-     .step-slide__bottom
+                //-         .quiz-progress
+                //-             .quiz-progress__title Готово:
+                //-                 span 40%
+                //-             .quiz-progress__steps
+                //-                 .quiz-progress__item.active(style="width:40%")
+                //-         .prev-next-container
+                //-             .quiz__error
+                //-             a.btn.btn-prev.qa-prev(href='#')
+                //-             .si-button-pulse
+                //-                 a.btn.btn-next.qa-next(href='#').blick Далее
+                //-                     svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                //-                         path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                //-                         C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                //-                         c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+                                         .step-slide.step-slide--text
+                .step-slide
                     .step-slide__title На какой регион, область <br> или город работаете?
-                    .quiz__ans.quiz__ans--text
+                    .quiz__ans.question__ans--radio
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question5', value='Москва и обл.')
+                            .pick-item__label Москва и область
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question5', value='Санкт-Петербург и обл.')
+                            .pick-item__label Санкт-Петербург и область
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question5', value='Город миллионик  ')
+                            .pick-item__label Город миллионик
+                        label.pick-item
+                            input.pick-item__input(type='radio', name='question5', value='Вся Россия')
+                            .pick-item__label Вся Россия
+                        label.pick-item
+                            input.pick-item__input.other-input(type='radio', name='question5', value='Другой город')
+                            .pick-item__label Другой город 
+                    .quiz__ans.quiz__ans--other-text
                         label.pick-item.pick-item--text
-                            input(type='text', name='question5', placeholder='Например: москва')
+                            input(type='text', placeholder='Например: москва')
                     .step-slide__bottom
                         .quiz-progress
                             .quiz-progress__title Готово:
-                                span 40%
+                                span 42%
                             .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:40%")
+                                .quiz-progress__item.active(style="width:42%")
                         .prev-next-container
                             .quiz__error
                             a.btn.btn-prev.qa-prev(href='#')
@@ -299,15 +342,12 @@
                         label.pick-item
                             input.pick-item__input(type='radio', name='question8', value='Нужна консультация эксперта ')
                             .pick-item__label Нужна консультация эксперта 
-                        label.pick-item
-                            input.pick-item__input(type='radio', name='question8', value='другое')
-                            .pick-item__label другое
                     .step-slide__bottom
                         .quiz-progress
                             .quiz-progress__title Готово:
-                                span 70%
+                                span 56%
                             .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:70%")
+                                .quiz-progress__item.active(style="width:56%")
                         .prev-next-container
                             .quiz__error
                             a.btn.btn-prev.qa-prev(href='#') 
@@ -338,9 +378,9 @@
                     .step-slide__bottom
                         .quiz-progress
                             .quiz-progress__title Готово:
-                                span 80%
+                                span 71%
                             .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:80%")
+                                .quiz-progress__item.active(style="width:71%")
                         .prev-next-container
                             .quiz__error
                             a.btn.btn-prev.qa-prev(href='#')
@@ -386,9 +426,9 @@
                     .step-slide__bottom
                         .quiz-progress
                             .quiz-progress__title Готово:
-                                span 90%
+                                span 86%
                             .quiz-progress__steps
-                                .quiz-progress__item.active(style="width:90%")
+                                .quiz-progress__item.active(style="width:86%")
                         .prev-next-container
                             .quiz__error
                             a.btn.btn-prev.qa-prev(href='#')

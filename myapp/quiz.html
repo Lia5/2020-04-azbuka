@@ -81,7 +81,7 @@
                 <div class="home__subtitle--other animated">с 8-ми летним опытом</div>
               </div>
             </div>
-            <div class="home__text animated"> <span>Пройдите тест из 7 простых вопросов </span>эффективность продающего сайта для Вашего бизнеса</div>
+            <div class="home__text animated"> <span class="text--bold">Пройдя тест из 7 простых вопросов, </span>Вы узнаете как продающий сайт поможет привлечь <span class="text--accent text--bold">в 2x раза </span>больше клиентов!</div>
             <div class="home__btn">
               <div class="si-button-pulse"> <a href="#modalQuiz" class="btn modal-open blick"><span class="ident">Пройти тест</span></a></div>
             </div>
@@ -310,15 +310,20 @@
                   <div class="pick-item__label">Ресторанный бизнес</div>
                 </label>
                 <label class="pick-item">
-                  <input type="radio" name="question2" value="другое" class="pick-item__input">
+                  <input type="radio" name="question2" value="другое" class="pick-item__input other-input">
                   <div class="pick-item__label">другое</div>
+                </label>
+              </div>
+              <div class="quiz__ans quiz__ans--other-text">
+                <label class="pick-item pick-item--text">
+                  <input type="text" placeholder="Введите текст">
                 </label>
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Готово:<span>10%</span></div>
+                  <div class="quiz-progress__title">Готово:<span>0%</span></div>
                   <div class="quiz-progress__steps">
-                    <div style="width:10%" class="quiz-progress__item active"></div>
+                    <div style="width:0%" class="quiz-progress__item active"></div>
                   </div>
                 </div>
                 <div class="prev-next-container">
@@ -356,9 +361,9 @@
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Готово:<span>20%</span></div>
+                  <div class="quiz-progress__title">Готово:<span>14%</span></div>
                   <div class="quiz-progress__steps">
-                    <div style="width:20%" class="quiz-progress__item active"></div>
+                    <div style="width:14%" class="quiz-progress__item active"></div>
                   </div>
                 </div>
                 <div class="prev-next-container">
@@ -371,11 +376,15 @@
               </div>
             </div>
             <div class="step-slide">
-              <div class="step-slide__title">Какой бюджет на рекламу <br> Вы выделяете?</div>
+              <div class="step-slide__title">Какой бюджет на привлечение клиентов <br> Вы выделяете?</div>
               <div class="quiz__ans question__ans--radio">
                 <label class="pick-item">
-                  <input type="radio" name="question4" value="от 20 000 до 50 000 рублей" class="pick-item__input">
-                  <div class="pick-item__label">от 20 000 до 50 000 рублей</div>
+                  <input type="radio" name="question4" value="от 15 000 до 30 000 рублей" class="pick-item__input">
+                  <div class="pick-item__label">от 15 000 до 30 000 рублей</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question4" value="от 30 000 рублей 50 000 рублей" class="pick-item__input">
+                  <div class="pick-item__label">от 30 000 рублей 50 000 рублей</div>
                 </label>
                 <label class="pick-item">
                   <input type="radio" name="question4" value="от 50 000 рублей 100 000 рублей" class="pick-item__input">
@@ -392,9 +401,9 @@
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Готово:<span>30%</span></div>
+                  <div class="quiz-progress__title">Готово:<span>28%</span></div>
                   <div class="quiz-progress__steps">
-                    <div style="width:30%" class="quiz-progress__item active"></div>
+                    <div style="width:28%" class="quiz-progress__item active"></div>
                   </div>
                 </div>
                 <div class="prev-next-container">
@@ -406,18 +415,40 @@
                 </div>
               </div>
             </div>
-            <div class="step-slide step-slide--text">
+            <div class="step-slide">
               <div class="step-slide__title">На какой регион, область <br> или город работаете?</div>
-              <div class="quiz__ans quiz__ans--text">
+              <div class="quiz__ans question__ans--radio">
+                <label class="pick-item">
+                  <input type="radio" name="question5" value="Москва и обл." class="pick-item__input">
+                  <div class="pick-item__label">Москва и область</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question5" value="Санкт-Петербург и обл." class="pick-item__input">
+                  <div class="pick-item__label">Санкт-Петербург и область</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question5" value="Город миллионик  " class="pick-item__input">
+                  <div class="pick-item__label">Город миллионик</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question5" value="Вся Россия" class="pick-item__input">
+                  <div class="pick-item__label">Вся Россия</div>
+                </label>
+                <label class="pick-item">
+                  <input type="radio" name="question5" value="Другой город" class="pick-item__input other-input">
+                  <div class="pick-item__label">Другой город </div>
+                </label>
+              </div>
+              <div class="quiz__ans quiz__ans--other-text">
                 <label class="pick-item pick-item--text">
-                  <input type="text" name="question5" placeholder="Например: москва">
+                  <input type="text" placeholder="Например: москва">
                 </label>
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Готово:<span>40%</span></div>
+                  <div class="quiz-progress__title">Готово:<span>42%</span></div>
                   <div class="quiz-progress__steps">
-                    <div style="width:40%" class="quiz-progress__item active"></div>
+                    <div style="width:42%" class="quiz-progress__item active"></div>
                   </div>
                 </div>
                 <div class="prev-next-container">
@@ -448,16 +479,12 @@
                   <input type="radio" name="question8" value="Нужна консультация эксперта " class="pick-item__input">
                   <div class="pick-item__label">Нужна консультация эксперта </div>
                 </label>
-                <label class="pick-item">
-                  <input type="radio" name="question8" value="другое" class="pick-item__input">
-                  <div class="pick-item__label">другое</div>
-                </label>
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Готово:<span>70%</span></div>
+                  <div class="quiz-progress__title">Готово:<span>56%</span></div>
                   <div class="quiz-progress__steps">
-                    <div style="width:70%" class="quiz-progress__item active"></div>
+                    <div style="width:56%" class="quiz-progress__item active"></div>
                   </div>
                 </div>
                 <div class="prev-next-container">
@@ -495,9 +522,9 @@
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Готово:<span>80%</span></div>
+                  <div class="quiz-progress__title">Готово:<span>71%</span></div>
                   <div class="quiz-progress__steps">
-                    <div style="width:80%" class="quiz-progress__item active"></div>
+                    <div style="width:71%" class="quiz-progress__item active"></div>
                   </div>
                 </div>
                 <div class="prev-next-container">
@@ -555,9 +582,9 @@
               </div>
               <div class="step-slide__bottom">
                 <div class="quiz-progress">
-                  <div class="quiz-progress__title">Готово:<span>90%</span></div>
+                  <div class="quiz-progress__title">Готово:<span>86%</span></div>
                   <div class="quiz-progress__steps">
-                    <div style="width:90%" class="quiz-progress__item active"></div>
+                    <div style="width:86%" class="quiz-progress__item active"></div>
                   </div>
                 </div>
                 <div class="prev-next-container">

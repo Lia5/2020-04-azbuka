@@ -26,7 +26,7 @@
         }
     }
     &__body {
-        width: 70%;
+        width: 73%;
         padding-top: 17px;
         padding-right: 20px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -49,6 +49,7 @@
         line-height: 65px;
         color: #e8ebf4;
         letter-spacing: 4px;
+        max-width: 600px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             font-size: 49px;
@@ -61,6 +62,9 @@
             letter-spacing: 3px;
             left: 6px;
             position: relative;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
             font-size: 43px;
@@ -68,6 +72,12 @@
         }
         &--accent {
             color: #ff9232;
+            display: block;
+
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                display: inline;
+            }
         }
     }
     &__subtitle {
@@ -211,18 +221,6 @@
             @media screen and (max-width: 749px) {
                 content: none;
             }
-        }
-        span {
-            font-weight: 700;
-        }
-        @media screen and (max-width: 1115px) {
-
-        }
-        @media screen and (max-width: 880px) {
-
-        }
-        @media screen and (max-width: 500px) {
-
         }
     }
     &__btn {

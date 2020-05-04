@@ -155,6 +155,7 @@
             max-width: 634px;
         }
         @media screen and (max-width: 749px){
+            width: 100%;
             max-width: 286px;
             margin-left: auto;
             margin-right: auto;
@@ -163,6 +164,20 @@
             max-width: 734px;
             @media screen and (max-width: 749px){
                 width: 100%;
+            }
+        }
+        &--other-text {
+            opacity: 0;
+            height: 0;
+            overflow-x: hidden;
+            transition: 0.3s;
+            &.active {
+                opacity: 1;
+                height: auto;
+
+            }
+            .pick-item--text {
+                margin-right: 0;
             }
         }
     }
@@ -507,7 +522,7 @@
     @media screen and (max-width: 749px){
         width: 100%;
     }
-    &:nth-child(2n+1) {
+    &:nth-child(2n+1):not(.pick-item--text) {
         margin-right: 2%;
         @media screen and (max-width: 749px){
             margin-right: 0;
