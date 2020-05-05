@@ -1,6 +1,7 @@
 .tarifs {
+    padding: 40px 0;
     color: #fff;
-    background: #000 url('../img/tarifs.jpg') no-repeat;
+    background: #000 url('../img/tarifs-bg.jpg') no-repeat;
     background-size: cover;
     &__header {
         display: flex;
@@ -30,6 +31,7 @@
         }
     }
     &__title {
+        display: block;
         text-align: center;
         color: #cecece;
     }
@@ -53,23 +55,47 @@
     &__line {
         display: flex;
         width: 100%;
+        &:nth-child(2n+1) {
+            .tarifs__list,
+            .tarifs__column {
+                background: rgba(255, 255, 255, 0.12);
+            }
+            .tarifs__price {
+                background: transparent;
+            }
+        }
+        .tarifs__column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tarifs--last-pro {
+            flex-direction: column;
+        }
     }
     &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         flex-grow: 1;
         font-size: 12px;
         width: 40%;
+        padding: 10px;
         &--first {
             font-size: 13px;
         }
         ul {
             display: flex;
             flex-wrap: wrap;
+            margin-top: 8px;
         }
         li {
             position: relative;
             width: 50%;
             padding-left: 10px;
             font-size: 9px;
+            line-height: 1.7;
             &:before {
                 content: "";
                 position: absolute;
@@ -82,16 +108,31 @@
             }
         }
         &--last {
+            display: flex;
+            ul {
+                display: block;
+                flex-grow: 1;
+                flex-basis: 0;
+                &:last-child {
+                    flex-grow: 1.1;
+                }
+            }
             li {
                 font-size: 8px;
-                width: 30%;
+                width: 100%;
+                span {
+                    font-weight: 700;
+                }
             }
         }
+    }
+    &__item {
     }
     &__column {
         width: 20%;
         max-width: 213px;
         text-align: center;
+        padding: 10px;
     }
     &__check {
         position: relative;
@@ -130,6 +171,34 @@
                 background-position: center;
                 background-size: 10px 10px;
             }
+        }
+    }
+    .price {
+        margin-top: -10px;
+        font-size: 20px;
+        padding: 10px;
+        line-height: 1;
+        span {
+            font-weight: 700;
+        }
+    }
+    &--st {
+        .price {
+            color: #16181e;
+            background: #e1e1e1;
+        }
+    }
+    &--biz {
+        .price {
+            background: #ffa430;
+        }
+    }
+
+    &--pro {
+        .price {
+            margin-top: 10px;
+            background: #006ae5;
+            background: linear-gradient(to right, #006ae5, #12a9ff);
         }
     }
 }
