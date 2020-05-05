@@ -17,6 +17,19 @@
     .wrap {
         position: relative;
     }
+
+    .tarifs--desctop {
+        
+        @media screen and (max-width: 749px) {
+            display: none;
+        }
+    }
+    &--mob {
+        display: none;
+        @media screen and (max-width: 749px) {
+            display: block;
+        }
+    }
     &__header {
         display: flex;
         margin-bottom: 8px;
@@ -24,8 +37,16 @@
     &__logo {
         flex-grow: 1;
         margin-top: 19px;
+
+        @media screen and (max-width: 749px) {
+            width: 40%;
+        }
         img {
             max-width: 300px;
+
+            @media screen and (max-width: 749px) {
+                max-width: 100%;
+            }
         }
     }
     &__logo-text {
@@ -79,6 +100,13 @@
         width: 100%;
         .tarifs__price {
             height: 30px;
+
+            @media screen and (max-width: 749px) {
+                width: 100%;
+                height: auto;
+                max-width: none;
+                margin-bottom: 40px;
+            }
         }
         &:nth-child(2n+1) {
             .tarifs__list,
@@ -121,6 +149,9 @@
             padding-left: 10px;
             font-size: 9px;
             line-height: 1.7;
+            @media screen and (max-width: 749px) {
+                width: 100%;
+            }
             &:before {
                 content: "";
                 position: absolute;
@@ -134,10 +165,16 @@
         }
         &--last {
             display: flex;
+            @media screen and (max-width: 749px) {
+                flex-wrap: wrap;
+            }
             ul {
                 display: block;
                 flex-grow: 1;
                 flex-basis: 0;
+                @media screen and (max-width: 749px) {
+                    flex-basis: unset;
+                }
                 &:last-child {
                     flex-grow: 1.1;
                 }
@@ -145,6 +182,9 @@
             li {
                 font-size: 8px;
                 width: 100%;
+                @media screen and (max-width: 749px) {
+                    font-size: 10px;
+                }
                 span {
                     font-weight: 700;
                 }
@@ -158,6 +198,11 @@
         max-width: 213px;
         text-align: center;
         padding: 7px 15px;
+        &.tarifs__title {
+            @media screen and (max-width: 749px) {
+                width: 60%;
+            }
+        }
     }
     &__check {
         position: relative;
@@ -206,6 +251,13 @@
         span {
             font-weight: 700;
         }
+        @media only screen and (max-width: 1350px) and (orientation: portrait), screen and (max-width: 1080px) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 749px) {
+            margin-top: 20px;
+        }
     }
     &--st {
         .price {
@@ -232,6 +284,12 @@
         right: 90px;
         padding: 20px;
         background: #202430;
+        @media only screen and (max-width: 1350px) and (orientation: portrait), screen and (max-width: 1080px) {
+            right: 15px;
+        }
+        @media screen and (max-width: 749px) {
+            position: static;
+        }
         a {
             color: #fff;
             letter-spacing: 1.5px;
@@ -283,10 +341,19 @@
     &__more {
         font-size: 11px;
         position: absolute;
-        top: 5px;
-        left: 30px;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 25px;
         color: #ececec;
         opacity: 0.51;
         white-space: nowrap;
+        @media only screen and (max-width: 1350px) and (orientation: portrait), screen and (max-width: 1080px) {
+            white-space: unset;
+        }
+
+        @media screen and (max-width: 749px) {
+            left: auto;
+            right: 29px;
+        }
     }
 }
