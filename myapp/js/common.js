@@ -391,7 +391,12 @@ $(function() {
             $('.time_of_day_hello').html(night);
         }
     }
-
+    if(jQuery('.list-title').length) {
+        $('.list-title').on('click', function(){
+            $(this).toggleClass('active');
+            $(this).next().toggleClass('active');
+        });
+    }
 
 });
 

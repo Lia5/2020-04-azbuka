@@ -45,10 +45,10 @@
     }
     &__title {
         font-family: "AABebasNeue", Arial, Helvetica, sans-serif;
-        font-size: 59px;
+        font-size: 57px;
         line-height: 65px;
         color: #e8ebf4;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
         max-width: 600px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
@@ -67,12 +67,11 @@
             margin-right: auto;
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
-            font-size: 43px;
+            font-size: 41px;
             line-height: 48px;
         }
         &--accent {
             color: #ff9232;
-            display: block;
 
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {

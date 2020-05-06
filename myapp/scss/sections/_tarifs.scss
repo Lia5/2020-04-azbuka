@@ -147,7 +147,7 @@
             position: relative;
             width: 50%;
             padding-left: 10px;
-            font-size: 9px;
+            font-size: 11px;
             line-height: 1.7;
             @media screen and (max-width: 749px) {
                 width: 100%;
@@ -164,7 +164,13 @@
             }
         }
         &--last {
-            display: flex;
+            display: none;
+            opacity: 0;
+            transition: 0.3s;
+            &.active {
+                opacity: 1;
+                display: flex;
+            }
             @media screen and (max-width: 749px) {
                 flex-wrap: wrap;
             }
@@ -175,15 +181,12 @@
                 @media screen and (max-width: 749px) {
                     flex-basis: unset;
                 }
-                &:last-child {
-                    flex-grow: 1.1;
-                }
             }
             li {
-                font-size: 8px;
+                font-size: 11px;
                 width: 100%;
                 @media screen and (max-width: 749px) {
-                    font-size: 10px;
+                    font-size: 14px;
                 }
                 span {
                     font-weight: 700;
@@ -354,6 +357,24 @@
         @media screen and (max-width: 749px) {
             left: auto;
             right: 29px;
+        }
+    }
+}
+.arrow-down {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    fill: #fff;
+    margin-left: 5px;
+    padding-top: 5px;
+    transition: 0.3s;
+}
+.list-title {
+    cursor: pointer;
+    &.active {
+        .arrow-down {
+            top: 5px;
+            transform: rotate(180deg);
         }
     }
 }
