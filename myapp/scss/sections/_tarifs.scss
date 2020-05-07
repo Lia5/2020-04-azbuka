@@ -1,4 +1,5 @@
 .tarifs {
+    flex-grow: 1;
     padding: 40px 0;
     color: #fff;
     background: #000 url('../img/tarifs-bg.jpg') no-repeat;
@@ -393,7 +394,7 @@
     padding-top: 5px;
     transition: 0.3s;
 }
-.list-title {
+.tarifs__item  {
     cursor: pointer;
     &.active {
         .arrow-down {
