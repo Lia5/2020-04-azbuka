@@ -393,8 +393,8 @@ $(function() {
     }
     if(jQuery('.list-title').length) {
         $('.list-title').on('click', function(){
-            $(this).toggleClass('active');
-            $(this).next().toggleClass('active');
+            $(this).parent().toggleClass('active');
+            $(this).parent().next().toggleClass('active');
         });
     }
 
